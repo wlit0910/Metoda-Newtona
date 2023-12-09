@@ -1,14 +1,8 @@
 # Metoda Newtona
 
-## Projekt grupowy z przedmiotu Metody numeryczne
+## Projekt grupowy z przedmiotu Metody Numeryczne realizowany przez studentów III roku Informatyki Stosowanej Uniwersytetu Przyrodniczego w Poznaniu.
 
-### realizowany przez studentów 3 roku Informatyki Stosowanej
-
-### na Uniwersytecie Przyrodniczym w Poznaniu
-
-### Temat projektu:
-
-### Wyznaczanie miejsca zerowego funkcji metodą stycznych (metodą Newtona)
+### Temat projektu: Wyznaczanie miejsca zerowego funkcji metodą stycznych (metodą Newtona)
 
 Wykonawcy projektu:
 
