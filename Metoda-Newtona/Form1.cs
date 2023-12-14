@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Metoda_Newtona
 {
-	public partial class Form1 : Form
+	public partial class Interpolator : Form
 	{
-		public Form1()
+		public Interpolator()
 		{
 			InitializeComponent();
 		}
