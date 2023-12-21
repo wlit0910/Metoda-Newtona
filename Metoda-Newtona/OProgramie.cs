@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Metoda_Newtona
 {
-	public partial class Interpolator : Form
+	public partial class OProgramie : Form
 	{
-		public Interpolator()
+		public OProgramie()
 		{
 			InitializeComponent();
+			
+			//this.Text = String.Format("Informacje o {0}", AssemblyTitle);
+		}
+
+		private void okButton_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+
 		}
 	}
 }

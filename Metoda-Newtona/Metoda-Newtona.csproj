@@ -46,16 +46,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Interpolator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Interpolator.Designer.cs">
+      <DependentUpon>Interpolator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObslugaBledow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObslugaBledow.Designer.cs">
+      <DependentUpon>ObslugaBledow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OProgramie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OProgramie.Designer.cs">
+      <DependentUpon>OProgramie.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SchematObslugiBledow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchematObslugiBledow.Designer.cs">
+      <DependentUpon>SchematObslugiBledow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wykres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wykres.Designer.cs">
+      <DependentUpon>Wykres.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Interpolator.resx">
+      <DependentUpon>Interpolator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObslugaBledow.resx">
+      <DependentUpon>ObslugaBledow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OProgramie.resx">
+      <DependentUpon>OProgramie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +96,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SchematObslugiBledow.resx">
+      <DependentUpon>SchematObslugiBledow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wykres.resx">
+      <DependentUpon>Wykres.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

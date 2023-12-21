@@ -48,6 +48,10 @@
 			this.saveButton = new System.Windows.Forms.Button();
 			this.logRichTextBox = new System.Windows.Forms.RichTextBox();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.oProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.schematWprowadzaniaDanychToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label6
@@ -76,6 +80,7 @@
 			this.IsCorrectButton.TabIndex = 36;
 			this.IsCorrectButton.Text = "Sprawdź";
 			this.IsCorrectButton.UseVisualStyleBackColor = true;
+			this.IsCorrectButton.Click += new System.EventHandler(this.IsCorrectButton_Click);
 			// 
 			// zeroPlaceTextBox
 			// 
@@ -102,6 +107,7 @@
 			this.resetButton.TabIndex = 33;
 			this.resetButton.Text = "Resetuj";
 			this.resetButton.UseVisualStyleBackColor = true;
+			this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
 			// 
 			// iterationsTextBox
 			// 
@@ -147,6 +153,7 @@
 			this.calculateButton.TabIndex = 28;
 			this.calculateButton.Text = "Oblicz";
 			this.calculateButton.UseVisualStyleBackColor = true;
+			this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
 			// 
 			// label1
 			// 
@@ -206,6 +213,7 @@
 			this.saveButton.TabIndex = 40;
 			this.saveButton.Text = "Zapisz\r\n";
 			this.saveButton.UseVisualStyleBackColor = true;
+			this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
 			// 
 			// logRichTextBox
 			// 
@@ -218,11 +226,36 @@
 			// menuStrip1
 			// 
 			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(883, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(883, 28);
 			this.menuStrip1.TabIndex = 41;
 			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// toolStripMenuItem1
+			// 
+			this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.oProgramieToolStripMenuItem,
+            this.schematWprowadzaniaDanychToolStripMenuItem});
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 24);
+			this.toolStripMenuItem1.Text = "Pomoc";
+			// 
+			// oProgramieToolStripMenuItem
+			// 
+			this.oProgramieToolStripMenuItem.Name = "oProgramieToolStripMenuItem";
+			this.oProgramieToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+			this.oProgramieToolStripMenuItem.Text = "O programie";
+			this.oProgramieToolStripMenuItem.Click += new System.EventHandler(this.oProgramieToolStripMenuItem_Click);
+			// 
+			// schematWprowadzaniaDanychToolStripMenuItem
+			// 
+			this.schematWprowadzaniaDanychToolStripMenuItem.Name = "schematWprowadzaniaDanychToolStripMenuItem";
+			this.schematWprowadzaniaDanychToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+			this.schematWprowadzaniaDanychToolStripMenuItem.Text = "Schemat wprowadzania danych";
+			this.schematWprowadzaniaDanychToolStripMenuItem.Click += new System.EventHandler(this.schematWprowadzaniaDanychToolStripMenuItem_Click);
 			// 
 			// Interpolator
 			// 
@@ -252,6 +285,8 @@
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Interpolator";
 			this.Text = "Interpolator";
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -279,6 +314,9 @@
 		private System.Windows.Forms.Button saveButton;
 		private System.Windows.Forms.RichTextBox logRichTextBox;
 		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem oProgramieToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem schematWprowadzaniaDanychToolStripMenuItem;
 	}
 }
 
