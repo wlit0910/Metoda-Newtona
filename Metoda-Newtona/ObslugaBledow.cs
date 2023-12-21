@@ -27,5 +27,10 @@ namespace Metoda_Newtona
 			SchematObslugiBledow Schemat = new SchematObslugiBledow();
 			Schemat.Show();
 		}
+
+		private void OkButton_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
