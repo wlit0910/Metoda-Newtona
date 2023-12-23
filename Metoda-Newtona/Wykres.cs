@@ -25,9 +25,9 @@ namespace Metoda_Newtona
 			chart1.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
 			chart1.MouseWheel += Chart1_MouseWheel;
 
-			Title title = chart1.Titles.Add("Metoda Newtona");
-			chart1.ChartAreas[0].AxisX.Title = "Oś x";
-			chart1.ChartAreas[0].AxisY.Title = "Oś y";
+			Title title = chart1.Titles.Add("Interpolacja metodą stycznych (Newtona)");
+			chart1.ChartAreas[0].AxisX.Title = "Oś X";
+			chart1.ChartAreas[0].AxisY.Title = "Oś Y";
 		}
 		public void DrawFunctionChart(Series series)
 		{
@@ -79,6 +79,7 @@ namespace Metoda_Newtona
 		}
 		public void ResetChart()
 		{
+			
 			foreach (var series in chart1.Series)
 			{
 				series.Points.Clear();

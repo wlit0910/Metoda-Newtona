@@ -38,7 +38,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(13, 29);
+			this.label3.Location = new System.Drawing.Point(13, 54);
 			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(209, 16);
@@ -48,7 +48,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(13, 48);
+			this.label2.Location = new System.Drawing.Point(13, 73);
 			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(174, 16);
@@ -58,17 +58,19 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(13, 9);
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.label1.ForeColor = System.Drawing.Color.Red;
+			this.label1.Location = new System.Drawing.Point(13, 22);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(98, 16);
+			this.label1.Size = new System.Drawing.Size(112, 16);
 			this.label1.TabIndex = 13;
 			this.label1.Text = "Wystąpił błąd!";
 			// 
 			// OkButton
 			// 
 			this.OkButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.OkButton.Location = new System.Drawing.Point(403, 45);
+			this.OkButton.Location = new System.Drawing.Point(154, 115);
 			this.OkButton.Margin = new System.Windows.Forms.Padding(4);
 			this.OkButton.Name = "OkButton";
 			this.OkButton.Size = new System.Drawing.Size(133, 28);
@@ -79,7 +81,7 @@
 			// 
 			// SchemeButton
 			// 
-			this.SchemeButton.Location = new System.Drawing.Point(262, 45);
+			this.SchemeButton.Location = new System.Drawing.Point(13, 115);
 			this.SchemeButton.Margin = new System.Windows.Forms.Padding(4);
 			this.SchemeButton.Name = "SchemeButton";
 			this.SchemeButton.Size = new System.Drawing.Size(133, 28);
@@ -92,14 +94,14 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(552, 94);
+			this.ClientSize = new System.Drawing.Size(315, 161);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.OkButton);
 			this.Controls.Add(this.SchemeButton);
 			this.Name = "ObslugaBledow";
-			this.Text = "ObslugaBledow";
+			this.Text = "Wystąpił błąd!";
 			this.Load += new System.EventHandler(this.ObslugaBledow_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

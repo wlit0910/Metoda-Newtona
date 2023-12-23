@@ -43,7 +43,7 @@
 			this.chart1.Legends.Add(legend1);
 			this.chart1.Location = new System.Drawing.Point(0, 0);
 			this.chart1.Name = "chart1";
-			this.chart1.Size = new System.Drawing.Size(800, 662);
+			this.chart1.Size = new System.Drawing.Size(1279, 746);
 			this.chart1.TabIndex = 1;
 			this.chart1.Text = "chart1";
 			this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -52,7 +52,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 662);
+			this.ClientSize = new System.Drawing.Size(1279, 746);
 			this.Controls.Add(this.chart1);
 			this.Name = "Wykres";
 			this.Text = "Wykres";
