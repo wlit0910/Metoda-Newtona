@@ -1,3 +1,10 @@
+<h3 align="center">
+<img alt="Alt text" src="https://img.shields.io/badge/.NET-512BD4.svg?style=for-the-badge&logo=dotnet&logoColor=white"/>
+<img alt="Alt text" src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
+<img alt="Alt text" src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"/>
+<img alt="Alt text" src="https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=Visual-Studio&logoColor=white"/>
+</h3>
+
 # Metoda Newtona
 
 ## Projekt grupowy z przedmiotu Metody Numeryczne realizowany przez studentów III roku Informatyki Stosowanej na Uniwersytecie Przyrodniczym w Poznaniu.
