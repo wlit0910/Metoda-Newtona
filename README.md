@@ -39,7 +39,7 @@ Wykonawcy projektu:
 | Wykres na którym jest: Kolejne przybliżenia miejsca zerowego,     | X          |
 | Wykres na którym jest: wyznaczone miejsce zerowe                  | X          |
 | ----                                                              | X          |
-| ----                                                              | X          |
+| Pogrubić numery iteracji i ważniejsze indormacje w RichTextBoxie                                                              | X          |
 | ----                                                              | X          |
 | ----                                                              | X          |
 | ----                                                              | X          |
