@@ -57,26 +57,29 @@
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(112, 185);
+			this.label6.Location = new System.Drawing.Point(84, 150);
+			this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(37, 16);
+			this.label6.Size = new System.Drawing.Size(30, 13);
 			this.label6.TabIndex = 38;
 			this.label6.Text = "delta";
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(112, 141);
+			this.label5.Location = new System.Drawing.Point(84, 115);
+			this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(51, 16);
+			this.label5.Size = new System.Drawing.Size(40, 13);
 			this.label5.TabIndex = 37;
 			this.label5.Text = "epsilon";
 			// 
 			// IsCorrectButton
 			// 
-			this.IsCorrectButton.Location = new System.Drawing.Point(218, 329);
+			this.IsCorrectButton.Location = new System.Drawing.Point(378, 226);
+			this.IsCorrectButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.IsCorrectButton.Name = "IsCorrectButton";
-			this.IsCorrectButton.Size = new System.Drawing.Size(75, 35);
+			this.IsCorrectButton.Size = new System.Drawing.Size(56, 28);
 			this.IsCorrectButton.TabIndex = 36;
 			this.IsCorrectButton.Text = "Sprawdź";
 			this.IsCorrectButton.UseVisualStyleBackColor = true;
@@ -84,26 +87,29 @@
 			// 
 			// zeroPlaceTextBox
 			// 
-			this.zeroPlaceTextBox.Location = new System.Drawing.Point(280, 284);
+			this.zeroPlaceTextBox.Location = new System.Drawing.Point(210, 231);
+			this.zeroPlaceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.zeroPlaceTextBox.Name = "zeroPlaceTextBox";
 			this.zeroPlaceTextBox.ReadOnly = true;
-			this.zeroPlaceTextBox.Size = new System.Drawing.Size(115, 22);
+			this.zeroPlaceTextBox.Size = new System.Drawing.Size(87, 20);
 			this.zeroPlaceTextBox.TabIndex = 35;
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(145, 287);
+			this.label4.Location = new System.Drawing.Point(109, 233);
+			this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(103, 16);
+			this.label4.Size = new System.Drawing.Size(83, 13);
 			this.label4.TabIndex = 34;
 			this.label4.Text = "Miejsce zerowe:";
 			// 
 			// resetButton
 			// 
-			this.resetButton.Location = new System.Drawing.Point(301, 329);
+			this.resetButton.Location = new System.Drawing.Point(438, 226);
+			this.resetButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.resetButton.Name = "resetButton";
-			this.resetButton.Size = new System.Drawing.Size(75, 35);
+			this.resetButton.Size = new System.Drawing.Size(56, 28);
 			this.resetButton.TabIndex = 33;
 			this.resetButton.Text = "Resetuj";
 			this.resetButton.UseVisualStyleBackColor = true;
@@ -112,44 +118,49 @@
 			// iterationsTextBox
 			// 
 			this.iterationsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.iterationsTextBox.Location = new System.Drawing.Point(280, 239);
+			this.iterationsTextBox.Location = new System.Drawing.Point(210, 194);
+			this.iterationsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.iterationsTextBox.Name = "iterationsTextBox";
-			this.iterationsTextBox.Size = new System.Drawing.Size(115, 22);
+			this.iterationsTextBox.Size = new System.Drawing.Size(87, 20);
 			this.iterationsTextBox.TabIndex = 32;
 			this.iterationsTextBox.Text = "100";
 			// 
 			// deltaTextBox
 			// 
 			this.deltaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.deltaTextBox.Location = new System.Drawing.Point(280, 196);
+			this.deltaTextBox.Location = new System.Drawing.Point(210, 159);
+			this.deltaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.deltaTextBox.Name = "deltaTextBox";
-			this.deltaTextBox.Size = new System.Drawing.Size(115, 22);
+			this.deltaTextBox.Size = new System.Drawing.Size(87, 20);
 			this.deltaTextBox.TabIndex = 31;
 			this.deltaTextBox.Text = "0,000001";
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(78, 242);
+			this.label3.Location = new System.Drawing.Point(58, 197);
+			this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(167, 16);
+			this.label3.Size = new System.Drawing.Size(132, 13);
 			this.label3.TabIndex = 30;
 			this.label3.Text = "Maksymalna liczba iteracji:";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(9, 201);
+			this.label2.Location = new System.Drawing.Point(7, 163);
+			this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(236, 16);
+			this.label2.Size = new System.Drawing.Size(189, 13);
 			this.label2.TabIndex = 29;
 			this.label2.Text = "Dokładność wyznaczania pierwiastka:";
 			// 
 			// calculateButton
 			// 
-			this.calculateButton.Location = new System.Drawing.Point(135, 329);
+			this.calculateButton.Location = new System.Drawing.Point(318, 226);
+			this.calculateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.calculateButton.Name = "calculateButton";
-			this.calculateButton.Size = new System.Drawing.Size(75, 35);
+			this.calculateButton.Size = new System.Drawing.Size(56, 28);
 			this.calculateButton.TabIndex = 28;
 			this.calculateButton.Text = "Oblicz";
 			this.calculateButton.UseVisualStyleBackColor = true;
@@ -158,68 +169,76 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(36, 157);
+			this.label1.Location = new System.Drawing.Point(27, 128);
+			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(208, 16);
+			this.label1.Size = new System.Drawing.Size(166, 13);
 			this.label1.TabIndex = 27;
 			this.label1.Text = "Dokładność porównania z zerem:";
 			// 
 			// epsilonTextBox
 			// 
 			this.epsilonTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.epsilonTextBox.Location = new System.Drawing.Point(280, 154);
+			this.epsilonTextBox.Location = new System.Drawing.Point(210, 125);
+			this.epsilonTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.epsilonTextBox.Name = "epsilonTextBox";
-			this.epsilonTextBox.Size = new System.Drawing.Size(115, 22);
+			this.epsilonTextBox.Size = new System.Drawing.Size(87, 20);
 			this.epsilonTextBox.TabIndex = 26;
 			this.epsilonTextBox.Text = "0,000001";
 			// 
 			// pointXTextBox
 			// 
-			this.pointXTextBox.Location = new System.Drawing.Point(280, 109);
+			this.pointXTextBox.Location = new System.Drawing.Point(210, 89);
+			this.pointXTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.pointXTextBox.Name = "pointXTextBox";
-			this.pointXTextBox.Size = new System.Drawing.Size(115, 22);
+			this.pointXTextBox.Size = new System.Drawing.Size(87, 20);
 			this.pointXTextBox.TabIndex = 25;
 			// 
 			// label1PodajPunktStartowy
 			// 
 			this.label1PodajPunktStartowy.AutoSize = true;
-			this.label1PodajPunktStartowy.Location = new System.Drawing.Point(92, 109);
+			this.label1PodajPunktStartowy.Location = new System.Drawing.Point(69, 89);
+			this.label1PodajPunktStartowy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label1PodajPunktStartowy.Name = "label1PodajPunktStartowy";
-			this.label1PodajPunktStartowy.Size = new System.Drawing.Size(149, 16);
+			this.label1PodajPunktStartowy.Size = new System.Drawing.Size(123, 13);
 			this.label1PodajPunktStartowy.TabIndex = 24;
 			this.label1PodajPunktStartowy.Text = "Podaj punkt startowy x0:";
 			// 
 			// labelPodajWielomian
 			// 
 			this.labelPodajWielomian.AutoSize = true;
-			this.labelPodajWielomian.Location = new System.Drawing.Point(156, 63);
+			this.labelPodajWielomian.Location = new System.Drawing.Point(117, 51);
+			this.labelPodajWielomian.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.labelPodajWielomian.Name = "labelPodajWielomian";
-			this.labelPodajWielomian.Size = new System.Drawing.Size(91, 16);
+			this.labelPodajWielomian.Size = new System.Drawing.Size(75, 13);
 			this.labelPodajWielomian.TabIndex = 23;
 			this.labelPodajWielomian.Text = "Podaj funkcje:";
 			// 
 			// parametersTextBox
 			// 
-			this.parametersTextBox.Location = new System.Drawing.Point(280, 63);
+			this.parametersTextBox.Location = new System.Drawing.Point(210, 51);
+			this.parametersTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.parametersTextBox.Name = "parametersTextBox";
-			this.parametersTextBox.Size = new System.Drawing.Size(115, 22);
+			this.parametersTextBox.Size = new System.Drawing.Size(87, 20);
 			this.parametersTextBox.TabIndex = 22;
 			// 
 			// saveButton
 			// 
-			this.saveButton.Location = new System.Drawing.Point(777, 370);
+			this.saveButton.Location = new System.Drawing.Point(353, 653);
+			this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.saveButton.Name = "saveButton";
-			this.saveButton.Size = new System.Drawing.Size(75, 35);
+			this.saveButton.Size = new System.Drawing.Size(67, 44);
 			this.saveButton.TabIndex = 40;
-			this.saveButton.Text = "Zapisz\r\n";
+			this.saveButton.Text = "Zapisz\r\n do pliku";
 			this.saveButton.UseVisualStyleBackColor = true;
 			this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
 			// 
 			// logRichTextBox
 			// 
-			this.logRichTextBox.Location = new System.Drawing.Point(424, 27);
+			this.logRichTextBox.Location = new System.Drawing.Point(10, 268);
+			this.logRichTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.logRichTextBox.Name = "logRichTextBox";
-			this.logRichTextBox.Size = new System.Drawing.Size(428, 337);
+			this.logRichTextBox.Size = new System.Drawing.Size(484, 381);
 			this.logRichTextBox.TabIndex = 39;
 			this.logRichTextBox.Text = "";
 			// 
@@ -230,7 +249,8 @@
             this.toolStripMenuItem1});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(883, 28);
+			this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+			this.menuStrip1.Size = new System.Drawing.Size(505, 24);
 			this.menuStrip1.TabIndex = 41;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -240,28 +260,28 @@
             this.oProgramieToolStripMenuItem,
             this.schematWprowadzaniaDanychToolStripMenuItem});
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 24);
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(57, 20);
 			this.toolStripMenuItem1.Text = "Pomoc";
 			// 
 			// oProgramieToolStripMenuItem
 			// 
 			this.oProgramieToolStripMenuItem.Name = "oProgramieToolStripMenuItem";
-			this.oProgramieToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+			this.oProgramieToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
 			this.oProgramieToolStripMenuItem.Text = "O programie";
 			this.oProgramieToolStripMenuItem.Click += new System.EventHandler(this.oProgramieToolStripMenuItem_Click);
 			// 
 			// schematWprowadzaniaDanychToolStripMenuItem
 			// 
 			this.schematWprowadzaniaDanychToolStripMenuItem.Name = "schematWprowadzaniaDanychToolStripMenuItem";
-			this.schematWprowadzaniaDanychToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+			this.schematWprowadzaniaDanychToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
 			this.schematWprowadzaniaDanychToolStripMenuItem.Text = "Schemat wprowadzania danych";
 			this.schematWprowadzaniaDanychToolStripMenuItem.Click += new System.EventHandler(this.schematWprowadzaniaDanychToolStripMenuItem_Click);
 			// 
 			// Interpolator
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(883, 450);
+			this.ClientSize = new System.Drawing.Size(505, 721);
 			this.Controls.Add(this.saveButton);
 			this.Controls.Add(this.logRichTextBox);
 			this.Controls.Add(this.label6);
@@ -283,6 +303,7 @@
 			this.Controls.Add(this.parametersTextBox);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Name = "Interpolator";
 			this.Text = "Interpolator";
 			this.menuStrip1.ResumeLayout(false);

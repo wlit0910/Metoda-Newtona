@@ -82,17 +82,13 @@ namespace Metoda_Newtona
 		}
 		public void ResetChart()
 		{
-			if(chart1.Series!=null)
-			{
 
-			}
-
-			foreach (var series in chart1.Series)
-			{
-				series.Points.Clear();
-				//chart1.Series["Miejsce zerowe"].Points.Clear();
-			}
-
+			//foreach (var series in chart1.Series)
+			//{
+			//	series.Points.Clear();
+			//	//chart1.Series["Miejsce zerowe"].Points.Clear();
+			//}
+			
 
 			//while (chart1.Series.Count > 0) { chart1.Series.RemoveAt(0); }
 
