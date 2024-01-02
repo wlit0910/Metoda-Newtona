@@ -55,7 +55,7 @@ namespace Metoda_Newtona
 
 			return result;
 		}
-		private void calculateButton_Click(object sender, EventArgs e)
+		private void calculateButton_Click(object sender, EventArgs e) // OBLICZ
 		{
 			try //obsługa błędów wprowadzanych danych
 			{
@@ -76,6 +76,7 @@ namespace Metoda_Newtona
 			catch (Exception ex)
 			{
 				ObslugaBledow Uwaga = new ObslugaBledow();
+				MessageBox.Show(ex.ToString());
 				Uwaga.Show();
 			}
 		}
@@ -83,12 +84,17 @@ namespace Metoda_Newtona
 
 		public decimal CalculateZeroPlace(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations)
 		{
+			//Font Tekst = logRichTextBox.SelectionFont;
+
+			logRichTextBox.SelectionFont = new Font(logRichTextBox.Font, FontStyle.Bold);
 			logRichTextBox.Text += "Rozpoczęto obliczenia \n";
 			logRichTextBox.Text += "Funkcja wejściowa " + String.Join(";", functionParameters) + "\n";
 			logRichTextBox.Text += "Punkt startowy " + x0 + "\n";
 
 			decimal x1 = x0 - 1;
 			decimal fX0 = CalculateFunctionValueAtX(functionParameters, x0);
+
+			logRichTextBox.SelectionFont = new Font(logRichTextBox.Font, FontStyle.Regular);
 
 			logRichTextBox.Text += "Wartość funkcji w punkcie startowym " + fX0 + "\n";
 
@@ -100,9 +106,12 @@ namespace Metoda_Newtona
 
 			while (iterations > 0 && Math.Abs(x1 - x0) > epsilon && Math.Abs(fX0) > delta) //wykonuj dopóki liczba iteracji jest większa od 0 i wartość bezwzględna z x1 - x0 jest większa od epsilon i wartość bezwzględna z funkcji w punkcie x0 jest większa od delta
 			{
+				logRichTextBox.SelectionFont = new Font(logRichTextBox.Font, FontStyle.Bold);
 				logRichTextBox.Text += "\n";
 				numberOfIteration += 1;
-				logRichTextBox.Text += "Numer iteracji " + numberOfIteration + "\n";
+				logRichTextBox.AppendText("Numer iteracji " + numberOfIteration + "\n");
+				//logRichTextBox.Rtf = @"{\rtf1\ansi This is in \b bold\b0.}";
+			
 
 				decimal[] derivativeParamters = CalculateDerivative(functionParameters);
 				decimal fX1 = CalculateFunctionValueAtX(derivativeParamters, x0);
@@ -238,6 +247,7 @@ namespace Metoda_Newtona
 
 		private void resetButton_Click(object sender, EventArgs e)
 		{
+			wykres.Close();
 			parametersTextBox.Clear();
 			pointXTextBox.Clear();
 			epsilonTextBox.Text = "0,000001";
@@ -245,8 +255,10 @@ namespace Metoda_Newtona
 			iterationsTextBox.Text = "100";
 			zeroPlaceTextBox.Clear();
 			logRichTextBox.Clear();
+			this.Refresh();
+			wykres.Refresh();
 
-			wykres.ResetChart();
+			//wykres.ResetChart();
 		}
 
 		private void saveButton_Click(object sender, EventArgs e)

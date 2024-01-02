@@ -44,6 +44,7 @@ namespace Metoda_Newtona
 			series.Points.AddXY(pointX, pointY);
 			series.ChartType = SeriesChartType.Point;
 			series.Color = Color.Black;
+			series.MarkerSize = 10;
 			chart1.Series.Add(series);
 		}
 		private void Chart1_MouseWheel(object sender, MouseEventArgs e)
@@ -75,21 +76,31 @@ namespace Metoda_Newtona
 					yAxis.ScaleView.Zoom(posYStart, posYFinish);
 				}
 			}
-			catch { }
+			catch(Exception ex) { 
+				MessageBox.Show("Błąd. Treść błędu: \n"+ ex.Message);
+			}
 		}
 		public void ResetChart()
 		{
-			
+			if(chart1.Series!=null)
+			{
+
+			}
+
 			foreach (var series in chart1.Series)
 			{
 				series.Points.Clear();
+				//chart1.Series["Miejsce zerowe"].Points.Clear();
 			}
 
-			//chart1.Series["Potencjalne miejsca zerowe"].Points.Clear();
+
+			//while (chart1.Series.Count > 0) { chart1.Series.RemoveAt(0); }
+
 			chart1.Series.Clear();
 			potentialZeroPlaces = new Series("Potencjalne miejsca zerowe");
 			potentialZeroPlaces.ChartType = SeriesChartType.Point;
 			potentialZeroPlaces.Color = Color.Green;
+			potentialZeroPlaces.MarkerSize = 10;
 			chart1.Series.Add(potentialZeroPlaces);
 		}
 
