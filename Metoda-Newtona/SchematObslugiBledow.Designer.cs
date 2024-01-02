@@ -131,7 +131,7 @@
 			// 
 			this.parametersTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.parametersTextBox.Location = new System.Drawing.Point(208, 17);
-			this.parametersTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.parametersTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.parametersTextBox.Name = "parametersTextBox";
 			this.parametersTextBox.ReadOnly = true;
 			this.parametersTextBox.Size = new System.Drawing.Size(87, 20);
@@ -143,7 +143,7 @@
 			// 
 			this.pointXTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.pointXTextBox.Location = new System.Drawing.Point(208, 55);
-			this.pointXTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pointXTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.pointXTextBox.Name = "pointXTextBox";
 			this.pointXTextBox.ReadOnly = true;
 			this.pointXTextBox.Size = new System.Drawing.Size(87, 20);
@@ -156,7 +156,7 @@
 			this.iterationsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.iterationsTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.iterationsTextBox.Location = new System.Drawing.Point(208, 160);
-			this.iterationsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.iterationsTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.iterationsTextBox.Name = "iterationsTextBox";
 			this.iterationsTextBox.ReadOnly = true;
 			this.iterationsTextBox.Size = new System.Drawing.Size(87, 20);
@@ -169,7 +169,7 @@
 			this.epsilonTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.epsilonTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.epsilonTextBox.Location = new System.Drawing.Point(208, 91);
-			this.epsilonTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.epsilonTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.epsilonTextBox.Name = "epsilonTextBox";
 			this.epsilonTextBox.ReadOnly = true;
 			this.epsilonTextBox.Size = new System.Drawing.Size(87, 20);
@@ -192,7 +192,7 @@
 			this.deltaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.deltaTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.deltaTextBox.Location = new System.Drawing.Point(208, 125);
-			this.deltaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.deltaTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.deltaTextBox.Name = "deltaTextBox";
 			this.deltaTextBox.ReadOnly = true;
 			this.deltaTextBox.Size = new System.Drawing.Size(87, 20);
@@ -255,6 +255,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(647, 239);
 			this.Controls.Add(this.OkButton);
 			this.Controls.Add(this.label10);
@@ -275,9 +276,11 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.label1PodajPunktStartowy);
 			this.Controls.Add(this.labelPodajWielomian);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "SchematObslugiBledow";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "SchematObslugiBledow";
 			this.ResumeLayout(false);
 			this.PerformLayout();

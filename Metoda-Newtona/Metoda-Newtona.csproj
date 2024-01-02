@@ -69,11 +69,11 @@
     <Compile Include="Interpolator.Designer.cs">
       <DependentUpon>Interpolator.cs</DependentUpon>
     </Compile>
-    <Compile Include="ObslugaBledow.cs">
+    <Compile Include="Blad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ObslugaBledow.Designer.cs">
-      <DependentUpon>ObslugaBledow.cs</DependentUpon>
+    <Compile Include="Blad.Designer.cs">
+      <DependentUpon>Blad.cs</DependentUpon>
     </Compile>
     <Compile Include="OProgramie.cs">
       <SubType>Form</SubType>
@@ -98,8 +98,8 @@
     <EmbeddedResource Include="Interpolator.resx">
       <DependentUpon>Interpolator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ObslugaBledow.resx">
-      <DependentUpon>ObslugaBledow.cs</DependentUpon>
+    <EmbeddedResource Include="Blad.resx">
+      <DependentUpon>Blad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OProgramie.resx">
       <DependentUpon>OProgramie.cs</DependentUpon>

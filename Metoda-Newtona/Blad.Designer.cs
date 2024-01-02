@@ -1,6 +1,6 @@
 ﻿namespace Metoda_Newtona
 {
-	partial class ObslugaBledow
+	partial class Blad
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -38,70 +38,69 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(13, 54);
-			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label3.Location = new System.Drawing.Point(10, 44);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(209, 16);
+			this.label3.Size = new System.Drawing.Size(167, 13);
 			this.label3.TabIndex = 15;
 			this.label3.Text = "Wprowadzono niepoprawne dane";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(13, 73);
-			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label2.Location = new System.Drawing.Point(10, 59);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(174, 16);
+			this.label2.Size = new System.Drawing.Size(211, 13);
 			this.label2.TabIndex = 14;
-			this.label2.Text = "Wprowadź dane jeszcze raz";
+			this.label2.Text = "Zobacz okno pomocy lub wyjdź z programu";
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.label1.ForeColor = System.Drawing.Color.Red;
-			this.label1.Location = new System.Drawing.Point(13, 22);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Location = new System.Drawing.Point(10, 18);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(112, 16);
+			this.label1.Size = new System.Drawing.Size(91, 13);
 			this.label1.TabIndex = 13;
 			this.label1.Text = "Wystąpił błąd!";
 			// 
 			// OkButton
 			// 
 			this.OkButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.OkButton.Location = new System.Drawing.Point(154, 115);
-			this.OkButton.Margin = new System.Windows.Forms.Padding(4);
+			this.OkButton.Location = new System.Drawing.Point(116, 93);
 			this.OkButton.Name = "OkButton";
-			this.OkButton.Size = new System.Drawing.Size(133, 28);
+			this.OkButton.Size = new System.Drawing.Size(100, 26);
 			this.OkButton.TabIndex = 12;
-			this.OkButton.Text = "OK";
+			this.OkButton.Text = "Wyjdź";
 			this.OkButton.UseVisualStyleBackColor = true;
 			this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
 			// 
 			// SchemeButton
 			// 
-			this.SchemeButton.Location = new System.Drawing.Point(13, 115);
-			this.SchemeButton.Margin = new System.Windows.Forms.Padding(4);
+			this.SchemeButton.Location = new System.Drawing.Point(10, 93);
 			this.SchemeButton.Name = "SchemeButton";
-			this.SchemeButton.Size = new System.Drawing.Size(133, 28);
+			this.SchemeButton.Size = new System.Drawing.Size(100, 26);
 			this.SchemeButton.TabIndex = 11;
-			this.SchemeButton.Text = "Zobacz schemat";
+			this.SchemeButton.Text = "Pomoc";
 			this.SchemeButton.UseVisualStyleBackColor = true;
 			this.SchemeButton.Click += new System.EventHandler(this.SchemeButton_Click);
 			// 
-			// ObslugaBledow
+			// Blad
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(315, 161);
+			this.BackColor = System.Drawing.Color.White;
+			this.ClientSize = new System.Drawing.Size(236, 131);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.OkButton);
 			this.Controls.Add(this.SchemeButton);
-			this.Name = "ObslugaBledow";
-			this.Text = "Wystąpił błąd!";
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Name = "Blad";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Uwaga, błąd!";
 			this.Load += new System.EventHandler(this.ObslugaBledow_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

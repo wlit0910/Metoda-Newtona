@@ -17,7 +17,6 @@ C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\Me
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\Metoda-Newtona.pdb
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.csproj.AssemblyReference.cache
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Interpolator.resources
-C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.ObslugaBledow.resources
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.OProgramie.resources
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Properties.Resources.resources
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.SchematObslugiBledow.resources
@@ -26,3 +25,4 @@ C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Me
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.csproj.CoreCompileInputs.cache
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.exe
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.pdb
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Blad.resources

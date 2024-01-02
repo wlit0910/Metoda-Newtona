@@ -75,7 +75,7 @@ namespace Metoda_Newtona
 			}
 			catch (Exception ex)
 			{
-				ObslugaBledow Uwaga = new ObslugaBledow();
+				Blad Uwaga = new Blad();
 				MessageBox.Show(ex.ToString());
 				Uwaga.Show();
 			}
@@ -294,16 +294,22 @@ namespace Metoda_Newtona
 			}
 		}
 
-		private void oProgramieToolStripMenuItem_Click(object sender, EventArgs e)
+		private void schematWprowadzaniaDanychToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			SchematObslugiBledow schematObslugiBledow = new SchematObslugiBledow();
+			schematObslugiBledow.Show();
+		}
+
+		private void oProgramieToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			OProgramie O_Programie = new OProgramie();
 			O_Programie.Show();
 		}
 
-		private void schematWprowadzaniaDanychToolStripMenuItem_Click(object sender, EventArgs e)
+		private void button1_Click(object sender, EventArgs e)
 		{
-			SchematObslugiBledow schematObslugiBledow = new SchematObslugiBledow();
-			schematObslugiBledow.Show();
+			wykres.Close();
+			this.Close();
 		}
 	}
 }

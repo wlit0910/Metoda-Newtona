@@ -19,6 +19,7 @@ namespace Metoda_Newtona
 		{
 			InitializeComponent();
 			
+			
 			ResetChart();
 
 			chart1.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
@@ -26,8 +27,11 @@ namespace Metoda_Newtona
 			chart1.MouseWheel += Chart1_MouseWheel;
 
 			Title title = chart1.Titles.Add("Interpolacja metodą stycznych (Newtona)");
+			title.Font = new Font("Arial", 15, FontStyle.Bold);
 			chart1.ChartAreas[0].AxisX.Title = "Oś X";
+			chart1.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 10, FontStyle.Bold);
 			chart1.ChartAreas[0].AxisY.Title = "Oś Y";
+			chart1.ChartAreas[0].AxisY.TitleFont = new Font("Arial", 10, FontStyle.Bold);
 		}
 		public void DrawFunctionChart(Series series)
 		{
@@ -38,12 +42,13 @@ namespace Metoda_Newtona
 		{
 			potentialZeroPlaces.Points.AddXY(pointX, pointY);
 		}
-		public void DrawZeroPlace(decimal pointX, decimal pointY)
+		public void DrawZeroPlace(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
 		{
 			Series series = new Series("Miejsce zerowe");
 			series.Points.AddXY(pointX, pointY);
 			series.ChartType = SeriesChartType.Point;
-			series.Color = Color.Black;
+
+			series.Color = Color.Firebrick;
 			series.MarkerSize = 10;
 			chart1.Series.Add(series);
 		}
@@ -83,21 +88,30 @@ namespace Metoda_Newtona
 		public void ResetChart()
 		{
 
-			//foreach (var series in chart1.Series)
-			//{
-			//	series.Points.Clear();
-			//	//chart1.Series["Miejsce zerowe"].Points.Clear();
-			//}
-			
+			try
+			{
 
-			//while (chart1.Series.Count > 0) { chart1.Series.RemoveAt(0); }
+				//foreach (var series in chart1.Series)
+				//{
+				//	series.Points.Clear();
+				//	//chart1.Series["Miejsce zerowe"].Points.Clear();
+				//}
+				//while (chart1.Series.Count > 0) { chart1.Series.RemoveAt(0); }
 
-			chart1.Series.Clear();
-			potentialZeroPlaces = new Series("Potencjalne miejsca zerowe");
-			potentialZeroPlaces.ChartType = SeriesChartType.Point;
-			potentialZeroPlaces.Color = Color.Green;
-			potentialZeroPlaces.MarkerSize = 10;
-			chart1.Series.Add(potentialZeroPlaces);
+				chart1.Series.Clear();
+				potentialZeroPlaces = new Series("Potencjalne miejsca zerowe");
+				potentialZeroPlaces.ChartType = SeriesChartType.Point;
+				potentialZeroPlaces.Color = Color.Green;
+				potentialZeroPlaces.MarkerSize = 10;
+				chart1.Series.Add(potentialZeroPlaces);
+
+			}
+			catch
+			{
+				Blad blad = new Blad();
+				blad.Show();
+			}
+
 		}
 
 		private void Wykres_Load(object sender, EventArgs e)

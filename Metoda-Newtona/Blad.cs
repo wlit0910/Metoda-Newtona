@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace Metoda_Newtona
 {
-	public partial class ObslugaBledow : Form
+	public partial class Blad : Form
 	{
-		public ObslugaBledow()
+		public Blad()
 		{
 			InitializeComponent();
 		}
 
 		private void ObslugaBledow_Load(object sender, EventArgs e)
-		{
-			this.Close();
+		{			
 		}
 
 		private void SchemeButton_Click(object sender, EventArgs e)
@@ -30,7 +29,7 @@ namespace Metoda_Newtona
 
 		private void OkButton_Click(object sender, EventArgs e)
 		{
-
+			this.Close();
 		}
 	}
 }
