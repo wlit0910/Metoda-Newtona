@@ -30,6 +30,7 @@
 		{
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wykres));
 			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
 			this.SuspendLayout();
@@ -42,18 +43,21 @@
 			legend1.Name = "Legend1";
 			this.chart1.Legends.Add(legend1);
 			this.chart1.Location = new System.Drawing.Point(0, 0);
+			this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.chart1.Name = "chart1";
-			this.chart1.Size = new System.Drawing.Size(1279, 746);
+			this.chart1.Size = new System.Drawing.Size(959, 606);
 			this.chart1.TabIndex = 1;
 			this.chart1.Text = "chart1";
 			this.chart1.Click += new System.EventHandler(this.chart1_Click);
 			// 
 			// Wykres
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1279, 746);
+			this.ClientSize = new System.Drawing.Size(959, 606);
 			this.Controls.Add(this.chart1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Name = "Wykres";
 			this.Text = "Wykres";
 			this.Load += new System.EventHandler(this.Wykres_Load);

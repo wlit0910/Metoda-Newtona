@@ -225,7 +225,7 @@
 			// 
 			// saveButton
 			// 
-			this.saveButton.Location = new System.Drawing.Point(353, 653);
+			this.saveButton.Location = new System.Drawing.Point(427, 666);
 			this.saveButton.Margin = new System.Windows.Forms.Padding(2);
 			this.saveButton.Name = "saveButton";
 			this.saveButton.Size = new System.Drawing.Size(67, 44);
@@ -239,7 +239,7 @@
 			this.logRichTextBox.Location = new System.Drawing.Point(10, 268);
 			this.logRichTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.logRichTextBox.Name = "logRichTextBox";
-			this.logRichTextBox.Size = new System.Drawing.Size(484, 381);
+			this.logRichTextBox.Size = new System.Drawing.Size(484, 394);
 			this.logRichTextBox.TabIndex = 39;
 			this.logRichTextBox.Text = "";
 			// 
