@@ -73,18 +73,17 @@ namespace Metoda_Newtona
 				wykres.DrawFunctionChart(functionChartSeries);
 				wykres.Show();
 			}
-			catch (Exception ex)
+			catch
 			{
-				Blad Uwaga = new Blad();
-				MessageBox.Show(ex.ToString());
-				Uwaga.Show();
+				Blad uwaga = new Blad();
+				uwaga.Show();
 			}
 		}
 
 
-		public decimal CalculateZeroPlace(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations)
+		public decimal CalculateZeroPlace(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations) // Liczenie miejsca zerowego
 		{
-			//Font Tekst = logRichTextBox.SelectionFont;
+			// try catch
 
 			logRichTextBox.SelectionFont = new Font(logRichTextBox.Font, FontStyle.Bold);
 			logRichTextBox.Text += "Rozpoczęto obliczenia \n";
@@ -161,8 +160,10 @@ namespace Metoda_Newtona
 			return x0;
 		}
 
-		public bool IsResultCorrect(decimal[] functionParameters, decimal zeroPlace, decimal epsilon)
+		public bool IsResultCorrect(decimal[] functionParameters, decimal zeroPlace, decimal epsilon) // Sprawdź wynik - funkcja
 		{
+			// try catch
+
 			decimal result = CalculateFunctionValueAtX(functionParameters, zeroPlace);
 
 			if (Math.Abs(result) < epsilon)
@@ -175,8 +176,10 @@ namespace Metoda_Newtona
 			}
 		}
 
-		private void IsCorrectButton_Click(object sender, EventArgs e)
+		private void IsCorrectButton_Click(object sender, EventArgs e) // Sprawdź wynik - przycisk
 		{
+			// try catch
+
 			decimal[] functionParameters = Array.ConvertAll(parametersTextBox.Text.Split(';'), Decimal.Parse);
 			decimal zeroPlace = Decimal.Parse(zeroPlaceTextBox.Text);
 			decimal epsilon = Decimal.Parse(epsilonTextBox.Text);
@@ -195,6 +198,8 @@ namespace Metoda_Newtona
 
 		public Series PrepareChartSeries(decimal[] functionParameters, decimal startingPointX, string seriesName)
 		{
+			// try catch
+
 			Series series = new Series(seriesName);
 			for (decimal i = startingPointX - 5.0m; i < startingPointX + 5.0m; i = i + 0.5m)
 			{
@@ -212,6 +217,8 @@ namespace Metoda_Newtona
          */
 		public Series PrepareTangentSeries(decimal[] functionParameters, decimal startingPointX, string seriesName)
 		{
+			// try catch
+
 			Series series = new Series(seriesName);
 			series.Color = Color.Red;
 			decimal fStartingPointX = CalculateFunctionValueAtX(functionParameters, startingPointX);
@@ -247,6 +254,8 @@ namespace Metoda_Newtona
 
 		private void resetButton_Click(object sender, EventArgs e)
 		{
+			// try catch
+
 			wykres.Close();
 			parametersTextBox.Clear();
 			pointXTextBox.Clear();
@@ -261,8 +270,10 @@ namespace Metoda_Newtona
 			//wykres.ResetChart();
 		}
 
-		private void saveButton_Click(object sender, EventArgs e)
+		private void saveButton_Click(object sender, EventArgs e) // Zapisz dane do pliku
 		{
+			// try catch
+
 			MemoryStream userInput = new MemoryStream();
 
 			userInput.Position = 0;
@@ -296,7 +307,7 @@ namespace Metoda_Newtona
 
 		private void schematWprowadzaniaDanychToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			SchematObslugiBledow schematObslugiBledow = new SchematObslugiBledow();
+			Pomoc schematObslugiBledow = new Pomoc();
 			schematObslugiBledow.Show();
 		}
 
@@ -306,7 +317,7 @@ namespace Metoda_Newtona
 			O_Programie.Show();
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void button1_Click(object sender, EventArgs e) // zamknij program
 		{
 			wykres.Close();
 			this.Close();

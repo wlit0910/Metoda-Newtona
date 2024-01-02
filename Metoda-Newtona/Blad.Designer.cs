@@ -98,6 +98,7 @@
 			this.Controls.Add(this.SchemeButton);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.MaximizeBox = false;
 			this.Name = "Blad";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Uwaga, błąd!";

@@ -23,7 +23,7 @@ namespace Metoda_Newtona
 
 		private void SchemeButton_Click(object sender, EventArgs e)
 		{
-			SchematObslugiBledow Schemat = new SchematObslugiBledow();
+			Pomoc Schemat = new Pomoc();
 			Schemat.Show();
 		}
 

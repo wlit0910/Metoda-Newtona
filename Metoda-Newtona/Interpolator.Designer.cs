@@ -83,7 +83,7 @@
 			// IsCorrectButton
 			// 
 			this.IsCorrectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.IsCorrectButton.Location = new System.Drawing.Point(432, 282);
+			this.IsCorrectButton.Location = new System.Drawing.Point(432, 273);
 			this.IsCorrectButton.Margin = new System.Windows.Forms.Padding(2);
 			this.IsCorrectButton.Name = "IsCorrectButton";
 			this.IsCorrectButton.Size = new System.Drawing.Size(72, 51);
@@ -115,7 +115,7 @@
 			// resetButton
 			// 
 			this.resetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.resetButton.Location = new System.Drawing.Point(538, 282);
+			this.resetButton.Location = new System.Drawing.Point(538, 273);
 			this.resetButton.Margin = new System.Windows.Forms.Padding(2);
 			this.resetButton.Name = "resetButton";
 			this.resetButton.Size = new System.Drawing.Size(72, 51);
@@ -167,7 +167,7 @@
 			// calculateButton
 			// 
 			this.calculateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.calculateButton.Location = new System.Drawing.Point(327, 282);
+			this.calculateButton.Location = new System.Drawing.Point(327, 273);
 			this.calculateButton.Margin = new System.Windows.Forms.Padding(2);
 			this.calculateButton.Name = "calculateButton";
 			this.calculateButton.Size = new System.Drawing.Size(72, 51);
@@ -204,6 +204,7 @@
 			this.pointXTextBox.Name = "pointXTextBox";
 			this.pointXTextBox.Size = new System.Drawing.Size(156, 20);
 			this.pointXTextBox.TabIndex = 25;
+			this.pointXTextBox.Text = "0";
 			// 
 			// label1PodajPunktStartowy
 			// 
@@ -233,6 +234,7 @@
 			this.parametersTextBox.Name = "parametersTextBox";
 			this.parametersTextBox.Size = new System.Drawing.Size(156, 20);
 			this.parametersTextBox.TabIndex = 22;
+			this.parametersTextBox.Text = "2;3;4;8;7;5";
 			// 
 			// saveButton
 			// 
@@ -281,8 +283,8 @@
 			// schematWprowadzaniaDanychToolStripMenuItem
 			// 
 			this.schematWprowadzaniaDanychToolStripMenuItem.Name = "schematWprowadzaniaDanychToolStripMenuItem";
-			this.schematWprowadzaniaDanychToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-			this.schematWprowadzaniaDanychToolStripMenuItem.Text = "Schemat wprowadzania danych";
+			this.schematWprowadzaniaDanychToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.schematWprowadzaniaDanychToolStripMenuItem.Text = "Pomoc";
 			this.schematWprowadzaniaDanychToolStripMenuItem.Click += new System.EventHandler(this.schematWprowadzaniaDanychToolStripMenuItem_Click);
 			// 
 			// pictureBox1
@@ -418,6 +420,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip1;
 			this.Margin = new System.Windows.Forms.Padding(2);
+			this.MaximizeBox = false;
 			this.Name = "Interpolator";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Interpolator";

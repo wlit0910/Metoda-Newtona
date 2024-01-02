@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Metoda_Newtona
 {
-	public partial class SchematObslugiBledow : Form
+	public partial class Pomoc : Form
 	{
-		public SchematObslugiBledow()
+		public Pomoc()
 		{
 			InitializeComponent();
 		}

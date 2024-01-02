@@ -19,6 +19,8 @@ namespace Metoda_Newtona
 		{
 			InitializeComponent();
 			
+			// try catch
+
 			
 			ResetChart();
 
@@ -29,12 +31,14 @@ namespace Metoda_Newtona
 			Title title = chart1.Titles.Add("Interpolacja metodą stycznych (Newtona)");
 			title.Font = new Font("Arial", 15, FontStyle.Bold);
 			chart1.ChartAreas[0].AxisX.Title = "Oś X";
-			chart1.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 10, FontStyle.Bold);
+			chart1.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 15, FontStyle.Bold);
 			chart1.ChartAreas[0].AxisY.Title = "Oś Y";
-			chart1.ChartAreas[0].AxisY.TitleFont = new Font("Arial", 10, FontStyle.Bold);
+			chart1.ChartAreas[0].AxisY.TitleFont = new Font("Arial", 15, FontStyle.Bold);
 		}
 		public void DrawFunctionChart(Series series)
 		{
+			// try catch
+
 			series.ChartType = SeriesChartType.Spline;
 			chart1.Series.Add(series);
 		}
@@ -44,6 +48,8 @@ namespace Metoda_Newtona
 		}
 		public void DrawZeroPlace(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
 		{
+			// try catch
+
 			Series series = new Series("Miejsce zerowe");
 			series.Points.AddXY(pointX, pointY);
 			series.ChartType = SeriesChartType.Point;
@@ -54,12 +60,12 @@ namespace Metoda_Newtona
 		}
 		private void Chart1_MouseWheel(object sender, MouseEventArgs e)
 		{
-			var chart = (Chart)sender;
-			var xAxis = chart.ChartAreas[0].AxisX;
-			var yAxis = chart.ChartAreas[0].AxisY;
-
 			try
 			{
+				var chart = (Chart)sender;
+				var xAxis = chart.ChartAreas[0].AxisX;
+				var yAxis = chart.ChartAreas[0].AxisY;
+
 				if (e.Delta < 0) // Scrolled down.
 				{
 					xAxis.ScaleView.ZoomReset();
