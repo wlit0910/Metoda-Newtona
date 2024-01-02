@@ -40,9 +40,10 @@
 			// 
 			// okButton
 			// 
-			this.okButton.Location = new System.Drawing.Point(499, 296);
+			this.okButton.Location = new System.Drawing.Point(374, 240);
+			this.okButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(91, 36);
+			this.okButton.Size = new System.Drawing.Size(68, 29);
 			this.okButton.TabIndex = 11;
 			this.okButton.Text = "OK";
 			this.okButton.UseVisualStyleBackColor = true;
@@ -51,18 +52,20 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(215, 154);
+			this.label4.Location = new System.Drawing.Point(161, 125);
+			this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(141, 48);
+			this.label4.Size = new System.Drawing.Size(116, 39);
 			this.label4.TabIndex = 10;
 			this.label4.Text = "Weronika Litowczenko\r\nJan Rusinek\r\nAdam Wandelt";
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(215, 61);
+			this.label3.Location = new System.Drawing.Point(161, 50);
+			this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(376, 16);
+			this.label3.Size = new System.Drawing.Size(301, 13);
 			this.label3.TabIndex = 9;
 			this.label3.Text = "Wyznaczanie miejsca zerowego metodą stycznych (Newtona).";
 			// 
@@ -70,9 +73,10 @@
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
 			this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-			this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+			this.pictureBox1.Location = new System.Drawing.Point(9, 10);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(185, 320);
+			this.pictureBox1.Size = new System.Drawing.Size(139, 260);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 8;
 			this.pictureBox1.TabStop = false;
@@ -80,32 +84,36 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(215, 29);
+			this.label2.Location = new System.Drawing.Point(161, 24);
+			this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(35, 16);
+			this.label2.Size = new System.Drawing.Size(28, 13);
 			this.label2.TabIndex = 7;
 			this.label2.Text = "Opis";
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(215, 127);
+			this.label1.Location = new System.Drawing.Point(161, 103);
+			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(51, 16);
+			this.label1.Size = new System.Drawing.Size(42, 13);
 			this.label1.TabIndex = 6;
 			this.label1.Text = "Autorzy";
 			// 
 			// OProgramie
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(619, 364);
+			this.ClientSize = new System.Drawing.Size(464, 296);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Name = "OProgramie";
 			this.Text = "OProgramie";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

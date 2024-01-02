@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interpolator));
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.IsCorrectButton = new System.Windows.Forms.Button();
@@ -77,7 +78,7 @@
 			// IsCorrectButton
 			// 
 			this.IsCorrectButton.Location = new System.Drawing.Point(378, 226);
-			this.IsCorrectButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.IsCorrectButton.Margin = new System.Windows.Forms.Padding(2);
 			this.IsCorrectButton.Name = "IsCorrectButton";
 			this.IsCorrectButton.Size = new System.Drawing.Size(56, 28);
 			this.IsCorrectButton.TabIndex = 36;
@@ -88,7 +89,7 @@
 			// zeroPlaceTextBox
 			// 
 			this.zeroPlaceTextBox.Location = new System.Drawing.Point(210, 231);
-			this.zeroPlaceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.zeroPlaceTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.zeroPlaceTextBox.Name = "zeroPlaceTextBox";
 			this.zeroPlaceTextBox.ReadOnly = true;
 			this.zeroPlaceTextBox.Size = new System.Drawing.Size(87, 20);
@@ -107,7 +108,7 @@
 			// resetButton
 			// 
 			this.resetButton.Location = new System.Drawing.Point(438, 226);
-			this.resetButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.resetButton.Margin = new System.Windows.Forms.Padding(2);
 			this.resetButton.Name = "resetButton";
 			this.resetButton.Size = new System.Drawing.Size(56, 28);
 			this.resetButton.TabIndex = 33;
@@ -119,7 +120,7 @@
 			// 
 			this.iterationsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.iterationsTextBox.Location = new System.Drawing.Point(210, 194);
-			this.iterationsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.iterationsTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.iterationsTextBox.Name = "iterationsTextBox";
 			this.iterationsTextBox.Size = new System.Drawing.Size(87, 20);
 			this.iterationsTextBox.TabIndex = 32;
@@ -129,7 +130,7 @@
 			// 
 			this.deltaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.deltaTextBox.Location = new System.Drawing.Point(210, 159);
-			this.deltaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.deltaTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.deltaTextBox.Name = "deltaTextBox";
 			this.deltaTextBox.Size = new System.Drawing.Size(87, 20);
 			this.deltaTextBox.TabIndex = 31;
@@ -158,7 +159,7 @@
 			// calculateButton
 			// 
 			this.calculateButton.Location = new System.Drawing.Point(318, 226);
-			this.calculateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.calculateButton.Margin = new System.Windows.Forms.Padding(2);
 			this.calculateButton.Name = "calculateButton";
 			this.calculateButton.Size = new System.Drawing.Size(56, 28);
 			this.calculateButton.TabIndex = 28;
@@ -180,7 +181,7 @@
 			// 
 			this.epsilonTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.epsilonTextBox.Location = new System.Drawing.Point(210, 125);
-			this.epsilonTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.epsilonTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.epsilonTextBox.Name = "epsilonTextBox";
 			this.epsilonTextBox.Size = new System.Drawing.Size(87, 20);
 			this.epsilonTextBox.TabIndex = 26;
@@ -189,7 +190,7 @@
 			// pointXTextBox
 			// 
 			this.pointXTextBox.Location = new System.Drawing.Point(210, 89);
-			this.pointXTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pointXTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.pointXTextBox.Name = "pointXTextBox";
 			this.pointXTextBox.Size = new System.Drawing.Size(87, 20);
 			this.pointXTextBox.TabIndex = 25;
@@ -217,7 +218,7 @@
 			// parametersTextBox
 			// 
 			this.parametersTextBox.Location = new System.Drawing.Point(210, 51);
-			this.parametersTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.parametersTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.parametersTextBox.Name = "parametersTextBox";
 			this.parametersTextBox.Size = new System.Drawing.Size(87, 20);
 			this.parametersTextBox.TabIndex = 22;
@@ -225,7 +226,7 @@
 			// saveButton
 			// 
 			this.saveButton.Location = new System.Drawing.Point(353, 653);
-			this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.saveButton.Margin = new System.Windows.Forms.Padding(2);
 			this.saveButton.Name = "saveButton";
 			this.saveButton.Size = new System.Drawing.Size(67, 44);
 			this.saveButton.TabIndex = 40;
@@ -236,7 +237,7 @@
 			// logRichTextBox
 			// 
 			this.logRichTextBox.Location = new System.Drawing.Point(10, 268);
-			this.logRichTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.logRichTextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.logRichTextBox.Name = "logRichTextBox";
 			this.logRichTextBox.Size = new System.Drawing.Size(484, 381);
 			this.logRichTextBox.TabIndex = 39;
@@ -302,8 +303,9 @@
 			this.Controls.Add(this.labelPodajWielomian);
 			this.Controls.Add(this.parametersTextBox);
 			this.Controls.Add(this.menuStrip1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip1;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "Interpolator";
 			this.Text = "Interpolator";
 			this.menuStrip1.ResumeLayout(false);

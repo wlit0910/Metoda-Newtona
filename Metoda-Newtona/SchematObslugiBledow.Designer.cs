@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SchematObslugiBledow));
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
@@ -53,10 +54,9 @@
 			// 
 			this.label10.AutoSize = true;
 			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-			this.label10.Location = new System.Drawing.Point(400, 136);
-			this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label10.Location = new System.Drawing.Point(300, 110);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(38, 39);
+			this.label10.Size = new System.Drawing.Size(30, 31);
 			this.label10.TabIndex = 68;
 			this.label10.Text = "↙";
 			// 
@@ -64,20 +64,18 @@
 			// 
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-			this.label9.Location = new System.Drawing.Point(400, 68);
-			this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label9.Location = new System.Drawing.Point(300, 55);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(38, 39);
+			this.label9.Size = new System.Drawing.Size(30, 31);
 			this.label9.TabIndex = 67;
 			this.label9.Text = "↖";
 			// 
 			// label11
 			// 
 			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(449, 116);
-			this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label11.Location = new System.Drawing.Point(337, 94);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(259, 16);
+			this.label11.Size = new System.Drawing.Size(206, 13);
 			this.label11.TabIndex = 66;
 			this.label11.Text = "separatorem dziesiętnym jest przecinek \",\"";
 			// 
@@ -85,10 +83,9 @@
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-			this.label8.Location = new System.Drawing.Point(400, 101);
-			this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label8.Location = new System.Drawing.Point(300, 82);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(42, 39);
+			this.label8.Size = new System.Drawing.Size(34, 31);
 			this.label8.TabIndex = 65;
 			this.label8.Text = "🠔";
 			// 
@@ -96,20 +93,18 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-			this.label6.Location = new System.Drawing.Point(400, 183);
-			this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label6.Location = new System.Drawing.Point(300, 149);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(42, 39);
+			this.label6.Size = new System.Drawing.Size(34, 31);
 			this.label6.TabIndex = 64;
 			this.label6.Text = "🠔";
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(449, 201);
-			this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label7.Location = new System.Drawing.Point(337, 163);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(236, 16);
+			this.label7.Size = new System.Drawing.Size(188, 13);
 			this.label7.TabIndex = 63;
 			this.label7.Text = "liczba iteracji musi być liczbą naturalną";
 			// 
@@ -117,31 +112,29 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-			this.label5.Location = new System.Drawing.Point(400, 7);
-			this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label5.Location = new System.Drawing.Point(300, 6);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(42, 39);
+			this.label5.Size = new System.Drawing.Size(34, 31);
 			this.label5.TabIndex = 62;
 			this.label5.Text = "🠔";
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(449, 25);
-			this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label4.Location = new System.Drawing.Point(337, 20);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(401, 16);
+			this.label4.Size = new System.Drawing.Size(316, 13);
 			this.label4.TabIndex = 61;
 			this.label4.Text = "separatorem między współczynnikami wielomianów są średniki \";\"";
 			// 
 			// parametersTextBox
 			// 
 			this.parametersTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.parametersTextBox.Location = new System.Drawing.Point(277, 21);
-			this.parametersTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.parametersTextBox.Location = new System.Drawing.Point(208, 17);
+			this.parametersTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.parametersTextBox.Name = "parametersTextBox";
 			this.parametersTextBox.ReadOnly = true;
-			this.parametersTextBox.Size = new System.Drawing.Size(115, 22);
+			this.parametersTextBox.Size = new System.Drawing.Size(87, 20);
 			this.parametersTextBox.TabIndex = 51;
 			this.parametersTextBox.Text = "1;2;3";
 			this.parametersTextBox.WordWrap = false;
@@ -149,11 +142,11 @@
 			// pointXTextBox
 			// 
 			this.pointXTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.pointXTextBox.Location = new System.Drawing.Point(277, 68);
-			this.pointXTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.pointXTextBox.Location = new System.Drawing.Point(208, 55);
+			this.pointXTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.pointXTextBox.Name = "pointXTextBox";
 			this.pointXTextBox.ReadOnly = true;
-			this.pointXTextBox.Size = new System.Drawing.Size(115, 22);
+			this.pointXTextBox.Size = new System.Drawing.Size(87, 20);
 			this.pointXTextBox.TabIndex = 54;
 			this.pointXTextBox.Text = "-5";
 			this.pointXTextBox.WordWrap = false;
@@ -162,11 +155,11 @@
 			// 
 			this.iterationsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.iterationsTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.iterationsTextBox.Location = new System.Drawing.Point(277, 197);
-			this.iterationsTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.iterationsTextBox.Location = new System.Drawing.Point(208, 160);
+			this.iterationsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.iterationsTextBox.Name = "iterationsTextBox";
 			this.iterationsTextBox.ReadOnly = true;
-			this.iterationsTextBox.Size = new System.Drawing.Size(115, 22);
+			this.iterationsTextBox.Size = new System.Drawing.Size(87, 20);
 			this.iterationsTextBox.TabIndex = 60;
 			this.iterationsTextBox.Text = "100";
 			this.iterationsTextBox.WordWrap = false;
@@ -175,11 +168,11 @@
 			// 
 			this.epsilonTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.epsilonTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.epsilonTextBox.Location = new System.Drawing.Point(277, 112);
-			this.epsilonTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.epsilonTextBox.Location = new System.Drawing.Point(208, 91);
+			this.epsilonTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.epsilonTextBox.Name = "epsilonTextBox";
 			this.epsilonTextBox.ReadOnly = true;
-			this.epsilonTextBox.Size = new System.Drawing.Size(115, 22);
+			this.epsilonTextBox.Size = new System.Drawing.Size(87, 20);
 			this.epsilonTextBox.TabIndex = 55;
 			this.epsilonTextBox.Text = "0,000001";
 			this.epsilonTextBox.WordWrap = false;
@@ -187,9 +180,10 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(75, 205);
+			this.label3.Location = new System.Drawing.Point(56, 167);
+			this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(167, 16);
+			this.label3.Size = new System.Drawing.Size(132, 13);
 			this.label3.TabIndex = 58;
 			this.label3.Text = "Maksymalna liczba iteracji:";
 			// 
@@ -197,11 +191,11 @@
 			// 
 			this.deltaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.deltaTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.deltaTextBox.Location = new System.Drawing.Point(277, 154);
-			this.deltaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.deltaTextBox.Location = new System.Drawing.Point(208, 125);
+			this.deltaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.deltaTextBox.Name = "deltaTextBox";
 			this.deltaTextBox.ReadOnly = true;
-			this.deltaTextBox.Size = new System.Drawing.Size(115, 22);
+			this.deltaTextBox.Size = new System.Drawing.Size(87, 20);
 			this.deltaTextBox.TabIndex = 59;
 			this.deltaTextBox.Text = "0,000001";
 			this.deltaTextBox.WordWrap = false;
@@ -209,46 +203,49 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(7, 163);
+			this.label2.Location = new System.Drawing.Point(5, 132);
+			this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(236, 16);
+			this.label2.Size = new System.Drawing.Size(189, 13);
 			this.label2.TabIndex = 57;
 			this.label2.Text = "Dokładność wyznaczania pierwiastka:";
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(33, 120);
+			this.label1.Location = new System.Drawing.Point(25, 98);
+			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(208, 16);
+			this.label1.Size = new System.Drawing.Size(166, 13);
 			this.label1.TabIndex = 56;
 			this.label1.Text = "Dokładność porównania z zerem:";
 			// 
 			// label1PodajPunktStartowy
 			// 
 			this.label1PodajPunktStartowy.AutoSize = true;
-			this.label1PodajPunktStartowy.Location = new System.Drawing.Point(89, 72);
+			this.label1PodajPunktStartowy.Location = new System.Drawing.Point(67, 58);
+			this.label1PodajPunktStartowy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label1PodajPunktStartowy.Name = "label1PodajPunktStartowy";
-			this.label1PodajPunktStartowy.Size = new System.Drawing.Size(149, 16);
+			this.label1PodajPunktStartowy.Size = new System.Drawing.Size(123, 13);
 			this.label1PodajPunktStartowy.TabIndex = 53;
 			this.label1PodajPunktStartowy.Text = "Podaj punkt startowy x0:";
 			// 
 			// labelPodajWielomian
 			// 
 			this.labelPodajWielomian.AutoSize = true;
-			this.labelPodajWielomian.Location = new System.Drawing.Point(153, 25);
+			this.labelPodajWielomian.Location = new System.Drawing.Point(115, 20);
+			this.labelPodajWielomian.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.labelPodajWielomian.Name = "labelPodajWielomian";
-			this.labelPodajWielomian.Size = new System.Drawing.Size(91, 16);
+			this.labelPodajWielomian.Size = new System.Drawing.Size(75, 13);
 			this.labelPodajWielomian.TabIndex = 52;
 			this.labelPodajWielomian.Text = "Podaj funkcje:";
 			// 
 			// OkButton
 			// 
 			this.OkButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.OkButton.Location = new System.Drawing.Point(620, 250);
-			this.OkButton.Margin = new System.Windows.Forms.Padding(4);
+			this.OkButton.Location = new System.Drawing.Point(465, 203);
 			this.OkButton.Name = "OkButton";
-			this.OkButton.Size = new System.Drawing.Size(100, 28);
+			this.OkButton.Size = new System.Drawing.Size(75, 23);
 			this.OkButton.TabIndex = 69;
 			this.OkButton.Text = "OK";
 			this.OkButton.UseVisualStyleBackColor = true;
@@ -256,9 +253,9 @@
 			// 
 			// SchematObslugiBledow
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(863, 294);
+			this.ClientSize = new System.Drawing.Size(647, 239);
 			this.Controls.Add(this.OkButton);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label9);
@@ -278,6 +275,8 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.label1PodajPunktStartowy);
 			this.Controls.Add(this.labelPodajWielomian);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Name = "SchematObslugiBledow";
 			this.Text = "SchematObslugiBledow";
 			this.ResumeLayout(false);
