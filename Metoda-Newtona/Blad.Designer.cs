@@ -56,11 +56,11 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label1.ForeColor = System.Drawing.Color.Red;
-			this.label1.Location = new System.Drawing.Point(10, 18);
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.label1.ForeColor = System.Drawing.Color.Firebrick;
+			this.label1.Location = new System.Drawing.Point(7, 18);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(91, 13);
+			this.label1.Size = new System.Drawing.Size(109, 17);
 			this.label1.TabIndex = 13;
 			this.label1.Text = "Wystąpił błąd!";
 			// 
@@ -97,7 +97,7 @@
 			this.Controls.Add(this.OkButton);
 			this.Controls.Add(this.SchemeButton);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.MaximizeBox = false;
 			this.Name = "Blad";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

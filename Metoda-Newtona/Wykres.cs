@@ -18,29 +18,36 @@ namespace Metoda_Newtona
 		public Wykres()
 		{
 			InitializeComponent();
-			
-			// try catch
+			try	{
+				ResetChart();
 
-			
-			ResetChart();
+				chart1.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+				chart1.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
+				chart1.MouseWheel += Chart1_MouseWheel;
 
-			chart1.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
-			chart1.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
-			chart1.MouseWheel += Chart1_MouseWheel;
+				Title title = chart1.Titles.Add("Interpolacja metodą stycznych (Newtona)");
+				title.Font = new Font("Arial", 15, FontStyle.Bold);
 
-			Title title = chart1.Titles.Add("Interpolacja metodą stycznych (Newtona)");
-			title.Font = new Font("Arial", 15, FontStyle.Bold);
-			chart1.ChartAreas[0].AxisX.Title = "Oś X";
-			chart1.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 15, FontStyle.Bold);
-			chart1.ChartAreas[0].AxisY.Title = "Oś Y";
-			chart1.ChartAreas[0].AxisY.TitleFont = new Font("Arial", 15, FontStyle.Bold);
+				chart1.ChartAreas[0].AxisX.Title = "Oś X";
+				chart1.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 15, FontStyle.Bold);
+				chart1.ChartAreas[0].AxisY.Title = "Oś Y";
+				chart1.ChartAreas[0].AxisY.TitleFont = new Font("Arial", 15, FontStyle.Bold);
+			}
+			catch {
+				Blad blad = new Blad();
+				blad.Show();
+			}		
 		}
 		public void DrawFunctionChart(Series series)
 		{
-			// try catch
-
-			series.ChartType = SeriesChartType.Spline;
-			chart1.Series.Add(series);
+			try {
+				series.ChartType = SeriesChartType.Spline;
+				chart1.Series.Add(series);
+			}
+			catch {
+				Blad blad = new Blad();
+				blad.Show();
+			}
 		}
 		public void DrawPoint(decimal pointX, decimal pointY)
 		{
@@ -48,20 +55,25 @@ namespace Metoda_Newtona
 		}
 		public void DrawZeroPlace(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
 		{
-			// try catch
+			try{
+				Series series = new Series("Miejsce zerowe");
+				series.Points.AddXY(pointX, pointY);
+				series.ChartType = SeriesChartType.Point;
 
-			Series series = new Series("Miejsce zerowe");
-			series.Points.AddXY(pointX, pointY);
-			series.ChartType = SeriesChartType.Point;
+				series.Color = Color.Firebrick;
+				series.MarkerSize = 10;
+				chart1.Series.Add(series);
+			}
+			catch {
+				Blad blad = new Blad();
+				blad.Show();
+			}
 
-			series.Color = Color.Firebrick;
-			series.MarkerSize = 10;
-			chart1.Series.Add(series);
+
 		}
 		private void Chart1_MouseWheel(object sender, MouseEventArgs e)
 		{
-			try
-			{
+			try	{
 				var chart = (Chart)sender;
 				var xAxis = chart.ChartAreas[0].AxisX;
 				var yAxis = chart.ChartAreas[0].AxisY;
@@ -94,8 +106,7 @@ namespace Metoda_Newtona
 		public void ResetChart()
 		{
 
-			try
-			{
+			try	{
 
 				//foreach (var series in chart1.Series)
 				//{
@@ -112,8 +123,7 @@ namespace Metoda_Newtona
 				chart1.Series.Add(potentialZeroPlaces);
 
 			}
-			catch
-			{
+			catch {
 				Blad blad = new Blad();
 				blad.Show();
 			}
