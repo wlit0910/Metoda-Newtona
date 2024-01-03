@@ -136,5 +136,8 @@
   <ItemGroup>
     <None Include="Img\mathBackground.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\tangent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

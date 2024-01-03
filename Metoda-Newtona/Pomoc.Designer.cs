@@ -245,13 +245,13 @@
 			this.OkButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.OkButton.Location = new System.Drawing.Point(465, 203);
 			this.OkButton.Name = "OkButton";
-			this.OkButton.Size = new System.Drawing.Size(75, 23);
+			this.OkButton.Size = new System.Drawing.Size(78, 24);
 			this.OkButton.TabIndex = 69;
-			this.OkButton.Text = "OK";
+			this.OkButton.Text = "Rozumiem";
 			this.OkButton.UseVisualStyleBackColor = true;
 			this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
 			// 
-			// SchematObslugiBledow
+			// Pomoc
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -280,7 +280,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.MaximizeBox = false;
-			this.Name = "SchematObslugiBledow";
+			this.Name = "Pomoc";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Pomoc";
 			this.ResumeLayout(false);
