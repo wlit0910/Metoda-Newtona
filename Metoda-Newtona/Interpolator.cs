@@ -57,7 +57,7 @@ namespace Metoda_Newtona
 		}
 		private void calculateButton_Click(object sender, EventArgs e) // OBLICZ
 		{
-			try //obsługa błędów wprowadzanych danych
+			try //obsługa błędów wprowadzanych danych parserami
 			{
 				wykres.ResetChart();
 				decimal epsilon = Decimal.Parse(epsilonTextBox.Text);
@@ -84,19 +84,20 @@ namespace Metoda_Newtona
 		public decimal CalculateZeroPlace(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations) // Liczenie miejsca zerowego
 		{
 			// try catch
+			// porobic AppendText zamiast +=
 
-			logRichTextBox.SelectionFont = new Font(logRichTextBox.Font, FontStyle.Bold);
+
+			
 			logRichTextBox.Text += "Rozpoczęto obliczenia \n";
+			
 			logRichTextBox.Text += "Funkcja wejściowa " + String.Join(";", functionParameters) + "\n";
 			logRichTextBox.Text += "Punkt startowy " + x0 + "\n";
 
 			decimal x1 = x0 - 1;
 			decimal fX0 = CalculateFunctionValueAtX(functionParameters, x0);
 
-			logRichTextBox.SelectionFont = new Font(logRichTextBox.Font, FontStyle.Regular);
-
+			
 			logRichTextBox.Text += "Wartość funkcji w punkcie startowym " + fX0 + "\n";
-
 			logRichTextBox.Text += "Dokładność porównania z zerem " + epsilon + "\n";
 			logRichTextBox.Text += "Dokładność wyznaczania pierwiastka " + delta + "\n";
 			logRichTextBox.Text += "Maksymalna wartość iteracji " + iterations + "\n";
@@ -105,22 +106,28 @@ namespace Metoda_Newtona
 
 			while (iterations > 0 && Math.Abs(x1 - x0) > epsilon && Math.Abs(fX0) > delta) //wykonuj dopóki liczba iteracji jest większa od 0 i wartość bezwzględna z x1 - x0 jest większa od epsilon i wartość bezwzględna z funkcji w punkcie x0 jest większa od delta
 			{
-				logRichTextBox.SelectionFont = new Font(logRichTextBox.Font, FontStyle.Bold);
+				
+
 				logRichTextBox.Text += "\n";
 				numberOfIteration += 1;
-				logRichTextBox.AppendText("Numer iteracji " + numberOfIteration + "\n");
+				logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Bold);
+
+				logRichTextBox.AppendText("Numer iteracji: " + numberOfIteration + "\n");
 				//logRichTextBox.Rtf = @"{\rtf1\ansi This is in \b bold\b0.}";
-			
+
 
 				decimal[] derivativeParamters = CalculateDerivative(functionParameters);
 				decimal fX1 = CalculateFunctionValueAtX(derivativeParamters, x0);
+
+				
+				logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Regular);
 				logRichTextBox.Text += "Pochodna funkcji w potencjalnym miejscu zerowym " + fX1 + "\n";
 
 				decimal[] tangentParameters = CalculateTangent(derivativeParamters, x0, fX0);
 
 				if (functionParameters.Length > 1) // nie wyliczymy stycznej dla stałej tak żeby przecięła oś X
 				{
-					Series series = PrepareTangentSeries(tangentParameters, x0, "Styczna " + numberOfIteration);
+					Series series = PrepareTangentSeries(tangentParameters, x0, "Styczna nr " + numberOfIteration);
 					wykres.DrawFunctionChart(series);
 				}
 
@@ -136,14 +143,18 @@ namespace Metoda_Newtona
 				x1 = x0;
 				x0 = x0 - fX0 / fX1;
 
+
 				logRichTextBox.Text += "Potencjalne miejsce zerowe " + x0 + "\n";
 				fX0 = CalculateFunctionValueAtX(functionParameters, x0);
+
 
 				logRichTextBox.Text += "Wartość funkcji w potencjalnym miejscu zerowym " + fX0 + "\n";
 				wykres.DrawPoint(x0, fX0);
 
 				iterations = iterations - 1;
-				logRichTextBox.Text += "Pozostało iteracji " + iterations + "\n";
+
+				// wywalic
+				logRichTextBox.Text += "Pozostało jeszcze iteracji: " + iterations + "\n";
 			}
 
 			if (iterations == 0) //sprawdzenie czy osiągnięto maksymalną liczbę iteracji
@@ -153,8 +164,16 @@ namespace Metoda_Newtona
 			}
 
 			logRichTextBox.Text += "\n";
+
 			logRichTextBox.Text += "Zakończono obliczenia " + "\n";
-			logRichTextBox.Text += "Miejsce zerowe to " + x0 + "\n";
+			logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Bold);
+
+			logRichTextBox.AppendText("Miejsce zerowe to " + x0 + "\n"); 
+			logRichTextBox.AppendText("Wartość funkcji w tym miejscu zerowym: " + fX0.ToString() + "\n");
+			logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Regular);
+
+			logRichTextBox.AppendText("Numer iteracji, w której znaleziono miejsce zerowe: " + numberOfIteration.ToString() + "\n");
+
 			wykres.DrawZeroPlace(x0, fX0);
 
 			return x0;

@@ -80,8 +80,15 @@ namespace Metoda_Newtona
 
 				if (e.Delta < 0) // Scrolled down.
 				{
-					xAxis.ScaleView.ZoomReset();
-					yAxis.ScaleView.ZoomReset();
+					try{
+						xAxis.ScaleView.ZoomReset();
+						yAxis.ScaleView.ZoomReset();
+					}
+					catch{
+						Blad blad = new Blad();
+						blad.Show();
+					}
+
 				}
 				else if (e.Delta > 0) // Scrolled up.
 				{
