@@ -30,12 +30,14 @@ namespace Metoda_Newtona
 		 * @param pointX punkt dla którego będziemy wyznaczać wartość funkcji
 		 * @return wartość funkcji w zadanym punkcie
 		 */
-		public decimal CalculateFunctionValueAtX(decimal[] functionParameters, decimal pointX)
+		public decimal CalculateFunctionValueAtX(decimal[] functionParameters, decimal pointX) // Wyliczamy po kolei wartości funkcji f(x) w punkcie x1, x2, x3, x4 ......  i dodajemy je do siebie
 		{
 			decimal result = 0.0m;
 			for (int i = 0; i < functionParameters.Length; i++)
 			{
+				//		x1,x2,x3,x4....		*						x0 do potęgi takiej, ile jest wpółczynników wielomianu, iteracyjnie o 1 mniej
 				result += functionParameters[i] * (decimal)Math.Pow((double)pointX, functionParameters.Length - 1 - i);
+				
 			}
 			return result;
 		}
@@ -49,7 +51,7 @@ namespace Metoda_Newtona
 			 * @return wartość wartość pochodnej funkcji
 			 */
 
-		public decimal[] CalculateDerivative(decimal[] functionParameters)
+		public decimal[] CalculateDerivative(decimal[] functionParameters) // Wyznaczenie tablicy z wartościami pochodnych funkcji w punktach x1, x2, x3, x4, ......
 		{
 			decimal[] result = new decimal[functionParameters.Length - 1];
 
@@ -96,7 +98,9 @@ namespace Metoda_Newtona
 				int iterations = Int32.Parse(iterationsTextBox.Text);
 				decimal pointX = Decimal.Parse(pointXTextBox.Text); // punkt startowy X0
 
-				decimal[] functionParameters = Array.ConvertAll(parametersTextBox.Text.Split(';'), Decimal.Parse); // tablica współczynników wielomianu
+				//wykres.PunktPocz(pointX); // new ------------------------
+
+				decimal[] functionParameters = Array.ConvertAll(parametersTextBox.Text.Split(';'), Decimal.Parse); // wpisanie współczynników wielomianów do tablicy współczynników wielomianu
 
 				decimal zeroPlace = CalculateZeroPlace(functionParameters, pointX, epsilon, delta, iterations); // funkcja obliczająca miejsce zerowe
 
@@ -131,7 +135,7 @@ namespace Metoda_Newtona
 
 		public decimal CalculateZeroPlace(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations) // Liczenie miejsca zerowego
 		{
-			// try catch
+			
 			// porobic AppendText zamiast +=
 
 
@@ -141,11 +145,16 @@ namespace Metoda_Newtona
 			logRichTextBox.Text += "Funkcja wejściowa " + String.Join(";", functionParameters) + "\n";
 			logRichTextBox.Text += "Punkt startowy " + x0 + "\n";
 
+
 			decimal x1 = x0 - 1; 
 
+			// wyliczona wartość funkcji w punkcie x0
 			decimal fX0 = CalculateFunctionValueAtX(functionParameters, x0);
 
+
 			
+
+
 			logRichTextBox.Text += "Wartość funkcji w punkcie startowym " + fX0 + "\n";
 			logRichTextBox.Text += "Dokładność porównania z zerem " + epsilon + "\n";
 			logRichTextBox.Text += "Dokładność wyznaczania pierwiastka " + delta + "\n";
@@ -164,14 +173,17 @@ namespace Metoda_Newtona
 				logRichTextBox.AppendText("Numer iteracji: " + numberOfIteration + "\n");
 				//logRichTextBox.Rtf = @"{\rtf1\ansi This is in \b bold\b0.}";
 
-
+				// Tutaj są parametry pochodnej
 				decimal[] derivativeParamters = CalculateDerivative(functionParameters);
+
+				// Pochodna funkcji w potencjalnym miejscu zerowym
 				decimal fX1 = CalculateFunctionValueAtX(derivativeParamters, x0);
 
 				
 				logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Regular);
 				logRichTextBox.Text += "Pochodna funkcji w potencjalnym miejscu zerowym " + fX1 + "\n";
 
+				// Parametry stycznej
 				decimal[] tangentParameters = CalculateTangent(derivativeParamters, x0, fX0);
 
 				if (functionParameters.Length > 1) // nie wyliczymy stycznej dla stałej tak żeby przecięła oś X
@@ -355,6 +367,7 @@ namespace Metoda_Newtona
 				series.Points.Add(new DataPoint((double)(startingPointX + 0.5m), (double)CalculateFunctionValueAtX(functionParameters, startingPointX + 0.5m)));
 				series.Points.Add(new DataPoint((double)(startingPointX), (double)CalculateFunctionValueAtX(functionParameters, startingPointX)));
 				series.Points.Add(new DataPoint((double)(startingPointX - 0.5m), (double)CalculateFunctionValueAtX(functionParameters, startingPointX - 0.5m)));
+				
 			}
 			return series;
 		}

@@ -52,7 +52,7 @@ namespace Metoda_Newtona
 		 * 
 		 * @param series seria danych do narysowania 
 		 */
-		public void DrawFunctionChart(Series series)
+		public void DrawFunctionChart(Series series) // dane z Interpolatora
 		{
 			try {
 				series.ChartType = SeriesChartType.Spline;
@@ -73,15 +73,27 @@ namespace Metoda_Newtona
 		public void DrawPoint(decimal pointX, decimal pointY)
 		{
 			potentialZeroPlaces.Points.AddXY(pointX, pointY);
+			//			potentialZeroPlaces.LegendText = "Punkt X0";
+			//potentialZeroPlaces.ChartType = SeriesChartType.Point;
 		}
 
+		//public void PunktPocz(decimal pointX)
+		//{
+		//	potentialZeroPlaces.Points.AddXY(pointX, 0);
+		//				potentialZeroPlaces.LegendText = "Punkt X0";
+		//	//potentialZeroPlaces.ChartType = SeriesChartType.Point;
+		//	potentialZeroPlaces.ChartType = SeriesChartType.Point;
+		//	potentialZeroPlaces.Color = Color.Red;
+		//	potentialZeroPlaces.MarkerSize = 10;
+		//}
 
-					/**
-			 * Metoda do rysowania miejsca zerowego
-			 * 
-			 * @param pointX współrzędna x miejsca zerowego
-			 * @param pointY współrzędna y miejsca zerowego
-			 */
+
+		/**
+ * Metoda do rysowania miejsca zerowego
+ * 
+ * @param pointX współrzędna x miejsca zerowego
+ * @param pointY współrzędna y miejsca zerowego
+ */
 		public void DrawZeroPlace(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
 		{
 			try{
