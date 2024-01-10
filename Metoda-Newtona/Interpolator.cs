@@ -15,6 +15,7 @@ namespace Metoda_Newtona
 	public partial class Interpolator : Form
 	{
 		private Wykres wykres;
+
 		public Interpolator()
 		{
 			InitializeComponent();
@@ -38,6 +39,8 @@ namespace Metoda_Newtona
 			}
 			return result;
 		}
+
+
 
 					/**
 			 * Metoda do wyznaczania pochodnej funkcji

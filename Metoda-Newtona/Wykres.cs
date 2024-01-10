@@ -15,6 +15,13 @@ namespace Metoda_Newtona
 	public partial class Wykres : Form
 	{
 		private Series potentialZeroPlaces;
+
+				/**
+		 * Konstruktor klasy 
+		 * Inicjuje serię danych dla potencjalnych miejsc zerowych 
+		 * Tworzy opis wykresu 
+		 */
+
 		public Wykres()
 		{
 			InitializeComponent();
@@ -38,6 +45,13 @@ namespace Metoda_Newtona
 				blad.Show();
 			}		
 		}
+
+
+				/**
+		 * Metoda do rysowania funkcji na wykresie
+		 * 
+		 * @param series seria danych do narysowania 
+		 */
 		public void DrawFunctionChart(Series series)
 		{
 			try {
@@ -49,10 +63,25 @@ namespace Metoda_Newtona
 				blad.Show();
 			}
 		}
+
+				/**
+		 * Metoda do rysowania potencjalnych miejsc zerowych
+		 * 
+		 * @param pointX współrzędna x kolejnego potencjalnego miejsca zerowego
+		 * @param pointY współrzędna y kolejnego potencjalnego miejsca zerowego
+		 */
 		public void DrawPoint(decimal pointX, decimal pointY)
 		{
 			potentialZeroPlaces.Points.AddXY(pointX, pointY);
 		}
+
+
+					/**
+			 * Metoda do rysowania miejsca zerowego
+			 * 
+			 * @param pointX współrzędna x miejsca zerowego
+			 * @param pointY współrzędna y miejsca zerowego
+			 */
 		public void DrawZeroPlace(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
 		{
 			try{
@@ -68,9 +97,14 @@ namespace Metoda_Newtona
 				Blad blad = new Blad();
 				blad.Show();
 			}
-
-
 		}
+
+				/**
+		 * Metoda, która umożliwia przybliżanie i oddalanie wykresu
+		 * 
+		 * Link: https://stackoverflow.com/questions/13584061/how-to-enable-zooming-in-microsoft-chart-control-by-using-mouse-wheel
+		 */
+
 		private void Chart1_MouseWheel(object sender, MouseEventArgs e)
 		{
 			try	{
