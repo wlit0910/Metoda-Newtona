@@ -21,6 +21,14 @@ namespace Metoda_Newtona
 			wykres = new Wykres();
 		}
 
+				/**
+		 * Metoda do wyliczania funkcji w punkcie
+		 * 
+		 * @param functionParameters tablica zawierająca parametry wielomianu
+		 * @param pointX punkt dla którego będziemy wyznaczać wartość funkcji
+		 * @return wartość funkcji w zadanym punkcie
+		 */
+
 		public decimal CalculateFunctionValueAtX(decimal[] functionParameters, decimal pointX)
 		{
 			decimal result = 0.0m;
@@ -31,6 +39,12 @@ namespace Metoda_Newtona
 			return result;
 		}
 
+					/**
+			 * Metoda do wyznaczania pochodnej funkcji
+			 * 
+			 * @param functionParameters tablica zawierająca parametry wielomianu
+			 * @return wartość wartość pochodnej funkcji
+			 */
 
 		public decimal[] CalculateDerivative(decimal[] functionParameters)
 		{
@@ -44,6 +58,14 @@ namespace Metoda_Newtona
 		}
 
 
+					/**
+			 * Metoda do wyznaczania stycznej 
+			 * 
+			 * @param derivativeFunctionParameters tablica zawierająca parametry pochodnej
+			 * @param pointX współrzędna x pochodnej
+			 * @param pointY współrzędna y pochodnej
+			 * @return wartość stycznej
+			 */
 		public decimal[] CalculateTangent(decimal[] derivativeFunctionParameters, decimal pointX, decimal pointY)
 		{
 			decimal[] result = new decimal[2];
@@ -55,6 +77,10 @@ namespace Metoda_Newtona
 
 			return result;
 		}
+
+
+
+
 		private void calculateButton_Click(object sender, EventArgs e) // OBLICZ
 		{
 			try //obsługa błędów wprowadzanych danych parserami
@@ -63,9 +89,12 @@ namespace Metoda_Newtona
 				decimal epsilon = Decimal.Parse(epsilonTextBox.Text);
 				decimal delta = Decimal.Parse(deltaTextBox.Text);
 				int iterations = Int32.Parse(iterationsTextBox.Text);
-				decimal[] functionParameters = Array.ConvertAll(parametersTextBox.Text.Split(';'), Decimal.Parse);
-				decimal pointX = Decimal.Parse(pointXTextBox.Text);
-				decimal zeroPlace = CalculateZeroPlace(functionParameters, pointX, epsilon, delta, iterations);
+				decimal pointX = Decimal.Parse(pointXTextBox.Text); // punkt startowy X0
+
+				decimal[] functionParameters = Array.ConvertAll(parametersTextBox.Text.Split(';'), Decimal.Parse); // tablica współczynników wielomianu
+
+				decimal zeroPlace = CalculateZeroPlace(functionParameters, pointX, epsilon, delta, iterations); // funkcja obliczająca miejsce zerowe
+
 				zeroPlaceTextBox.Text = zeroPlace.ToString();
 
 				Series functionChartSeries = PrepareChartSeries(functionParameters, pointX, "funkcja f(x)");
@@ -80,6 +109,17 @@ namespace Metoda_Newtona
 			}
 		}
 
+						/**
+				 * Metoda do wyznaczania miejsca zerowego
+				 * 
+				 * @param functionParameters tablica zawierająca parametry wielomianu
+				 * @param x0 punkt startowy
+				 * @param epsilon dokładność porównania z zerem
+				 * @param delta dokładność wyznaczania pierwiastka
+				 * @param iterations maksymalna wartość iteracji jaką program może wykonać
+				 * @return wartość miejsca zerowego
+				 */
+
 
 		public decimal CalculateZeroPlace(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations) // Liczenie miejsca zerowego
 		{
@@ -93,7 +133,8 @@ namespace Metoda_Newtona
 			logRichTextBox.Text += "Funkcja wejściowa " + String.Join(";", functionParameters) + "\n";
 			logRichTextBox.Text += "Punkt startowy " + x0 + "\n";
 
-			decimal x1 = x0 - 1;
+			decimal x1 = x0 - 1; 
+
 			decimal fX0 = CalculateFunctionValueAtX(functionParameters, x0);
 
 			
@@ -179,6 +220,16 @@ namespace Metoda_Newtona
 			return x0;
 		}
 
+
+		/**
+         * Metoda sprawdzająca czy miejsce zerowe jest poprawne zgodnie z zadaną dokładnością
+         * 
+         * @param functionParameters tablica zawierająca parametry wielomianu
+         * @param zeroPlace miejsce zerowe
+         * @param epsilon dokładność porównania z zerem
+         * @return poprawność miejsca zerowego
+         */
+
 		public bool IsResultCorrect(decimal[] functionParameters, decimal zeroPlace, decimal epsilon) // Sprawdź wynik - funkcja
 		{
 			// try catch
@@ -194,6 +245,11 @@ namespace Metoda_Newtona
 				return false;
 			}
 		}
+
+
+				/**
+		 * Metoda wywołana po kliknięciu przycisku Sprawdź
+		 */
 
 		private void IsCorrectButton_Click(object sender, EventArgs e) // Sprawdź wynik - przycisk
 		{
@@ -215,6 +271,14 @@ namespace Metoda_Newtona
 			
 		}
 
+
+				/**
+				 * Metoda
+				 * @param functionParameters tablica zawierająca parametry wielomianu
+				 * @param startingPointX punkt startowy
+				 * @param seriesName nazwa serii
+				 * @return seria danych do narysowania funkcji
+				 */
 		public Series PrepareChartSeries(decimal[] functionParameters, decimal startingPointX, string seriesName)
 		{
 			// try catch
@@ -234,6 +298,7 @@ namespace Metoda_Newtona
          * @param seriesName nazwa serii
          * @return seria danych dla stycznej
          */
+
 		public Series PrepareTangentSeries(decimal[] functionParameters, decimal startingPointX, string seriesName)
 		{
 			// try catch
