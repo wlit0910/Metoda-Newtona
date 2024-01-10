@@ -22,6 +22,7 @@ namespace Metoda_Newtona
 			wykres = new Wykres();
 		}
 
+
 				/**
 		 * Metoda do wyliczania funkcji w punkcie
 		 * 
@@ -29,7 +30,6 @@ namespace Metoda_Newtona
 		 * @param pointX punkt dla którego będziemy wyznaczać wartość funkcji
 		 * @return wartość funkcji w zadanym punkcie
 		 */
-
 		public decimal CalculateFunctionValueAtX(decimal[] functionParameters, decimal pointX)
 		{
 			decimal result = 0.0m;
@@ -59,6 +59,8 @@ namespace Metoda_Newtona
 			}
 			return result;
 		}
+
+
 
 
 					/**
@@ -112,6 +114,10 @@ namespace Metoda_Newtona
 			}
 		}
 
+
+
+
+
 						/**
 				 * Metoda do wyznaczania miejsca zerowego
 				 * 
@@ -122,7 +128,6 @@ namespace Metoda_Newtona
 				 * @param iterations maksymalna wartość iteracji jaką program może wykonać
 				 * @return wartość miejsca zerowego
 				 */
-
 
 		public decimal CalculateZeroPlace(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations) // Liczenie miejsca zerowego
 		{
@@ -224,6 +229,10 @@ namespace Metoda_Newtona
 		}
 
 
+
+
+
+
 		/**
          * Metoda sprawdzająca czy miejsce zerowe jest poprawne zgodnie z zadaną dokładnością
          * 
@@ -248,6 +257,9 @@ namespace Metoda_Newtona
 				return false;
 			}
 		}
+
+
+
 
 
 				/**
@@ -275,6 +287,9 @@ namespace Metoda_Newtona
 		}
 
 
+
+
+
 				/**
 				 * Metoda
 				 * @param functionParameters tablica zawierająca parametry wielomianu
@@ -293,6 +308,11 @@ namespace Metoda_Newtona
 			}
 			return series;
 		}
+
+
+
+
+
 
 		/**
          * Metoda do przygotowania serii danych do rysowania stycznej w punkcie
@@ -341,54 +361,67 @@ namespace Metoda_Newtona
 
 		private void resetButton_Click(object sender, EventArgs e)
 		{
-			// try catch
+			try
+			{
+				wykres.Close();
+				parametersTextBox.Clear();
+				pointXTextBox.Clear();
+				epsilonTextBox.Text = "0,000001";
+				deltaTextBox.Text = "0,000001";
+				iterationsTextBox.Text = "100";
+				zeroPlaceTextBox.Clear();
+				logRichTextBox.Clear();
+				this.Refresh();
+				wykres.Refresh();
 
-			wykres.Close();
-			parametersTextBox.Clear();
-			pointXTextBox.Clear();
-			epsilonTextBox.Text = "0,000001";
-			deltaTextBox.Text = "0,000001";
-			iterationsTextBox.Text = "100";
-			zeroPlaceTextBox.Clear();
-			logRichTextBox.Clear();
-			this.Refresh();
-			wykres.Refresh();
-
-			//wykres.ResetChart();
+				//wykres.ResetChart();
+			}
+			catch
+			{
+				Blad blad = new Blad();
+				blad.Show();
+			}
 		}
 
-		private void saveButton_Click(object sender, EventArgs e) // Zapisz dane do pliku
+		private void saveButton_Click(object sender, EventArgs e) // Zapisz dane z richTextBox do pliku .txt
 		{
-			// try catch
-
-			MemoryStream userInput = new MemoryStream();
-
-			userInput.Position = 0;
-
-			logRichTextBox.SaveFile(userInput, RichTextBoxStreamType.PlainText);
-			userInput.WriteByte(13);
-
-			SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-			saveFileDialog.CreatePrompt = true;
-			saveFileDialog.OverwritePrompt = true;
-
-			saveFileDialog.FileName = "MetodaNewtona";
-			saveFileDialog.DefaultExt = "txt";
-			saveFileDialog.Filter =
-				"Text files (*.txt)|*.txt|All files (*.*)|*.*";
-			saveFileDialog.InitialDirectory =
-				Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-			DialogResult result = saveFileDialog.ShowDialog();
-			Stream fileStream;
-
-			if (result == DialogResult.OK)
+			try
 			{
-				fileStream = saveFileDialog.OpenFile();
-				userInput.Position = 0;
-				userInput.WriteTo(fileStream);
-				fileStream.Close();
+				MemoryStream ms = new MemoryStream();
+
+				ms.Position = 0;
+
+				logRichTextBox.SaveFile(ms, RichTextBoxStreamType.PlainText);
+				ms.WriteByte(13);
+
+				SaveFileDialog svd = new SaveFileDialog();
+
+				svd.CreatePrompt = true;
+				svd.OverwritePrompt = true;
+
+				svd.FileName = "Dane-z-Interpolatora";
+				svd.DefaultExt = "txt";
+				svd.Filter =
+					"Text files (*.txt)|*.txt|All files (*.*)|*.*";
+				svd.InitialDirectory =
+					Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+				DialogResult result = svd.ShowDialog();
+
+				Stream fileStream;
+
+				if (result == DialogResult.OK)
+				{
+					fileStream = svd.OpenFile();
+					ms.Position = 0;
+					ms.WriteTo(fileStream);
+					fileStream.Close();
+				}
+			}
+			catch
+			{
+				Blad blad = new Blad();
+				blad.Show();
 			}
 		}
 
