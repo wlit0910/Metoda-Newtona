@@ -258,7 +258,7 @@ namespace Metoda_Newtona
 		{
 			// try catch
 
-			decimal result = CalculateFunctionValueAtX(functionParameters, zeroPlace);
+			decimal result = CalculateFunctionValueAtX(functionParameters, zeroPlace);  // czy bezwzględna wartość funkcji w miejscu zerowym jest mniejsza od wartości epsilon
 
 			if (Math.Abs(result) < epsilon)
 			{
@@ -372,7 +372,7 @@ namespace Metoda_Newtona
 			return series;
 		}
 
-		private void resetButton_Click(object sender, EventArgs e)
+		private void resetButton_Click(object sender, EventArgs e) // resetowanie danych w textboxach
 		{
 			try
 			{
