@@ -108,9 +108,9 @@
 			this.label4.Location = new System.Drawing.Point(324, 236);
 			this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(83, 13);
+			this.label4.Size = new System.Drawing.Size(132, 13);
 			this.label4.TabIndex = 34;
-			this.label4.Text = "Miejsce zerowe:";
+			this.label4.Text = "Obliczone miejsce zerowe:";
 			// 
 			// resetButton
 			// 
@@ -212,9 +212,9 @@
 			this.label1PodajPunktStartowy.Location = new System.Drawing.Point(324, 94);
 			this.label1PodajPunktStartowy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label1PodajPunktStartowy.Name = "label1PodajPunktStartowy";
-			this.label1PodajPunktStartowy.Size = new System.Drawing.Size(123, 13);
+			this.label1PodajPunktStartowy.Size = new System.Drawing.Size(96, 13);
 			this.label1PodajPunktStartowy.TabIndex = 24;
-			this.label1PodajPunktStartowy.Text = "Podaj punkt startowy x0:";
+			this.label1PodajPunktStartowy.Text = "Punkt startowy X0:";
 			// 
 			// labelPodajWielomian
 			// 
@@ -222,9 +222,9 @@
 			this.labelPodajWielomian.Location = new System.Drawing.Point(324, 43);
 			this.labelPodajWielomian.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.labelPodajWielomian.Name = "labelPodajWielomian";
-			this.labelPodajWielomian.Size = new System.Drawing.Size(110, 26);
+			this.labelPodajWielomian.Size = new System.Drawing.Size(116, 26);
 			this.labelPodajWielomian.TabIndex = 23;
-			this.labelPodajWielomian.Text = "Podaj wzór funkcji\r\nw postaci wielomianu:";
+			this.labelPodajWielomian.Text = "Wzór funkcji\r\n(w postaci wielomianu):";
 			// 
 			// parametersTextBox
 			// 

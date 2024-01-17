@@ -138,12 +138,9 @@ namespace Metoda_Newtona
 			
 			// porobic AppendText zamiast +=
 
-
 			
-			logRichTextBox.Text += "Rozpoczęto obliczenia \n";
-			
-			logRichTextBox.Text += "Funkcja wejściowa " + String.Join(";", functionParameters) + "\n";
-			logRichTextBox.Text += "Punkt startowy " + x0 + "\n";
+			logRichTextBox.Text += "Wzór funkcji w postaci wielomianu: " + parametersTextBox.Text + "\n"; //String.Join(";", functionParameters
+			logRichTextBox.Text += "Punkt startowy X0: " + pointXTextBox.Text + "\n"; //x0
 
 
 			decimal x1 = x0 - 1; 
@@ -155,10 +152,10 @@ namespace Metoda_Newtona
 			
 
 
-			logRichTextBox.Text += "Wartość funkcji w punkcie startowym " + fX0 + "\n";
-			logRichTextBox.Text += "Dokładność porównania z zerem " + epsilon + "\n";
-			logRichTextBox.Text += "Dokładność wyznaczania pierwiastka " + delta + "\n";
-			logRichTextBox.Text += "Maksymalna wartość iteracji " + iterations + "\n";
+			logRichTextBox.Text += "Wartość funkcji w punkcie startowym wynosi: " + fX0 + "\n";
+			logRichTextBox.Text += "Dokładność porównania z zerem - epsilon: " + epsilon + "\n";
+			logRichTextBox.Text += "Dokładność wyznaczania pierwiastka - delta: " + delta + "\n";
+			logRichTextBox.Text += "Maksymalna wartość iteracji: " + iterations + "\n";
 
 			int numberOfIteration = 0;
 
