@@ -423,7 +423,7 @@
 			this.MaximizeBox = false;
 			this.Name = "Interpolator";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Interpolator";
+			this.Text = "Kalkulator miesca zerowego";
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

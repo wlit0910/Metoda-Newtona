@@ -195,8 +195,9 @@ namespace Metoda_Newtona
 				if (Math.Abs(fX1) < delta) //sprawdzenie czy wartość funkcji od bieżącego przybliżenia miejsca zerowego jest mniejsza od przyjętej wartości delty - KRYTERIUM STOPU
 				{
 					MessageBox.Show("Zły punkt startowy");
+					logRichTextBox.Text += "Wartość funkcji f(x), która uruchomiła kryterium stopu: "+fX1.ToString()+"\n";
 					logRichTextBox.Text += "Zły punkt startowy\n";
-					logRichTextBox.Text += "Zakończono obliczenia " + "\n";
+					logRichTextBox.Text += "Koniec obliczeń" + "\n";
 
 					return x0;
 				}
@@ -338,17 +339,20 @@ namespace Metoda_Newtona
          * @return seria danych dla stycznej
          */
 
-		public Series PrepareTangentSeries(decimal[] functionParameters, decimal startingPointX, string seriesName)
+		public Series PrepareTangentSeries(decimal[] functionParameters, decimal startingPointX, string seriesName) // rysowanie stycznych
 		{
-			// try catch
+			
 
 			Series series = new Series(seriesName);
 			series.Color = Color.Red;
+
 			decimal fStartingPointX = CalculateFunctionValueAtX(functionParameters, startingPointX);
 			decimal valueAtX = fStartingPointX;
+
 			if ((functionParameters[0] > 0 && fStartingPointX < 0) || (functionParameters[0] < 0 && fStartingPointX > 0))
 			{
 				series.Points.Add(new DataPoint((double)(startingPointX - 0.5m), (double)CalculateFunctionValueAtX(functionParameters, startingPointX - 0.5m)));
+
 				while (fStartingPointX * valueAtX > 0)
 				{
 					valueAtX = CalculateFunctionValueAtX(functionParameters, startingPointX);
