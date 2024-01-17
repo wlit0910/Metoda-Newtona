@@ -22,24 +22,23 @@ Wykonawcy projektu:
 | Task                                                              | Completion |
 | ----------------------------------------------------------------- | ---------- |
 | Umożliwić użytkownikowi wpisania funkcji;przynajmniej wielomianu  | X          |
-| Przyjmować od użytkownika punktu startowego                       | X          |
-| Przyjmować dokładność obliczeń - delta, epsilon                   | X          |
-| Przyjmować dokładną liczbę iteracji                               | X          |
-| Obsługa błędów 1 - try-catch                                      | X          |
-| Obsługa błędów 2 - logiczne zabezpieczenia                        | X          |
-| [...] przyjmować kryterium stopu                                  | X          |
-| Wynik - wyznaczona wartość miejsca zerowego                       | X          |
+| Przyjmować od użytkownika punkt startowy                       | ️✅         |
+| Przyjmować dokładność obliczeń - delta, epsilon                   | ️✅          |
+| Przyjmować dokładną liczbę iteracji                               | ️✅          |
+| Obsługa błędów 1 - try-catch                                      | ️✅          |
+| Obsługa błędów 2 - logiczne zabezpieczenia                        | ️✅          |
+| Sprawdzać kryterium stopu                                  | ️✅          |
+| Wynik - wyznaczona wartość miejsca zerowego                       | ️✅          |
 | Zwracać wartość funkcji f(x) uruchamiającą kryterium stopu        | X          |
-| Zwracać numer iteracji, w której wyznaczono miejsce zerowe        | X          |
-| Sprawdzenie: zwracać wartość funkcji od wyznaczonego miejsca zer. | X          |
+| Zwracać numer iteracji, w której wyznaczono miejsce zerowe        | ️✅          |
+| Sprawdzenie: zwracać wartość funkcji od wyznaczonego miejsca zer. | ️✅          |
 | Informacje o autorach projektu i jego przeznaczeniu               | X          |
-| Przejrzysty, graficzny UI                                         | X          |
+| Przejrzysty, graficzny UI                                         | ️✅          |
 | Wykres na którym jest: wprowadzony wielomian,                     | X          |
 | Wykres na którym jest: punkt startowy,                            | X          |
-| Wykres na którym jest: Kolejne przybliżenia miejsca zerowego,     | X          |
-| Wykres na którym jest: wyznaczone miejsce zerowe                  | X          |
+| Wykres na którym jest: Kolejne przybliżenia miejsca zerowego,     | ️✅          |
+| Wykres na którym jest: wyznaczone miejsce zerowe                  | ️✅          |
 | ----                                                              | X          |
-| Pogrubić numery iteracji i ważniejsze indormacje w RichTextBoxie                                                              | X          |
 | ----                                                              | X          |
 | ----                                                              | X          |
 | ----                                                              | X          |
