@@ -80,7 +80,7 @@ namespace Metoda_Newtona
 			decimal derivativeValue = CalculateFunctionValueAtX(derivativeFunctionParameters, pointX);
 			result[0] = derivativeValue;
 
-			result[1] = pointY - derivativeValue * pointX;
+			result[1] = pointY - derivativeValue * pointX; // przekształcone równanie stycznej
 
 			return result;
 		}
@@ -106,7 +106,7 @@ namespace Metoda_Newtona
 
 				zeroPlaceTextBox.Text = zeroPlace.ToString();
 
-				Series functionChartSeries = PrepareChartSeries(functionParameters, pointX, "funkcja f(x)");
+				Series functionChartSeries = PrepareChartSeries(functionParameters, pointX, "Funkcja f(x)");
 
 				wykres.DrawFunctionChart(functionChartSeries);
 				wykres.Show();
@@ -192,7 +192,7 @@ namespace Metoda_Newtona
 					wykres.DrawFunctionChart(series);
 				}
 
-				if (Math.Abs(fX1) < delta) //sprawdzenie czy wartość funkcji od bieżącego przybliżenia miejsca zerowego jest mniejsza od przyjętej wartości delty
+				if (Math.Abs(fX1) < delta) //sprawdzenie czy wartość funkcji od bieżącego przybliżenia miejsca zerowego jest mniejsza od przyjętej wartości delty - KRYTERIUM STOPU
 				{
 					MessageBox.Show("Zły punkt startowy");
 					logRichTextBox.Text += "Zły punkt startowy\n";
@@ -201,43 +201,47 @@ namespace Metoda_Newtona
 					return x0;
 				}
 
+
+
 				x1 = x0;
-				x0 = x0 - fX0 / fX1;
+				x0 = x0 - fX0 / fX1;		// tutaj wyliczanie równanie stycznej --> x1 = x0 - fX0 / f'X0	i tak dalej (iteracyjnie)		fX1 to pochodna w potencjalnym miejscu zerowym obliczona powyżej
 
 
-				logRichTextBox.Text += "Potencjalne miejsce zerowe " + x0 + "\n";
+				logRichTextBox.Text += "Potencjalne miejsce zerowe wynosi: " + x0 + "\n";
 				fX0 = CalculateFunctionValueAtX(functionParameters, x0);
 
 
-				logRichTextBox.Text += "Wartość funkcji w potencjalnym miejscu zerowym " + fX0 + "\n";
+				logRichTextBox.Text += "Wartość funkcji w potencjalnym miejscu zerowym wynosi: " + fX0 + "\n";
 				wykres.DrawPoint(x0, fX0);
 
 				iterations = iterations - 1;
 
 				// wywalic
-				logRichTextBox.Text += "Pozostało jeszcze iteracji: " + iterations + "\n";
+				//logRichTextBox.Text += "Pozostało jeszcze iteracji: " + iterations + "\n";
 			}
 
 			if (iterations == 0) //sprawdzenie czy osiągnięto maksymalną liczbę iteracji
 			{
-				MessageBox.Show("Przekroczony limit obiegów");
-				logRichTextBox.Text += "Przekroczony limit obiegów\n";
+				MessageBox.Show("Przekroczono maksymalną liczbę iteracji","Osiągnięto maksymalną liczbę iteracji", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+				logRichTextBox.Text += "Przekroczono maksymalną liczbę iteracji\n";
 			}
 
 			logRichTextBox.Text += "\n";
+			logRichTextBox.Text += "\n";
 
-			logRichTextBox.Text += "Zakończono obliczenia " + "\n";
+			logRichTextBox.Text += "Uzyskane wyniki" + "\n";
 			logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Bold);
 
-			logRichTextBox.AppendText("Miejsce zerowe to " + x0 + "\n"); 
-			logRichTextBox.AppendText("Wartość funkcji w tym miejscu zerowym: " + fX0.ToString() + "\n");
+			logRichTextBox.AppendText("Miejsce zerowe wynosi: " + x0 + "\n"); 
+			logRichTextBox.AppendText("Wartość funkcji w tym miejscu zerowym wynosi: " + fX0.ToString() + "\n");
 			logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Regular);
 
 			logRichTextBox.AppendText("Numer iteracji, w której znaleziono miejsce zerowe: " + numberOfIteration.ToString() + "\n");
 
-			wykres.DrawZeroPlace(x0, fX0);
+			wykres.DrawZeroPlace(x0, fX0); // rysowane jest miejsce zerowe na wykresie
+			
 
-			return x0;
+			return x0; // miejsce zerowe, współrzędna X
 		}
 
 
@@ -258,9 +262,9 @@ namespace Metoda_Newtona
 		{
 			// try catch
 
-			decimal result = CalculateFunctionValueAtX(functionParameters, zeroPlace);  // czy bezwzględna wartość funkcji w miejscu zerowym jest mniejsza od wartości epsilon
+			decimal result = CalculateFunctionValueAtX(functionParameters, zeroPlace);  // czy bezwzględna wartość funkcji w miejscu zerowym jest mniejsza od wartości epsilon??
 
-			if (Math.Abs(result) < epsilon)
+			if (Math.Abs(result) < epsilon)												// wtedy - jeśli tutaj jest wartość bliska 0, to znaczy że program działa ok
 			{
 				return true;
 			}
@@ -316,7 +320,7 @@ namespace Metoda_Newtona
 			Series series = new Series(seriesName);
 			for (decimal i = startingPointX - 5.0m; i < startingPointX + 5.0m; i = i + 0.5m)
 			{
-				series.Points.Add(new DataPoint((double)i, (double)CalculateFunctionValueAtX(functionParameters, i)));
+				series.Points.Add(new DataPoint((double)i, (double)CalculateFunctionValueAtX(functionParameters, i))); // punkty X Y funkcji
 			}
 			return series;
 		}
@@ -412,7 +416,7 @@ namespace Metoda_Newtona
 				svd.CreatePrompt = true;
 				svd.OverwritePrompt = true;
 
-				svd.FileName = "Dane-z-Interpolatora";
+				svd.FileName = "Proces-wyznaczenia-miejsca-zerowego";
 				svd.DefaultExt = "txt";
 				svd.Filter =
 					"Text files (*.txt)|*.txt|All files (*.*)|*.*";

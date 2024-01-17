@@ -50,14 +50,14 @@
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.schematWprowadzaniaDanychToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.autorzyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.oProgramieToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.pictureBox6 = new System.Windows.Forms.PictureBox();
-			this.autorzyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.oProgramieToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
@@ -142,7 +142,7 @@
 			this.deltaTextBox.Name = "deltaTextBox";
 			this.deltaTextBox.Size = new System.Drawing.Size(156, 20);
 			this.deltaTextBox.TabIndex = 31;
-			this.deltaTextBox.Text = "0,000001";
+			this.deltaTextBox.Text = "0,001";
 			// 
 			// label3
 			// 
@@ -194,7 +194,7 @@
 			this.epsilonTextBox.Name = "epsilonTextBox";
 			this.epsilonTextBox.Size = new System.Drawing.Size(156, 20);
 			this.epsilonTextBox.TabIndex = 26;
-			this.epsilonTextBox.Text = "0,000001";
+			this.epsilonTextBox.Text = "0,001";
 			// 
 			// pointXTextBox
 			// 
@@ -204,7 +204,7 @@
 			this.pointXTextBox.Name = "pointXTextBox";
 			this.pointXTextBox.Size = new System.Drawing.Size(156, 20);
 			this.pointXTextBox.TabIndex = 25;
-			this.pointXTextBox.Text = "0";
+			this.pointXTextBox.Text = "9";
 			// 
 			// label1PodajPunktStartowy
 			// 
@@ -234,7 +234,7 @@
 			this.parametersTextBox.Name = "parametersTextBox";
 			this.parametersTextBox.Size = new System.Drawing.Size(156, 20);
 			this.parametersTextBox.TabIndex = 22;
-			this.parametersTextBox.Text = "2;3;4;8;7;5";
+			this.parametersTextBox.Text = "9;8;7;6";
 			// 
 			// saveButton
 			// 
@@ -283,9 +283,24 @@
 			// schematWprowadzaniaDanychToolStripMenuItem
 			// 
 			this.schematWprowadzaniaDanychToolStripMenuItem.Name = "schematWprowadzaniaDanychToolStripMenuItem";
-			this.schematWprowadzaniaDanychToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.schematWprowadzaniaDanychToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
 			this.schematWprowadzaniaDanychToolStripMenuItem.Text = "Pomoc";
 			this.schematWprowadzaniaDanychToolStripMenuItem.Click += new System.EventHandler(this.schematWprowadzaniaDanychToolStripMenuItem_Click);
+			// 
+			// autorzyToolStripMenuItem
+			// 
+			this.autorzyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.oProgramieToolStripMenuItem1});
+			this.autorzyToolStripMenuItem.Name = "autorzyToolStripMenuItem";
+			this.autorzyToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+			this.autorzyToolStripMenuItem.Text = "Autorzy";
+			// 
+			// oProgramieToolStripMenuItem1
+			// 
+			this.oProgramieToolStripMenuItem1.Name = "oProgramieToolStripMenuItem1";
+			this.oProgramieToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+			this.oProgramieToolStripMenuItem1.Text = "O programie";
+			this.oProgramieToolStripMenuItem1.Click += new System.EventHandler(this.oProgramieToolStripMenuItem1_Click);
 			// 
 			// pictureBox1
 			// 
@@ -346,21 +361,6 @@
 			this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox6.TabIndex = 45;
 			this.pictureBox6.TabStop = false;
-			// 
-			// autorzyToolStripMenuItem
-			// 
-			this.autorzyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.oProgramieToolStripMenuItem1});
-			this.autorzyToolStripMenuItem.Name = "autorzyToolStripMenuItem";
-			this.autorzyToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-			this.autorzyToolStripMenuItem.Text = "Autorzy";
-			// 
-			// oProgramieToolStripMenuItem1
-			// 
-			this.oProgramieToolStripMenuItem1.Name = "oProgramieToolStripMenuItem1";
-			this.oProgramieToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-			this.oProgramieToolStripMenuItem1.Text = "O programie";
-			this.oProgramieToolStripMenuItem1.Click += new System.EventHandler(this.oProgramieToolStripMenuItem1_Click);
 			// 
 			// button1
 			// 

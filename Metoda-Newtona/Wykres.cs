@@ -32,7 +32,7 @@ namespace Metoda_Newtona
 				chart1.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
 				chart1.MouseWheel += Chart1_MouseWheel;
 
-				Title title = chart1.Titles.Add("Interpolacja metodą stycznych (Newtona)");
+				Title title = chart1.Titles.Add("Wyznaczanie miejsca zerowego metodą stycznych (Newtona)");
 				title.Font = new Font("Arial", 15, FontStyle.Bold);
 
 				chart1.ChartAreas[0].AxisX.Title = "Oś X";
@@ -111,11 +111,10 @@ namespace Metoda_Newtona
 			}
 		}
 
-				/**
-		 * Metoda, która umożliwia przybliżanie i oddalanie wykresu
-		 * 
-		 * Link: https://stackoverflow.com/questions/13584061/how-to-enable-zooming-in-microsoft-chart-control-by-using-mouse-wheel
-		 */
+				
+		 // skalowanie wykresu:		 
+		 // https://stackoverflow.com/questions/13584061/how-to-enable-zooming-in-microsoft-chart-control-by-using-mouse-wheel
+		 
 
 		private void Chart1_MouseWheel(object sender, MouseEventArgs e)
 		{
@@ -124,7 +123,7 @@ namespace Metoda_Newtona
 				var xAxis = chart.ChartAreas[0].AxisX;
 				var yAxis = chart.ChartAreas[0].AxisY;
 
-				if (e.Delta < 0) // Scrolled down.
+				if (e.Delta < 0) // Na dół
 				{
 					try{
 						xAxis.ScaleView.ZoomReset();
@@ -136,7 +135,7 @@ namespace Metoda_Newtona
 					}
 
 				}
-				else if (e.Delta > 0) // Scrolled up.
+				else if (e.Delta > 0) // Do góry
 				{
 					var xMin = xAxis.ScaleView.ViewMinimum;
 					var xMax = xAxis.ScaleView.ViewMaximum;
