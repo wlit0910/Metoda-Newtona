@@ -29,7 +29,7 @@ Wykonawcy projektu:
 | Obsługa błędów 2 - logiczne zabezpieczenia                        | ️✅          |
 | Sprawdzać kryterium stopu                                  | ️✅          |
 | Wynik - wyznaczona wartość miejsca zerowego                       | ️✅          |
-| Zwracać wartość funkcji f(x) uruchamiającą kryterium stopu        | X          |
+| Zwracać wartość funkcji f(x) uruchamiającą kryterium stopu        | ✅          |
 | Zwracać numer iteracji, w której wyznaczono miejsce zerowe        | ️✅          |
 | Sprawdzenie: zwracać wartość funkcji od wyznaczonego miejsca zer. | ️✅          |
 | Informacje o autorach projektu i jego przeznaczeniu               | X          |
