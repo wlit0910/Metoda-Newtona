@@ -78,18 +78,21 @@ namespace Metoda_Newtona
 
 
 
-
-		private void calculateButton_Click(object sender, EventArgs e) // OBLICZ
+		// przycisk OBLICZ
+		private void calculateButton_Click(object sender, EventArgs e) 
 		{
 			try //obsługa błędów wprowadzanych danych parserami
 			{
 				wykres.ResetChart();
-				decimal epsilon = Decimal.Parse(epsilonTextBox.Text);
-				decimal delta = Decimal.Parse(deltaTextBox.Text);
-				int iterations = Int32.Parse(iterationsTextBox.Text);
-				decimal pointX = Decimal.Parse(pointXTextBox.Text); // punkt startowy X0
+				decimal epsilon = Decimal.Parse(epsilonTextBox.Text);       // parametr epsilon
+				decimal delta = Decimal.Parse(deltaTextBox.Text);			// parametr delta
+				int iterations = Int32.Parse(iterationsTextBox.Text);		// liczba iteracji
+				decimal pointX = Decimal.Parse(pointXTextBox.Text);			// punkt startowy X0
 
-				//wykres.PunktPocz(pointX); // new ------------------------
+
+
+				//wykres.PunktPocz(pointX); // zaznaczenie punktu startowego nie dziala
+
 
 				decimal[] functionParameters = Array.ConvertAll(parametersTextBox.Text.Split(';'), Decimal.Parse); // wpisanie współczynników wielomianów do tablicy współczynników wielomianu
 
@@ -113,18 +116,12 @@ namespace Metoda_Newtona
 
 
 
-						/**
-				 * Metoda do wyznaczania miejsca zerowego
-				 * 
-				 * @param functionParameters tablica zawierająca parametry wielomianu
-				 * @param x0 punkt startowy
-				 * @param epsilon dokładność porównania z zerem
-				 * @param delta dokładność wyznaczania pierwiastka
-				 * @param iterations maksymalna wartość iteracji jaką program może wykonać
-				 * @return wartość miejsca zerowego
-				 */
 
-		public decimal CalculateZeroPlace(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations) // Liczenie miejsca zerowego
+		// Funkcja wyliczająca miejsce zerowe
+									
+										// tablica z współczynnikami wielomianu, punkt startowy, epislon, delta, max. liczba iteracji
+
+		public decimal CalculateZeroPlace(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations) 
 		{
 			
 			// porobic AppendText zamiast +=
@@ -140,13 +137,12 @@ namespace Metoda_Newtona
 			decimal fX0 = CalculateFunctionValueAtX(functionParameters, x0);
 
 
-			
-
+		
 
 			logRichTextBox.Text += "Wartość funkcji w punkcie startowym wynosi: " + fX0 + "\n";
 			logRichTextBox.Text += "Dokładność porównania z zerem - epsilon: " + epsilon + "\n";
 			logRichTextBox.Text += "Dokładność wyznaczania pierwiastka - delta: " + delta + "\n";
-			logRichTextBox.Text += "Maksymalna wartość iteracji: " + iterations + "\n";
+			logRichTextBox.Text += "Maksymalna liczba iteracji: " + iterations + "\n";
 
 			int numberOfIteration = 0;
 
@@ -161,24 +157,33 @@ namespace Metoda_Newtona
 				logRichTextBox.AppendText("Numer iteracji: " + numberOfIteration + "\n");
 				//logRichTextBox.Rtf = @"{\rtf1\ansi This is in \b bold\b0.}";
 
-				// Tutaj są parametry pochodnej
+
+
+				// Tutaj są wartości pochodnej
 				decimal[] derivativeParamters = CalculateDerivative(functionParameters);
 
-				// Pochodna funkcji w potencjalnym miejscu zerowym
+
+
+				// Obliczona pochodna funkcji w potencjalnym miejscu zerowym
 				decimal fX1 = CalculateFunctionValueAtX(derivativeParamters, x0);
 
 				
 				logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Regular);
-				logRichTextBox.Text += "Pochodna funkcji w potencjalnym miejscu zerowym " + fX1 + "\n";
+				logRichTextBox.Text += "Pochodna funkcji w potencjalnym miejscu zerowym wynosi: " + fX1 + "\n";
 
-				// Parametry stycznej
+
+				// Obliczone wartości opisujące styczną
 				decimal[] tangentParameters = CalculateTangent(derivativeParamters, x0, fX0);
+
 
 				if (functionParameters.Length > 1) // nie wyliczymy stycznej dla stałej tak żeby przecięła oś X
 				{
 					Series series = PrepareTangentSeries(tangentParameters, x0, "Styczna nr " + numberOfIteration);
 					wykres.DrawFunctionChart(series);
 				}
+
+
+
 
 				if (Math.Abs(fX1) < delta) //sprawdzenie czy wartość funkcji od bieżącego przybliżenia miejsca zerowego jest mniejsza od przyjętej wartości delty - KRYTERIUM STOPU
 				{
@@ -196,7 +201,10 @@ namespace Metoda_Newtona
 				x0 = x0 - fX0 / fX1;		// tutaj wyliczanie równanie stycznej --> x1 = x0 - fX0 / f'X0	i tak dalej (iteracyjnie)		fX1 to pochodna w potencjalnym miejscu zerowym obliczona powyżej
 
 
+
 				logRichTextBox.Text += "Potencjalne miejsce zerowe wynosi: " + x0 + "\n";
+
+				// Wyliczamy wartość funkcji w potencjalnym miejscu zerowym
 				fX0 = CalculateFunctionValueAtX(functionParameters, x0);
 
 
@@ -205,11 +213,10 @@ namespace Metoda_Newtona
 
 				iterations = iterations - 1;
 
-				// wywalic
-				//logRichTextBox.Text += "Pozostało jeszcze iteracji: " + iterations + "\n";
+
 			}
 
-			if (iterations == 0) //sprawdzenie czy osiągnięto maksymalną liczbę iteracji
+			if (iterations == 0) // Czy osiągnięto maksymalną liczbę iteracji?
 			{
 				MessageBox.Show("Przekroczono maksymalną liczbę iteracji","Osiągnięto maksymalną liczbę iteracji", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 				logRichTextBox.Text += "Przekroczono maksymalną liczbę iteracji\n";
@@ -218,7 +225,9 @@ namespace Metoda_Newtona
 			logRichTextBox.Text += "\n";
 			logRichTextBox.Text += "\n";
 
-			logRichTextBox.Text += "Uzyskane wyniki" + "\n";
+			logRichTextBox.Text += "UZYSKANE WYNIKI" + "\n";
+			logRichTextBox.Text += "-------------------------------------------------------------------------------------------------------\n";
+
 			logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Bold);
 
 			logRichTextBox.AppendText("Miejsce zerowe wynosi: " + x0 + "\n"); 
@@ -227,10 +236,10 @@ namespace Metoda_Newtona
 
 			logRichTextBox.AppendText("Numer iteracji, w której znaleziono miejsce zerowe: " + numberOfIteration.ToString() + "\n");
 
-			wykres.DrawZeroPlace(x0, fX0); // rysowane jest miejsce zerowe na wykresie
+			wykres.DrawZeroPlace(x0, fX0); // Zaznaczane jest miejsce zerowe na wykresie
 			
 
-			return x0; // miejsce zerowe, współrzędna X
+			return x0; // wartość miejsca zerowego, współrzędna X
 		}
 
 
@@ -238,19 +247,11 @@ namespace Metoda_Newtona
 
 
 
-		/**
-         * Metoda sprawdzająca czy miejsce zerowe jest poprawne zgodnie z zadaną dokładnością
-         * 
-         * @param functionParameters tablica zawierająca parametry wielomianu
-         * @param zeroPlace miejsce zerowe
-         * @param epsilon dokładność porównania z zerem
-         * @return poprawność miejsca zerowego
-         */
+		// Funkcja sprawdzająca, czy miejsce zerowe jest zgodne z wartością epsilon (dokładność porównania z zerem)
 
+		//					(tablica z współczynnikami wielom, wyliczone miejsce zerowe, epsilon)
 		public bool IsResultCorrect(decimal[] functionParameters, decimal zeroPlace, decimal epsilon) // Sprawdź wynik - funkcja
 		{
-			// try catch
-
 			decimal result = CalculateFunctionValueAtX(functionParameters, zeroPlace);  // czy bezwzględna wartość funkcji w miejscu zerowym jest mniejsza od wartości epsilon??
 
 			if (Math.Abs(result) < epsilon)												// wtedy - jeśli tutaj jest wartość bliska 0, to znaczy że program działa ok
@@ -267,9 +268,7 @@ namespace Metoda_Newtona
 
 
 
-				/**
-		 * Metoda wywołana po kliknięciu przycisku Sprawdź
-		 */
+		// Wykonuje się funkcja powyższa i sprawdza wynik
 
 		private void IsCorrectButton_Click(object sender, EventArgs e) // Sprawdź wynik - przycisk
 		{
@@ -434,12 +433,14 @@ namespace Metoda_Newtona
 			}
 		}
 
+		// Wyświetl okno pomocy
 		private void schematWprowadzaniaDanychToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Pomoc schematObslugiBledow = new Pomoc();
 			schematObslugiBledow.Show();
 		}
 
+		// Wyświetl okno o programie
 		private void oProgramieToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			OProgramie O_Programie = new OProgramie();
