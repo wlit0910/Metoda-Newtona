@@ -23,13 +23,9 @@ namespace Metoda_Newtona
 		}
 
 
-				/**
-		 * Metoda do wyliczania funkcji w punkcie
-		 * 
-		 * @param functionParameters tablica zawierająca parametry wielomianu
-		 * @param pointX punkt dla którego będziemy wyznaczać wartość funkcji
-		 * @return wartość funkcji w zadanym punkcie
-		 */
+		// Funckja do wyliczania wartości funkcji w punkcie punkcie x1, x2, x3, x4 ......
+
+									// (tablica ze współczynnikami wielomianu, współrzedna X punktu dla którego będziemy wyznaczać wartość funkcji)
 		public decimal CalculateFunctionValueAtX(decimal[] functionParameters, decimal pointX) // Wyliczamy po kolei wartości funkcji f(x) w punkcie x1, x2, x3, x4 ......  i dodajemy je do siebie
 		{
 			decimal result = 0.0m;
@@ -39,18 +35,16 @@ namespace Metoda_Newtona
 				result += functionParameters[i] * (decimal)Math.Pow((double)pointX, functionParameters.Length - 1 - i);
 				
 			}
-			return result;
+			return result; // wartość funkcji w zadanym punkcie - współrzedna Y
 		}
 
 
 
-					/**
-			 * Metoda do wyznaczania pochodnej funkcji
-			 * 
-			 * @param functionParameters tablica zawierająca parametry wielomianu
-			 * @return wartość wartość pochodnej funkcji
-			 */
 
+
+		//Funkcja do wyznaczania wartości pochodnej funkcji w punktach x1, x2, x3, x4, ......
+
+												// tablica ze współczynnikami wielomianu
 		public decimal[] CalculateDerivative(decimal[] functionParameters) // Wyznaczenie tablicy z wartościami pochodnych funkcji w punktach x1, x2, x3, x4, ......
 		{
 			decimal[] result = new decimal[functionParameters.Length - 1];
@@ -59,20 +53,17 @@ namespace Metoda_Newtona
 			{
 				result[i] = functionParameters[i] * (functionParameters.Length - 1 - i);
 			}
-			return result;
+			return result; // wyliczona wartość pochodnej funkcji
 		}
 
 
 
 
-					/**
-			 * Metoda do wyznaczania stycznej 
-			 * 
-			 * @param derivativeFunctionParameters tablica zawierająca parametry pochodnej
-			 * @param pointX współrzędna x pochodnej
-			 * @param pointY współrzędna y pochodnej
-			 * @return wartość stycznej
-			 */
+
+
+		//Funkcja do wyznaczania wartości punktów opisujących styczną
+
+									//(tablica z wartościami pochodnych,    współrzędna X pochodnej, wsp. Y pochodnej)
 		public decimal[] CalculateTangent(decimal[] derivativeFunctionParameters, decimal pointX, decimal pointY)
 		{
 			decimal[] result = new decimal[2];
@@ -82,7 +73,7 @@ namespace Metoda_Newtona
 
 			result[1] = pointY - derivativeValue * pointX; // przekształcone równanie stycznej
 
-			return result;
+			return result; // wartość opisująca styczną
 		}
 
 
