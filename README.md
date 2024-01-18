@@ -21,7 +21,7 @@ Wykonawcy projektu:
 
 | Task                                                              | Completion |
 | ----------------------------------------------------------------- | ---------- |
-| Umożliwić użytkownikowi wpisania funkcji;przynajmniej wielomianu  | X          |
+| Umożliwić użytkownikowi wpisania funkcji;przynajmniej wielomianu  | ✅          |
 | Przyjmować od użytkownika punkt startowy                       | ️✅         |
 | Przyjmować dokładność obliczeń - delta, epsilon                   | ️✅          |
 | Przyjmować dokładną liczbę iteracji                               | ️✅          |
@@ -32,9 +32,9 @@ Wykonawcy projektu:
 | Zwracać wartość funkcji f(x) uruchamiającą kryterium stopu        | ✅          |
 | Zwracać numer iteracji, w której wyznaczono miejsce zerowe        | ️✅          |
 | Sprawdzenie: zwracać wartość funkcji od wyznaczonego miejsca zer. | ️✅          |
-| Informacje o autorach projektu i jego przeznaczeniu               | X          |
+| Informacje o autorach projektu i jego przeznaczeniu               | ✅          |
 | Przejrzysty, graficzny UI                                         | ️✅          |
-| Wykres na którym jest: wprowadzony wielomian,                     | X          |
+| Wykres na którym jest: wprowadzony wielomian,                     | ✅          |
 | Wykres na którym jest: punkt startowy,                            | X          |
 | Wykres na którym jest: Kolejne przybliżenia miejsca zerowego,     | ️✅          |
 | Wykres na którym jest: wyznaczone miejsce zerowe                  | ️✅          |
