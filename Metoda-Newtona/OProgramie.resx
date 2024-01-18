@@ -875,6 +875,13 @@
         U9lJMnLsW5xF1WmRz3EFg0oFG4PThRiAVosl1sLMz//Z
 </value>
   </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Metoda stycznych, znana również jako metoda Newtona
+to numeryczna technika znajdowania miejsc zerowych funkcji
+matematycznych. Ogólnie rzecz biorąc, metoda ta polega na
+przybliżaniu miejsca zerowego poprzez iteracyjne korzystanie
+z stycznej do krzywej funkcji w punkcie startowym</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIACDGgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgEAAAA9ntg7QAAAAFv

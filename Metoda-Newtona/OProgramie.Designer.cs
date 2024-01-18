@@ -111,12 +111,12 @@
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(21, 84);
+			this.label5.Location = new System.Drawing.Point(21, 90);
 			this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(97, 13);
+			this.label5.Size = new System.Drawing.Size(296, 65);
 			this.label5.TabIndex = 12;
-			this.label5.Text = "[opis szczegółowy]";
+			this.label5.Text = resources.GetString("label5.Text");
 			// 
 			// groupBox1
 			// 

@@ -382,7 +382,7 @@ namespace Metoda_Newtona
 				this.Refresh();
 				wykres.Refresh();
 
-				//wykres.ResetChart();
+				//wykres.ResetChart();  problem z resetowaniem wykresu
 			}
 			catch
 			{
