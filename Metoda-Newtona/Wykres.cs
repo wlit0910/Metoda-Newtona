@@ -16,11 +16,6 @@ namespace Metoda_Newtona
 	{
 		private Series potentialZeroPlaces;
 
-				/**
-		 * Konstruktor klasy 
-		 * Inicjuje serię danych dla potencjalnych miejsc zerowych 
-		 * Tworzy opis wykresu 
-		 */
 
 		public Wykres()
 		{
@@ -47,12 +42,10 @@ namespace Metoda_Newtona
 		}
 
 
-				/**
-		 * Metoda do rysowania funkcji na wykresie
-		 * 
-		 * @param series seria danych do narysowania 
-		 */
-		public void DrawFunctionChart(Series series) // dane z Interpolatora
+
+
+		// Rysowanie funkcji na wykresie
+		public void DrawFunctionChart(Series series) // dane z Interpolatora - seria danych do narysowania
 		{
 			try {
 				series.ChartType = SeriesChartType.Spline;
@@ -64,12 +57,12 @@ namespace Metoda_Newtona
 			}
 		}
 
-				/**
-		 * Metoda do rysowania potencjalnych miejsc zerowych
-		 * 
-		 * @param pointX współrzędna x kolejnego potencjalnego miejsca zerowego
-		 * @param pointY współrzędna y kolejnego potencjalnego miejsca zerowego
-		 */
+
+
+
+		// Zaznaczanie na wykresie potencjalnych miejsc zerowych
+
+								// (wsp.X, wsp.Y potencjalnego miejsca zerowego)
 		public void DrawPoint(decimal pointX, decimal pointY)
 		{
 			potentialZeroPlaces.Points.AddXY(pointX, pointY);
@@ -88,12 +81,10 @@ namespace Metoda_Newtona
 		//}
 
 
-		/**
- * Metoda do rysowania miejsca zerowego
- * 
- * @param pointX współrzędna x miejsca zerowego
- * @param pointY współrzędna y miejsca zerowego
- */
+
+		// Zaznaczenie miejsca zerowego na wykresie
+
+								// (wsp.X, wsp.Y miejsca zerowego)
 		public void DrawZeroPlace(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
 		{
 			try{
@@ -160,7 +151,7 @@ namespace Metoda_Newtona
 
 			try	{
 
-				//foreach (var series in chart1.Series)
+				//foreach (var series in chart1.Series)    resetowanie wykresu nie dziala
 				//{
 				//	series.Points.Clear();
 				//	//chart1.Series["Miejsce zerowe"].Points.Clear();
