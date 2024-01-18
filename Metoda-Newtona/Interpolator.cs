@@ -78,6 +78,8 @@ namespace Metoda_Newtona
 
 
 
+
+
 		// przycisk OBLICZ
 		private void calculateButton_Click(object sender, EventArgs e) 
 		{
@@ -294,13 +296,10 @@ namespace Metoda_Newtona
 
 
 
-				/**
-				 * Metoda
-				 * @param functionParameters tablica zawierająca parametry wielomianu
-				 * @param startingPointX punkt startowy
-				 * @param seriesName nazwa serii
-				 * @return seria danych do narysowania funkcji
-				 */
+
+		// Tworzenie serii danych do wykresu
+
+									// (tablica z współczynnikami wielom., punkt startowy, nazwa serii do wykresu)
 		public Series PrepareChartSeries(decimal[] functionParameters, decimal startingPointX, string seriesName)
 		{
 			// try catch
@@ -308,9 +307,9 @@ namespace Metoda_Newtona
 			Series series = new Series(seriesName);
 			for (decimal i = startingPointX - 5.0m; i < startingPointX + 5.0m; i = i + 0.5m)
 			{
-				series.Points.Add(new DataPoint((double)i, (double)CalculateFunctionValueAtX(functionParameters, i))); // punkty X Y funkcji
+				series.Points.Add(new DataPoint((double)i, (double)CalculateFunctionValueAtX(functionParameters, i))); // punkty X Y funkcji - albo styczna, miejsce zerowe itd
 			}
-			return series;
+			return series; // seria danych do wykresu
 		}
 
 
@@ -318,14 +317,9 @@ namespace Metoda_Newtona
 
 
 
-		/**
-         * Metoda do przygotowania serii danych do rysowania stycznej w punkcie
-         * @param functionParameters tablica zawierająca parametry wielomianu
-         * @param startingPointX punkt startowy
-         * @param seriesName nazwa serii
-         * @return seria danych dla stycznej
-         */
+		// Tworzenie serii danych do wykresu - dla stycznej w punkcie
 
+		//									(tablica współczynników wielom., punkt startowy, nazwa serii)
 		public Series PrepareTangentSeries(decimal[] functionParameters, decimal startingPointX, string seriesName) // rysowanie stycznych
 		{
 			
@@ -364,8 +358,11 @@ namespace Metoda_Newtona
 				series.Points.Add(new DataPoint((double)(startingPointX - 0.5m), (double)CalculateFunctionValueAtX(functionParameters, startingPointX - 0.5m)));
 				
 			}
-			return series;
+			return series; // seria danych do wykresu, dotycząca stycznej
 		}
+
+
+
 
 		private void resetButton_Click(object sender, EventArgs e) // resetowanie danych w textboxach
 		{
@@ -390,6 +387,9 @@ namespace Metoda_Newtona
 				blad.Show();
 			}
 		}
+
+
+
 
 		private void saveButton_Click(object sender, EventArgs e) // Zapisz dane z richTextBox do pliku .txt
 		{
@@ -432,6 +432,9 @@ namespace Metoda_Newtona
 				blad.Show();
 			}
 		}
+
+
+
 
 		// Wyświetl okno pomocy
 		private void schematWprowadzaniaDanychToolStripMenuItem_Click(object sender, EventArgs e)
