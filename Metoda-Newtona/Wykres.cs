@@ -70,6 +70,30 @@ namespace Metoda_Newtona
 			//potentialZeroPlaces.ChartType = SeriesChartType.Point;
 		}
 
+		public void RysujStart(decimal pointX, decimal pointY)
+		{
+
+			try
+			{
+				Series series = new Series("Punkt startowy X0");
+				series.Points.AddXY(pointX, pointY);
+				series.ChartType = SeriesChartType.Point;
+
+				series.Color = Color.Magenta;
+				series.MarkerSize = 10;
+				chart1.Series.Add(series);
+			}
+			catch
+			{
+				Blad blad = new Blad();
+				blad.Show();
+			}
+
+			//potencjalneMZ.Points.AddXY(pointX, pointY);
+			//			potentialZeroPlaces.LegendText = "Punkt X0";
+			//potentialZeroPlaces.ChartType = SeriesChartType.Point;
+		}
+
 		//public void PunktPocz(decimal pointX)
 		//{
 		//	potentialZeroPlaces.Points.AddXY(pointX, 0);
@@ -84,7 +108,7 @@ namespace Metoda_Newtona
 
 		// Zaznaczenie miejsca zerowego na wykresie
 
-								// (wsp.X, wsp.Y miejsca zerowego)
+		// (wsp.X, wsp.Y miejsca zerowego)
 		public void RysujMiejsceZerowe(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
 		{
 			try{

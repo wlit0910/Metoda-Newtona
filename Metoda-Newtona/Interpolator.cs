@@ -78,6 +78,13 @@ namespace Metoda_Newtona
 
 
 
+		public Series PunktStartowy(decimal punktStartowy, decimal wspY,string nazwaSerii)
+		{
+			Series series = new Series(nazwaSerii);
+
+			return series; // seria danych do wykresu
+		}
+
 
 
 		// przycisk OBLICZ
@@ -89,20 +96,25 @@ namespace Metoda_Newtona
 				decimal punktStartowy = Decimal.Parse(punktStartowy_TextBox.Text);			// punkt startowy X0
 				decimal epsilon = Decimal.Parse(epsilon_TextBox.Text);       // parametr epsilon
 				decimal delta = Decimal.Parse(delta_TextBox.Text);			// parametr delta
-				int liczbaIteracji = Int32.Parse(iteracje_TextBox.Text);		// liczba iteracji
+				int liczbaIteracji = Int32.Parse(iteracje_TextBox.Text);        // liczba iteracji
 
 
-
-				//wykres.PunktPocz(pointX); // zaznaczenie punktu startowego nie dziala
-
+				
 
 				decimal[] wspolczynnikiWielom = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(' '), Decimal.Parse); // wpisanie współczynników wielomianów do tablicy współczynników wielomianu
+
+
+				decimal wspY = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom,punktStartowy);
+				//Series start = PunktStartowy(punktStartowy, wspY, "Punkt startowy X0");
+				wykres.RysujStart(punktStartowy,wspY);
+
+
 
 				decimal miejsceZerowe = ObliczMiejsceZerowe(wspolczynnikiWielom, punktStartowy, epsilon, delta, liczbaIteracji); // funkcja obliczająca miejsce zerowe
 
 				miejsceZerowe_TextBox.Text = miejsceZerowe.ToString();
 
-				Series WykresFunkcjiWielomianu = StworzSerieDanych(wspolczynnikiWielom, punktStartowy, "Funkcja f(x)");
+				Series WykresFunkcjiWielomianu = StworzSerieDanych(wspolczynnikiWielom, punktStartowy, "Wykres wielomianu");
 
 				wykres.DrawFunctionChart(WykresFunkcjiWielomianu);
 				wykres.Show();
@@ -311,6 +323,7 @@ namespace Metoda_Newtona
 			}
 			return series; // seria danych do wykresu
 		}
+
 
 
 
