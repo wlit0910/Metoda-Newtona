@@ -183,11 +183,14 @@ namespace Metoda_Newtona
 				//while (chart1.Series.Count > 0) { chart1.Series.RemoveAt(0); }
 
 				chart1.Series.Clear();
+				//potencjalneMZ = new Series();
+
 				potencjalneMZ = new Series("Potencjalne miejsca zerowe");
 				potencjalneMZ.ChartType = SeriesChartType.Point;
 				potencjalneMZ.Color = Color.Green;
 				potencjalneMZ.MarkerSize = 8;
 				chart1.Series.Add(potencjalneMZ);
+				
 
 			}
 			catch {

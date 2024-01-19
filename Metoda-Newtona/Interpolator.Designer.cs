@@ -142,7 +142,7 @@
 			this.delta_TextBox.Name = "delta_TextBox";
 			this.delta_TextBox.Size = new System.Drawing.Size(156, 20);
 			this.delta_TextBox.TabIndex = 31;
-			this.delta_TextBox.Text = "0,001";
+			this.delta_TextBox.Text = "0,0001";
 			// 
 			// label_5
 			// 
@@ -194,7 +194,7 @@
 			this.epsilon_TextBox.Name = "epsilon_TextBox";
 			this.epsilon_TextBox.Size = new System.Drawing.Size(156, 20);
 			this.epsilon_TextBox.TabIndex = 26;
-			this.epsilon_TextBox.Text = "0,001";
+			this.epsilon_TextBox.Text = "0,0001";
 			// 
 			// punktStartowy_TextBox
 			// 
@@ -204,7 +204,7 @@
 			this.punktStartowy_TextBox.Name = "punktStartowy_TextBox";
 			this.punktStartowy_TextBox.Size = new System.Drawing.Size(156, 20);
 			this.punktStartowy_TextBox.TabIndex = 25;
-			this.punktStartowy_TextBox.Text = "9";
+			this.punktStartowy_TextBox.Text = "3";
 			// 
 			// label_2
 			// 
@@ -234,7 +234,7 @@
 			this.wspolczynniki_textbox1.Name = "wspolczynniki_textbox1";
 			this.wspolczynniki_textbox1.Size = new System.Drawing.Size(156, 20);
 			this.wspolczynniki_textbox1.TabIndex = 22;
-			this.wspolczynniki_textbox1.Text = "9 8 7 6";
+			this.wspolczynniki_textbox1.Text = "7 8 1 2";
 			// 
 			// saveButton
 			// 
