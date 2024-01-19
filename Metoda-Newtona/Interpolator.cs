@@ -81,7 +81,7 @@ namespace Metoda_Newtona
 
 
 		// przycisk OBLICZ
-		private void calculateButton_Click(object sender, EventArgs e) 
+		private void Oblicz_button_Click(object sender, EventArgs e) 
 		{
 			try //obsługa błędów wprowadzanych danych parserami
 			{
@@ -272,11 +272,11 @@ namespace Metoda_Newtona
 
 		// Wykonuje się funkcja powyższa i sprawdza wynik
 
-		private void IsCorrectButton_Click(object sender, EventArgs e) // Sprawdź wynik - przycisk
+		private void sprawdzWynik_button_Click(object sender, EventArgs e) // Sprawdź wynik - przycisk
 		{
 			// try catch
 
-			decimal[] functionParameters = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(';'), Decimal.Parse);
+			decimal[] functionParameters = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(' '), Decimal.Parse);
 			decimal zeroPlace = Decimal.Parse(miejsceZerowe_TextBox.Text);
 			decimal epsilon = Decimal.Parse(epsilon_TextBox.Text);
 			bool correctResult = SprawdzWynik(functionParameters, zeroPlace, epsilon);
@@ -364,7 +364,7 @@ namespace Metoda_Newtona
 
 
 
-		private void resetButton_Click(object sender, EventArgs e) // resetowanie danych w textboxach
+		private void resetuj_button_Click(object sender, EventArgs e) // resetowanie danych w textboxach
 		{
 			try
 			{
@@ -454,5 +454,15 @@ namespace Metoda_Newtona
 			Pomoc schematObslugiBledow = new Pomoc();
 			schematObslugiBledow.Show();
 		}
+
+		//private void resetuj_button_Click(object sender, EventArgs e)
+		//{
+
+		//}
+
+		//private void sprawdzWynik_button_Click(object sender, EventArgs e)
+		//{
+
+		//}
 	}
 }

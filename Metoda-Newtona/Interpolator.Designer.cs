@@ -30,15 +30,15 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interpolator));
 			this.label6 = new System.Windows.Forms.Label();
-			this.IsCorrectButton = new System.Windows.Forms.Button();
+			this.sprawdzWynik_button = new System.Windows.Forms.Button();
 			this.miejsceZerowe_TextBox = new System.Windows.Forms.TextBox();
 			this.label_6 = new System.Windows.Forms.Label();
-			this.resetButton = new System.Windows.Forms.Button();
+			this.resetuj_button = new System.Windows.Forms.Button();
 			this.iteracje_TextBox = new System.Windows.Forms.TextBox();
 			this.delta_TextBox = new System.Windows.Forms.TextBox();
 			this.label_5 = new System.Windows.Forms.Label();
 			this.label_4 = new System.Windows.Forms.Label();
-			this.calculateButton = new System.Windows.Forms.Button();
+			this.Oblicz_button = new System.Windows.Forms.Button();
 			this.label_3 = new System.Windows.Forms.Label();
 			this.epsilon_TextBox = new System.Windows.Forms.TextBox();
 			this.punktStartowy_TextBox = new System.Windows.Forms.TextBox();
@@ -80,17 +80,17 @@
 			this.label6.TabIndex = 38;
 			this.label6.Text = "ẟ";
 			// 
-			// IsCorrectButton
+			// sprawdzWynik_button
 			// 
-			this.IsCorrectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.IsCorrectButton.Location = new System.Drawing.Point(432, 273);
-			this.IsCorrectButton.Margin = new System.Windows.Forms.Padding(2);
-			this.IsCorrectButton.Name = "IsCorrectButton";
-			this.IsCorrectButton.Size = new System.Drawing.Size(72, 51);
-			this.IsCorrectButton.TabIndex = 36;
-			this.IsCorrectButton.Text = "Sprawdź\r\nmiejsce zerowe";
-			this.IsCorrectButton.UseVisualStyleBackColor = false;
-			this.IsCorrectButton.Click += new System.EventHandler(this.IsCorrectButton_Click);
+			this.sprawdzWynik_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.sprawdzWynik_button.Location = new System.Drawing.Point(432, 273);
+			this.sprawdzWynik_button.Margin = new System.Windows.Forms.Padding(2);
+			this.sprawdzWynik_button.Name = "sprawdzWynik_button";
+			this.sprawdzWynik_button.Size = new System.Drawing.Size(72, 51);
+			this.sprawdzWynik_button.TabIndex = 36;
+			this.sprawdzWynik_button.Text = "Sprawdź\r\nmiejsce zerowe";
+			this.sprawdzWynik_button.UseVisualStyleBackColor = false;
+			this.sprawdzWynik_button.Click += new System.EventHandler(this.sprawdzWynik_button_Click);
 			// 
 			// miejsceZerowe_TextBox
 			// 
@@ -112,17 +112,17 @@
 			this.label_6.TabIndex = 34;
 			this.label_6.Text = "Obliczone miejsce zerowe:";
 			// 
-			// resetButton
+			// resetuj_button
 			// 
-			this.resetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.resetButton.Location = new System.Drawing.Point(538, 273);
-			this.resetButton.Margin = new System.Windows.Forms.Padding(2);
-			this.resetButton.Name = "resetButton";
-			this.resetButton.Size = new System.Drawing.Size(72, 51);
-			this.resetButton.TabIndex = 33;
-			this.resetButton.Text = "Resetuj\r\nwszystko";
-			this.resetButton.UseVisualStyleBackColor = false;
-			this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+			this.resetuj_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.resetuj_button.Location = new System.Drawing.Point(538, 273);
+			this.resetuj_button.Margin = new System.Windows.Forms.Padding(2);
+			this.resetuj_button.Name = "resetuj_button";
+			this.resetuj_button.Size = new System.Drawing.Size(72, 51);
+			this.resetuj_button.TabIndex = 33;
+			this.resetuj_button.Text = "Resetuj\r\nwszystko";
+			this.resetuj_button.UseVisualStyleBackColor = false;
+			this.resetuj_button.Click += new System.EventHandler(this.resetuj_button_Click);
 			// 
 			// iteracje_TextBox
 			// 
@@ -164,17 +164,17 @@
 			this.label_4.TabIndex = 29;
 			this.label_4.Text = "Dokładność wyznaczania pierwiastka:";
 			// 
-			// calculateButton
+			// Oblicz_button
 			// 
-			this.calculateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.calculateButton.Location = new System.Drawing.Point(327, 273);
-			this.calculateButton.Margin = new System.Windows.Forms.Padding(2);
-			this.calculateButton.Name = "calculateButton";
-			this.calculateButton.Size = new System.Drawing.Size(72, 51);
-			this.calculateButton.TabIndex = 28;
-			this.calculateButton.Text = "Oblicz\r\nmiejsce zerowe";
-			this.calculateButton.UseVisualStyleBackColor = false;
-			this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
+			this.Oblicz_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.Oblicz_button.Location = new System.Drawing.Point(327, 273);
+			this.Oblicz_button.Margin = new System.Windows.Forms.Padding(2);
+			this.Oblicz_button.Name = "Oblicz_button";
+			this.Oblicz_button.Size = new System.Drawing.Size(72, 51);
+			this.Oblicz_button.TabIndex = 28;
+			this.Oblicz_button.Text = "Oblicz\r\nmiejsce zerowe";
+			this.Oblicz_button.UseVisualStyleBackColor = false;
+			this.Oblicz_button.Click += new System.EventHandler(this.Oblicz_button_Click);
 			// 
 			// label_3
 			// 
@@ -400,15 +400,15 @@
 			this.Controls.Add(this.saveButton);
 			this.Controls.Add(this.richTextBox1);
 			this.Controls.Add(this.label6);
-			this.Controls.Add(this.IsCorrectButton);
+			this.Controls.Add(this.sprawdzWynik_button);
 			this.Controls.Add(this.miejsceZerowe_TextBox);
 			this.Controls.Add(this.label_6);
-			this.Controls.Add(this.resetButton);
+			this.Controls.Add(this.resetuj_button);
 			this.Controls.Add(this.iteracje_TextBox);
 			this.Controls.Add(this.delta_TextBox);
 			this.Controls.Add(this.label_5);
 			this.Controls.Add(this.label_4);
-			this.Controls.Add(this.calculateButton);
+			this.Controls.Add(this.Oblicz_button);
 			this.Controls.Add(this.label_3);
 			this.Controls.Add(this.epsilon_TextBox);
 			this.Controls.Add(this.punktStartowy_TextBox);
@@ -440,15 +440,15 @@
 		#endregion
 
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button IsCorrectButton;
+		private System.Windows.Forms.Button sprawdzWynik_button;
 		private System.Windows.Forms.TextBox miejsceZerowe_TextBox;
 		private System.Windows.Forms.Label label_6;
-		private System.Windows.Forms.Button resetButton;
+		private System.Windows.Forms.Button resetuj_button;
 		private System.Windows.Forms.TextBox iteracje_TextBox;
 		private System.Windows.Forms.TextBox delta_TextBox;
 		private System.Windows.Forms.Label label_5;
 		private System.Windows.Forms.Label label_4;
-		private System.Windows.Forms.Button calculateButton;
+		private System.Windows.Forms.Button Oblicz_button;
 		private System.Windows.Forms.Label label_3;
 		private System.Windows.Forms.TextBox epsilon_TextBox;
 		private System.Windows.Forms.TextBox punktStartowy_TextBox;
