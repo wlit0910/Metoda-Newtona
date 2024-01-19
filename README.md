@@ -35,7 +35,7 @@ Wykonawcy projektu:
 | Informacje o autorach projektu i jego przeznaczeniu               | ✅          |
 | Przejrzysty, graficzny UI                                         | ️✅          |
 | Wykres na którym jest: wprowadzony wielomian,                     | ✅          |
-| Wykres na którym jest: punkt startowy,                            | X          |
+| Wykres na którym jest: punkt startowy,                            | ️✅          |
 | Wykres na którym jest: Kolejne przybliżenia miejsca zerowego,     | ️✅          |
 | Wykres na którym jest: wyznaczone miejsce zerowe                  | ️✅          |
 | ----                                                              | X          |
