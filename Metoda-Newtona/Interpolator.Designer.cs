@@ -31,22 +31,22 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interpolator));
 			this.label6 = new System.Windows.Forms.Label();
 			this.IsCorrectButton = new System.Windows.Forms.Button();
-			this.zeroPlaceTextBox = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
+			this.miejsceZerowe_TextBox = new System.Windows.Forms.TextBox();
+			this.label_6 = new System.Windows.Forms.Label();
 			this.resetButton = new System.Windows.Forms.Button();
-			this.iterationsTextBox = new System.Windows.Forms.TextBox();
-			this.deltaTextBox = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
+			this.iteracje_TextBox = new System.Windows.Forms.TextBox();
+			this.delta_TextBox = new System.Windows.Forms.TextBox();
+			this.label_5 = new System.Windows.Forms.Label();
+			this.label_4 = new System.Windows.Forms.Label();
 			this.calculateButton = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.epsilonTextBox = new System.Windows.Forms.TextBox();
-			this.pointXTextBox = new System.Windows.Forms.TextBox();
-			this.label1PodajPunktStartowy = new System.Windows.Forms.Label();
-			this.labelPodajWielomian = new System.Windows.Forms.Label();
+			this.label_3 = new System.Windows.Forms.Label();
+			this.epsilon_TextBox = new System.Windows.Forms.TextBox();
+			this.punktStartowy_TextBox = new System.Windows.Forms.TextBox();
+			this.label_2 = new System.Windows.Forms.Label();
+			this.label_1 = new System.Windows.Forms.Label();
 			this.wspolczynniki_textbox1 = new System.Windows.Forms.TextBox();
 			this.saveButton = new System.Windows.Forms.Button();
-			this.logRichTextBox = new System.Windows.Forms.RichTextBox();
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.PomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,25 +92,25 @@
 			this.IsCorrectButton.UseVisualStyleBackColor = false;
 			this.IsCorrectButton.Click += new System.EventHandler(this.IsCorrectButton_Click);
 			// 
-			// zeroPlaceTextBox
+			// miejsceZerowe_TextBox
 			// 
-			this.zeroPlaceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.zeroPlaceTextBox.Location = new System.Drawing.Point(523, 236);
-			this.zeroPlaceTextBox.Margin = new System.Windows.Forms.Padding(2);
-			this.zeroPlaceTextBox.Name = "zeroPlaceTextBox";
-			this.zeroPlaceTextBox.ReadOnly = true;
-			this.zeroPlaceTextBox.Size = new System.Drawing.Size(156, 20);
-			this.zeroPlaceTextBox.TabIndex = 35;
+			this.miejsceZerowe_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.miejsceZerowe_TextBox.Location = new System.Drawing.Point(523, 236);
+			this.miejsceZerowe_TextBox.Margin = new System.Windows.Forms.Padding(2);
+			this.miejsceZerowe_TextBox.Name = "miejsceZerowe_TextBox";
+			this.miejsceZerowe_TextBox.ReadOnly = true;
+			this.miejsceZerowe_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.miejsceZerowe_TextBox.TabIndex = 35;
 			// 
-			// label4
+			// label_6
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(324, 236);
-			this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(132, 13);
-			this.label4.TabIndex = 34;
-			this.label4.Text = "Obliczone miejsce zerowe:";
+			this.label_6.AutoSize = true;
+			this.label_6.Location = new System.Drawing.Point(324, 236);
+			this.label_6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label_6.Name = "label_6";
+			this.label_6.Size = new System.Drawing.Size(132, 13);
+			this.label_6.TabIndex = 34;
+			this.label_6.Text = "Obliczone miejsce zerowe:";
 			// 
 			// resetButton
 			// 
@@ -124,45 +124,45 @@
 			this.resetButton.UseVisualStyleBackColor = false;
 			this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
 			// 
-			// iterationsTextBox
+			// iteracje_TextBox
 			// 
-			this.iterationsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.iterationsTextBox.Location = new System.Drawing.Point(523, 202);
-			this.iterationsTextBox.Margin = new System.Windows.Forms.Padding(2);
-			this.iterationsTextBox.Name = "iterationsTextBox";
-			this.iterationsTextBox.Size = new System.Drawing.Size(156, 20);
-			this.iterationsTextBox.TabIndex = 32;
-			this.iterationsTextBox.Text = "100";
+			this.iteracje_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.iteracje_TextBox.Location = new System.Drawing.Point(523, 202);
+			this.iteracje_TextBox.Margin = new System.Windows.Forms.Padding(2);
+			this.iteracje_TextBox.Name = "iteracje_TextBox";
+			this.iteracje_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.iteracje_TextBox.TabIndex = 32;
+			this.iteracje_TextBox.Text = "100";
 			// 
-			// deltaTextBox
+			// delta_TextBox
 			// 
-			this.deltaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.deltaTextBox.Location = new System.Drawing.Point(523, 161);
-			this.deltaTextBox.Margin = new System.Windows.Forms.Padding(2);
-			this.deltaTextBox.Name = "deltaTextBox";
-			this.deltaTextBox.Size = new System.Drawing.Size(156, 20);
-			this.deltaTextBox.TabIndex = 31;
-			this.deltaTextBox.Text = "0,001";
+			this.delta_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.delta_TextBox.Location = new System.Drawing.Point(523, 161);
+			this.delta_TextBox.Margin = new System.Windows.Forms.Padding(2);
+			this.delta_TextBox.Name = "delta_TextBox";
+			this.delta_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.delta_TextBox.TabIndex = 31;
+			this.delta_TextBox.Text = "0,001";
 			// 
-			// label3
+			// label_5
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(324, 202);
-			this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(132, 13);
-			this.label3.TabIndex = 30;
-			this.label3.Text = "Maksymalna liczba iteracji:";
+			this.label_5.AutoSize = true;
+			this.label_5.Location = new System.Drawing.Point(324, 202);
+			this.label_5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label_5.Name = "label_5";
+			this.label_5.Size = new System.Drawing.Size(132, 13);
+			this.label_5.TabIndex = 30;
+			this.label_5.Text = "Maksymalna liczba iteracji:";
 			// 
-			// label2
+			// label_4
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(324, 164);
-			this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(189, 13);
-			this.label2.TabIndex = 29;
-			this.label2.Text = "Dokładność wyznaczania pierwiastka:";
+			this.label_4.AutoSize = true;
+			this.label_4.Location = new System.Drawing.Point(324, 164);
+			this.label_4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label_4.Name = "label_4";
+			this.label_4.Size = new System.Drawing.Size(189, 13);
+			this.label_4.TabIndex = 29;
+			this.label_4.Text = "Dokładność wyznaczania pierwiastka:";
 			// 
 			// calculateButton
 			// 
@@ -176,55 +176,55 @@
 			this.calculateButton.UseVisualStyleBackColor = false;
 			this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
 			// 
-			// label1
+			// label_3
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(324, 130);
-			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(166, 13);
-			this.label1.TabIndex = 27;
-			this.label1.Text = "Dokładność porównania z zerem:";
+			this.label_3.AutoSize = true;
+			this.label_3.Location = new System.Drawing.Point(324, 130);
+			this.label_3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label_3.Name = "label_3";
+			this.label_3.Size = new System.Drawing.Size(166, 13);
+			this.label_3.TabIndex = 27;
+			this.label_3.Text = "Dokładność porównania z zerem:";
 			// 
-			// epsilonTextBox
+			// epsilon_TextBox
 			// 
-			this.epsilonTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.epsilonTextBox.Location = new System.Drawing.Point(523, 123);
-			this.epsilonTextBox.Margin = new System.Windows.Forms.Padding(2);
-			this.epsilonTextBox.Name = "epsilonTextBox";
-			this.epsilonTextBox.Size = new System.Drawing.Size(156, 20);
-			this.epsilonTextBox.TabIndex = 26;
-			this.epsilonTextBox.Text = "0,001";
+			this.epsilon_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.epsilon_TextBox.Location = new System.Drawing.Point(523, 123);
+			this.epsilon_TextBox.Margin = new System.Windows.Forms.Padding(2);
+			this.epsilon_TextBox.Name = "epsilon_TextBox";
+			this.epsilon_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.epsilon_TextBox.TabIndex = 26;
+			this.epsilon_TextBox.Text = "0,001";
 			// 
-			// pointXTextBox
+			// punktStartowy_TextBox
 			// 
-			this.pointXTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.pointXTextBox.Location = new System.Drawing.Point(523, 87);
-			this.pointXTextBox.Margin = new System.Windows.Forms.Padding(2);
-			this.pointXTextBox.Name = "pointXTextBox";
-			this.pointXTextBox.Size = new System.Drawing.Size(156, 20);
-			this.pointXTextBox.TabIndex = 25;
-			this.pointXTextBox.Text = "9";
+			this.punktStartowy_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.punktStartowy_TextBox.Location = new System.Drawing.Point(523, 87);
+			this.punktStartowy_TextBox.Margin = new System.Windows.Forms.Padding(2);
+			this.punktStartowy_TextBox.Name = "punktStartowy_TextBox";
+			this.punktStartowy_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.punktStartowy_TextBox.TabIndex = 25;
+			this.punktStartowy_TextBox.Text = "9";
 			// 
-			// label1PodajPunktStartowy
+			// label_2
 			// 
-			this.label1PodajPunktStartowy.AutoSize = true;
-			this.label1PodajPunktStartowy.Location = new System.Drawing.Point(324, 94);
-			this.label1PodajPunktStartowy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label1PodajPunktStartowy.Name = "label1PodajPunktStartowy";
-			this.label1PodajPunktStartowy.Size = new System.Drawing.Size(96, 13);
-			this.label1PodajPunktStartowy.TabIndex = 24;
-			this.label1PodajPunktStartowy.Text = "Punkt startowy X0:";
+			this.label_2.AutoSize = true;
+			this.label_2.Location = new System.Drawing.Point(324, 94);
+			this.label_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label_2.Name = "label_2";
+			this.label_2.Size = new System.Drawing.Size(96, 13);
+			this.label_2.TabIndex = 24;
+			this.label_2.Text = "Punkt startowy X0:";
 			// 
-			// labelPodajWielomian
+			// label_1
 			// 
-			this.labelPodajWielomian.AutoSize = true;
-			this.labelPodajWielomian.Location = new System.Drawing.Point(324, 43);
-			this.labelPodajWielomian.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.labelPodajWielomian.Name = "labelPodajWielomian";
-			this.labelPodajWielomian.Size = new System.Drawing.Size(116, 26);
-			this.labelPodajWielomian.TabIndex = 23;
-			this.labelPodajWielomian.Text = "Wzór funkcji\r\n(w postaci wielomianu):";
+			this.label_1.AutoSize = true;
+			this.label_1.Location = new System.Drawing.Point(324, 43);
+			this.label_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label_1.Name = "label_1";
+			this.label_1.Size = new System.Drawing.Size(116, 26);
+			this.label_1.TabIndex = 23;
+			this.label_1.Text = "Wzór funkcji\r\n(w postaci wielomianu):";
 			// 
 			// wspolczynniki_textbox1
 			// 
@@ -248,15 +248,15 @@
 			this.saveButton.UseVisualStyleBackColor = false;
 			this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
 			// 
-			// logRichTextBox
+			// richTextBox1
 			// 
-			this.logRichTextBox.Location = new System.Drawing.Point(220, 337);
-			this.logRichTextBox.Margin = new System.Windows.Forms.Padding(2);
-			this.logRichTextBox.Name = "logRichTextBox";
-			this.logRichTextBox.ReadOnly = true;
-			this.logRichTextBox.Size = new System.Drawing.Size(484, 394);
-			this.logRichTextBox.TabIndex = 39;
-			this.logRichTextBox.Text = "";
+			this.richTextBox1.Location = new System.Drawing.Point(220, 337);
+			this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
+			this.richTextBox1.Name = "richTextBox1";
+			this.richTextBox1.ReadOnly = true;
+			this.richTextBox1.Size = new System.Drawing.Size(484, 394);
+			this.richTextBox1.TabIndex = 39;
+			this.richTextBox1.Text = "";
 			// 
 			// menuStrip1
 			// 
@@ -398,22 +398,22 @@
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.saveButton);
-			this.Controls.Add(this.logRichTextBox);
+			this.Controls.Add(this.richTextBox1);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.IsCorrectButton);
-			this.Controls.Add(this.zeroPlaceTextBox);
-			this.Controls.Add(this.label4);
+			this.Controls.Add(this.miejsceZerowe_TextBox);
+			this.Controls.Add(this.label_6);
 			this.Controls.Add(this.resetButton);
-			this.Controls.Add(this.iterationsTextBox);
-			this.Controls.Add(this.deltaTextBox);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.iteracje_TextBox);
+			this.Controls.Add(this.delta_TextBox);
+			this.Controls.Add(this.label_5);
+			this.Controls.Add(this.label_4);
 			this.Controls.Add(this.calculateButton);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.epsilonTextBox);
-			this.Controls.Add(this.pointXTextBox);
-			this.Controls.Add(this.label1PodajPunktStartowy);
-			this.Controls.Add(this.labelPodajWielomian);
+			this.Controls.Add(this.label_3);
+			this.Controls.Add(this.epsilon_TextBox);
+			this.Controls.Add(this.punktStartowy_TextBox);
+			this.Controls.Add(this.label_2);
+			this.Controls.Add(this.label_1);
 			this.Controls.Add(this.wspolczynniki_textbox1);
 			this.Controls.Add(this.menuStrip1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -441,22 +441,22 @@
 
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Button IsCorrectButton;
-		private System.Windows.Forms.TextBox zeroPlaceTextBox;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.TextBox miejsceZerowe_TextBox;
+		private System.Windows.Forms.Label label_6;
 		private System.Windows.Forms.Button resetButton;
-		private System.Windows.Forms.TextBox iterationsTextBox;
-		private System.Windows.Forms.TextBox deltaTextBox;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox iteracje_TextBox;
+		private System.Windows.Forms.TextBox delta_TextBox;
+		private System.Windows.Forms.Label label_5;
+		private System.Windows.Forms.Label label_4;
 		private System.Windows.Forms.Button calculateButton;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox epsilonTextBox;
-		private System.Windows.Forms.TextBox pointXTextBox;
-		private System.Windows.Forms.Label label1PodajPunktStartowy;
-		private System.Windows.Forms.Label labelPodajWielomian;
+		private System.Windows.Forms.Label label_3;
+		private System.Windows.Forms.TextBox epsilon_TextBox;
+		private System.Windows.Forms.TextBox punktStartowy_TextBox;
+		private System.Windows.Forms.Label label_2;
+		private System.Windows.Forms.Label label_1;
 		private System.Windows.Forms.TextBox wspolczynniki_textbox1;
 		private System.Windows.Forms.Button saveButton;
-		private System.Windows.Forms.RichTextBox logRichTextBox;
+		private System.Windows.Forms.RichTextBox richTextBox1;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem PomocToolStripMenuItem;

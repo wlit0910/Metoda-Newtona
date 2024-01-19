@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
+using System.Windows.Forms.DataVisualization.Charting; // dodana przestrzeń nazw niezbędna do tworzenia wykresów
 
 namespace Metoda_Newtona
 {
@@ -86,10 +86,10 @@ namespace Metoda_Newtona
 			try //obsługa błędów wprowadzanych danych parserami
 			{
 				wykres.ResetChart();
-				decimal epsilon = Decimal.Parse(epsilonTextBox.Text);       // parametr epsilon
-				decimal delta = Decimal.Parse(deltaTextBox.Text);			// parametr delta
-				int iterations = Int32.Parse(iterationsTextBox.Text);		// liczba iteracji
-				decimal pointX = Decimal.Parse(pointXTextBox.Text);			// punkt startowy X0
+				decimal epsilon = Decimal.Parse(epsilon_TextBox.Text);       // parametr epsilon
+				decimal delta = Decimal.Parse(delta_TextBox.Text);			// parametr delta
+				int iterations = Int32.Parse(iteracje_TextBox.Text);		// liczba iteracji
+				decimal pointX = Decimal.Parse(punktStartowy_TextBox.Text);			// punkt startowy X0
 
 
 
@@ -100,7 +100,7 @@ namespace Metoda_Newtona
 
 				decimal zeroPlace = ObliczMiejsceZerowe(functionParameters, pointX, epsilon, delta, iterations); // funkcja obliczająca miejsce zerowe
 
-				zeroPlaceTextBox.Text = zeroPlace.ToString();
+				miejsceZerowe_TextBox.Text = zeroPlace.ToString();
 
 				Series functionChartSeries = PrepareChartSeries(functionParameters, pointX, "Funkcja f(x)");
 
@@ -129,8 +129,8 @@ namespace Metoda_Newtona
 			// porobic AppendText zamiast +=
 
 			
-			logRichTextBox.Text += "Wzór funkcji w postaci wielomianu: " + wspolczynniki_textbox1.Text + "\n"; //String.Join(";", functionParameters
-			logRichTextBox.Text += "Punkt startowy X0: " + pointXTextBox.Text + "\n"; //x0
+			richTextBox1.Text += "Wzór funkcji w postaci wielomianu: " + wspolczynniki_textbox1.Text + "\n"; //String.Join(";", functionParameters
+			richTextBox1.Text += "Punkt startowy X0: " + punktStartowy_TextBox.Text + "\n"; //x0
 
 
 			decimal x1 = x0 - 1; 
@@ -141,10 +141,10 @@ namespace Metoda_Newtona
 
 		
 
-			logRichTextBox.Text += "Wartość funkcji w punkcie startowym wynosi: " + fX0 + "\n";
-			logRichTextBox.Text += "Dokładność porównania z zerem - epsilon: " + epsilon + "\n";
-			logRichTextBox.Text += "Dokładność wyznaczania pierwiastka - delta: " + delta + "\n";
-			logRichTextBox.Text += "Maksymalna liczba iteracji: " + iterations + "\n";
+			richTextBox1.Text += "Wartość funkcji w punkcie startowym wynosi: " + fX0 + "\n";
+			richTextBox1.Text += "Dokładność porównania z zerem - epsilon: " + epsilon + "\n";
+			richTextBox1.Text += "Dokładność wyznaczania pierwiastka - delta: " + delta + "\n";
+			richTextBox1.Text += "Maksymalna liczba iteracji: " + iterations + "\n";
 
 			int numberOfIteration = 0;
 
@@ -152,11 +152,11 @@ namespace Metoda_Newtona
 			{
 				
 
-				logRichTextBox.Text += "\n";
+				richTextBox1.Text += "\n";
 				numberOfIteration += 1;
-				logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Bold);
+				richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Bold);
 
-				logRichTextBox.AppendText("Numer iteracji: " + numberOfIteration + "\n");
+				richTextBox1.AppendText("Numer iteracji: " + numberOfIteration + "\n");
 				//logRichTextBox.Rtf = @"{\rtf1\ansi This is in \b bold\b0.}";
 
 
@@ -170,8 +170,8 @@ namespace Metoda_Newtona
 				decimal fX1 = ObliczWartoscFunkcji_WPunkcieX(derivativeParamters, x0);
 
 				
-				logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Regular);
-				logRichTextBox.Text += "Pochodna funkcji w potencjalnym miejscu zerowym wynosi: " + fX1 + "\n";
+				richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Regular);
+				richTextBox1.Text += "Pochodna funkcji w potencjalnym miejscu zerowym wynosi: " + fX1 + "\n";
 
 
 				// Obliczone wartości opisujące styczną
@@ -190,9 +190,9 @@ namespace Metoda_Newtona
 				if (Math.Abs(fX1) < delta) //sprawdzenie czy wartość funkcji od bieżącego przybliżenia miejsca zerowego jest mniejsza od przyjętej wartości delty - KRYTERIUM STOPU
 				{
 					MessageBox.Show("Zły punkt startowy");
-					logRichTextBox.Text += "Wartość funkcji f(x), która uruchomiła kryterium stopu: "+fX1.ToString()+"\n";
-					logRichTextBox.Text += "Zły punkt startowy\n";
-					logRichTextBox.Text += "Koniec obliczeń" + "\n";
+					richTextBox1.Text += "Wartość funkcji f(x), która uruchomiła kryterium stopu: "+fX1.ToString()+"\n";
+					richTextBox1.Text += "Zły punkt startowy\n";
+					richTextBox1.Text += "Koniec obliczeń" + "\n";
 
 					return x0;
 				}
@@ -204,13 +204,13 @@ namespace Metoda_Newtona
 
 
 
-				logRichTextBox.Text += "Potencjalne miejsce zerowe wynosi: " + x0 + "\n";
+				richTextBox1.Text += "Potencjalne miejsce zerowe wynosi: " + x0 + "\n";
 
 				// Wyliczamy wartość funkcji w potencjalnym miejscu zerowym
 				fX0 = ObliczWartoscFunkcji_WPunkcieX(functionParameters, x0);
 
 
-				logRichTextBox.Text += "Wartość funkcji w potencjalnym miejscu zerowym wynosi: " + fX0 + "\n";
+				richTextBox1.Text += "Wartość funkcji w potencjalnym miejscu zerowym wynosi: " + fX0 + "\n";
 				wykres.DrawPoint(x0, fX0);
 
 				iterations = iterations - 1;
@@ -221,22 +221,22 @@ namespace Metoda_Newtona
 			if (iterations == 0) // Czy osiągnięto maksymalną liczbę iteracji?
 			{
 				MessageBox.Show("Przekroczono maksymalną liczbę iteracji","Osiągnięto maksymalną liczbę iteracji", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-				logRichTextBox.Text += "Przekroczono maksymalną liczbę iteracji\n";
+				richTextBox1.Text += "Przekroczono maksymalną liczbę iteracji\n";
 			}
 
-			logRichTextBox.Text += "\n";
-			logRichTextBox.Text += "\n";
+			richTextBox1.Text += "\n";
+			richTextBox1.Text += "\n";
 
-			logRichTextBox.Text += "UZYSKANE WYNIKI" + "\n";
-			logRichTextBox.Text += "-------------------------------------------------------------------------------------------------------\n";
+			richTextBox1.Text += "UZYSKANE WYNIKI" + "\n";
+			richTextBox1.Text += "-------------------------------------------------------------------------------------------------------\n";
 
-			logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Bold);
+			richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Bold);
 
-			logRichTextBox.AppendText("Miejsce zerowe wynosi: " + x0 + "\n"); 
-			logRichTextBox.AppendText("Wartość funkcji w tym miejscu zerowym wynosi: " + fX0.ToString() + "\n");
-			logRichTextBox.Font = new Font(logRichTextBox.Font, FontStyle.Regular);
+			richTextBox1.AppendText("Miejsce zerowe wynosi: " + x0 + "\n"); 
+			richTextBox1.AppendText("Wartość funkcji w tym miejscu zerowym wynosi: " + fX0.ToString() + "\n");
+			richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Regular);
 
-			logRichTextBox.AppendText("Numer iteracji, w której znaleziono miejsce zerowe: " + numberOfIteration.ToString() + "\n");
+			richTextBox1.AppendText("Numer iteracji, w której znaleziono miejsce zerowe: " + numberOfIteration.ToString() + "\n");
 
 			wykres.DrawZeroPlace(x0, fX0); // Zaznaczane jest miejsce zerowe na wykresie
 			
@@ -277,8 +277,8 @@ namespace Metoda_Newtona
 			// try catch
 
 			decimal[] functionParameters = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(';'), Decimal.Parse);
-			decimal zeroPlace = Decimal.Parse(zeroPlaceTextBox.Text);
-			decimal epsilon = Decimal.Parse(epsilonTextBox.Text);
+			decimal zeroPlace = Decimal.Parse(miejsceZerowe_TextBox.Text);
+			decimal epsilon = Decimal.Parse(epsilon_TextBox.Text);
 			bool correctResult = SprawdzWynik(functionParameters, zeroPlace, epsilon);
 
 			if (correctResult)
@@ -370,12 +370,12 @@ namespace Metoda_Newtona
 			{
 				wykres.Close();
 				wspolczynniki_textbox1.Clear();
-				pointXTextBox.Clear();
-				epsilonTextBox.Text = "0,000001";
-				deltaTextBox.Text = "0,000001";
-				iterationsTextBox.Text = "100";
-				zeroPlaceTextBox.Clear();
-				logRichTextBox.Clear();
+				punktStartowy_TextBox.Clear();
+				epsilon_TextBox.Text = "0,000001";
+				delta_TextBox.Text = "0,000001";
+				iteracje_TextBox.Text = "100";
+				miejsceZerowe_TextBox.Clear();
+				richTextBox1.Clear();
 				this.Refresh();
 				wykres.Refresh();
 
@@ -399,7 +399,7 @@ namespace Metoda_Newtona
 
 				ms.Position = 0;
 
-				logRichTextBox.SaveFile(ms, RichTextBoxStreamType.PlainText);
+				richTextBox1.SaveFile(ms, RichTextBoxStreamType.PlainText);
 				ms.WriteByte(13);
 
 				SaveFileDialog svd = new SaveFileDialog();
