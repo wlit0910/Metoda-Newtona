@@ -44,12 +44,12 @@
 			this.pointXTextBox = new System.Windows.Forms.TextBox();
 			this.label1PodajPunktStartowy = new System.Windows.Forms.Label();
 			this.labelPodajWielomian = new System.Windows.Forms.Label();
-			this.parametersTextBox = new System.Windows.Forms.TextBox();
+			this.wspolczynniki_textbox1 = new System.Windows.Forms.TextBox();
 			this.saveButton = new System.Windows.Forms.Button();
 			this.logRichTextBox = new System.Windows.Forms.RichTextBox();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.schematWprowadzaniaDanychToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.PomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.autorzyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.oProgramieToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -226,15 +226,15 @@
 			this.labelPodajWielomian.TabIndex = 23;
 			this.labelPodajWielomian.Text = "Wzór funkcji\r\n(w postaci wielomianu):";
 			// 
-			// parametersTextBox
+			// wspolczynniki_textbox1
 			// 
-			this.parametersTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.parametersTextBox.Location = new System.Drawing.Point(523, 49);
-			this.parametersTextBox.Margin = new System.Windows.Forms.Padding(2);
-			this.parametersTextBox.Name = "parametersTextBox";
-			this.parametersTextBox.Size = new System.Drawing.Size(156, 20);
-			this.parametersTextBox.TabIndex = 22;
-			this.parametersTextBox.Text = "9;8;7;6";
+			this.wspolczynniki_textbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.wspolczynniki_textbox1.Location = new System.Drawing.Point(523, 49);
+			this.wspolczynniki_textbox1.Margin = new System.Windows.Forms.Padding(2);
+			this.wspolczynniki_textbox1.Name = "wspolczynniki_textbox1";
+			this.wspolczynniki_textbox1.Size = new System.Drawing.Size(156, 20);
+			this.wspolczynniki_textbox1.TabIndex = 22;
+			this.wspolczynniki_textbox1.Text = "9 8 7 6";
 			// 
 			// saveButton
 			// 
@@ -275,17 +275,17 @@
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.schematWprowadzaniaDanychToolStripMenuItem});
+            this.PomocToolStripMenuItem});
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
 			this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
 			this.toolStripMenuItem1.Text = "Opcje";
 			// 
-			// schematWprowadzaniaDanychToolStripMenuItem
+			// PomocToolStripMenuItem
 			// 
-			this.schematWprowadzaniaDanychToolStripMenuItem.Name = "schematWprowadzaniaDanychToolStripMenuItem";
-			this.schematWprowadzaniaDanychToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-			this.schematWprowadzaniaDanychToolStripMenuItem.Text = "Pomoc";
-			this.schematWprowadzaniaDanychToolStripMenuItem.Click += new System.EventHandler(this.schematWprowadzaniaDanychToolStripMenuItem_Click);
+			this.PomocToolStripMenuItem.Name = "PomocToolStripMenuItem";
+			this.PomocToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.PomocToolStripMenuItem.Text = "Pomoc";
+			this.PomocToolStripMenuItem.Click += new System.EventHandler(this.PomocToolStripMenuItem_Click);
 			// 
 			// autorzyToolStripMenuItem
 			// 
@@ -298,7 +298,7 @@
 			// oProgramieToolStripMenuItem1
 			// 
 			this.oProgramieToolStripMenuItem1.Name = "oProgramieToolStripMenuItem1";
-			this.oProgramieToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+			this.oProgramieToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
 			this.oProgramieToolStripMenuItem1.Text = "O programie";
 			this.oProgramieToolStripMenuItem1.Click += new System.EventHandler(this.oProgramieToolStripMenuItem1_Click);
 			// 
@@ -414,7 +414,7 @@
 			this.Controls.Add(this.pointXTextBox);
 			this.Controls.Add(this.label1PodajPunktStartowy);
 			this.Controls.Add(this.labelPodajWielomian);
-			this.Controls.Add(this.parametersTextBox);
+			this.Controls.Add(this.wspolczynniki_textbox1);
 			this.Controls.Add(this.menuStrip1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -454,12 +454,12 @@
 		private System.Windows.Forms.TextBox pointXTextBox;
 		private System.Windows.Forms.Label label1PodajPunktStartowy;
 		private System.Windows.Forms.Label labelPodajWielomian;
-		private System.Windows.Forms.TextBox parametersTextBox;
+		private System.Windows.Forms.TextBox wspolczynniki_textbox1;
 		private System.Windows.Forms.Button saveButton;
 		private System.Windows.Forms.RichTextBox logRichTextBox;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem schematWprowadzaniaDanychToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem PomocToolStripMenuItem;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.PictureBox pictureBox3;

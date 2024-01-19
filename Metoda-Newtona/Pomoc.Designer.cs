@@ -56,7 +56,7 @@
 			this.wspolczynnikiWielomianu.ReadOnly = true;
 			this.wspolczynnikiWielomianu.Size = new System.Drawing.Size(105, 21);
 			this.wspolczynnikiWielomianu.TabIndex = 51;
-			this.wspolczynnikiWielomianu.Text = "8;6;5;4;3;2;1";
+			this.wspolczynnikiWielomianu.Text = "8 6 5 4 3 2 1";
 			this.wspolczynnikiWielomianu.WordWrap = false;
 			// 
 			// pointXTextBox
@@ -183,9 +183,9 @@
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.label4.Location = new System.Drawing.Point(37, 101);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(139, 13);
+			this.label4.Size = new System.Drawing.Size(140, 13);
 			this.label4.TabIndex = 70;
-			this.label4.Text = "oddzielany średnikami ;";
+			this.label4.Text = "oddzielany spacjami \" \"";
 			// 
 			// label5
 			// 
