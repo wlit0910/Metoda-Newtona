@@ -19,7 +19,7 @@ namespace Metoda_Newtona
 
 		public Wykres()
 		{
-			InitializeComponent();
+			InitializeComponent(); // poniżej wstępne parametry wykresu - tytuł, opis osi współrzędnych itd.
 			try	{
 				ResetChart();
 
@@ -44,8 +44,8 @@ namespace Metoda_Newtona
 
 
 
-		// Rysowanie funkcji na wykresie
-		public void DrawFunctionChart(Series series) // dane z Interpolatora - seria danych do narysowania
+		// Rysowanie wykresu wielomianu na wykresie metodą funkcji sklejanych
+		public void RysujWielomian(Series series) // dane z Interpolatora - seria danych do narysowania
 		{
 			try {
 				series.ChartType = SeriesChartType.Spline;
@@ -60,23 +60,23 @@ namespace Metoda_Newtona
 
 
 
-		// Zaznaczanie na wykresie potencjalnych miejsc zerowych
+	
 
 								// (wsp.X, wsp.Y potencjalnego miejsca zerowego)
-		public void RysujPunkt(decimal pointX, decimal pointY)
+		public void RysujPunkt(decimal wspX, decimal wspY)
 		{
-			potencjalneMZ.Points.AddXY(pointX, pointY);
+			potencjalneMZ.Points.AddXY(wspX, wspY);
 			//			potentialZeroPlaces.LegendText = "Punkt X0";
 			//potentialZeroPlaces.ChartType = SeriesChartType.Point;
 		}
 
-		public void RysujStart(decimal pointX, decimal pointY)
+		public void RysujStart(decimal wspX, decimal wspY)
 		{
 
 			try
 			{
 				Series series = new Series("Punkt startowy X0");
-				series.Points.AddXY(pointX, pointY);
+				series.Points.AddXY(wspX, wspY);
 				series.ChartType = SeriesChartType.Point;
 
 				series.Color = Color.Magenta;
@@ -109,15 +109,15 @@ namespace Metoda_Newtona
 		// Zaznaczenie miejsca zerowego na wykresie
 
 		// (wsp.X, wsp.Y miejsca zerowego)
-		public void RysujMiejsceZerowe(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
+		public void RysujMiejsceZerowe(decimal wspX, decimal wspY) 
 		{
 			try{
 				Series series = new Series("Miejsce zerowe");
-				series.Points.AddXY(pointX, pointY);
+				series.Points.AddXY(wspX, wspY);
 				series.ChartType = SeriesChartType.Point;
 
 				series.Color = Color.Firebrick;
-				series.MarkerSize = 10;
+				series.MarkerSize = 12;
 				chart1.Series.Add(series);
 			}
 			catch {
@@ -186,7 +186,7 @@ namespace Metoda_Newtona
 				potencjalneMZ = new Series("Potencjalne miejsca zerowe");
 				potencjalneMZ.ChartType = SeriesChartType.Point;
 				potencjalneMZ.Color = Color.Green;
-				potencjalneMZ.MarkerSize = 10;
+				potencjalneMZ.MarkerSize = 8;
 				chart1.Series.Add(potencjalneMZ);
 
 			}

@@ -106,7 +106,8 @@ namespace Metoda_Newtona
 
 				decimal wspY = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom,punktStartowy);
 				//Series start = PunktStartowy(punktStartowy, wspY, "Punkt startowy X0");
-				wykres.RysujStart(punktStartowy,wspY);
+				
+				wykres.RysujStart(punktStartowy,wspY); // zaznaczenie punktu startowego na wykresie
 
 
 
@@ -116,7 +117,7 @@ namespace Metoda_Newtona
 
 				Series WykresFunkcjiWielomianu = StworzSerieDanych(wspolczynnikiWielom, punktStartowy, "Wykres wielomianu");
 
-				wykres.DrawFunctionChart(WykresFunkcjiWielomianu);
+				wykres.RysujWielomian(WykresFunkcjiWielomianu);
 				wykres.Show();
 			}
 			catch
@@ -193,7 +194,7 @@ namespace Metoda_Newtona
 				if (wspolczynnikiWielom.Length > 1) // nie wyliczymy stycznej dla stałej tak żeby przecięła oś X
 				{
 					Series series = PrepareTangentSeries(wartosciStycznej, x0, "Styczna nr " + numerIteracji);
-					wykres.DrawFunctionChart(series);
+					wykres.RysujWielomian(series);
 				}
 
 
