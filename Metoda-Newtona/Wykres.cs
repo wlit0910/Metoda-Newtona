@@ -14,7 +14,7 @@ namespace Metoda_Newtona
 {
 	public partial class Wykres : Form
 	{
-		private Series potentialZeroPlaces;
+		private Series potencjalneMZ;
 
 
 		public Wykres()
@@ -27,8 +27,8 @@ namespace Metoda_Newtona
 				chart1.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
 				chart1.MouseWheel += Chart1_MouseWheel;
 
-				Title title = chart1.Titles.Add("Wyznaczanie miejsca zerowego metodą stycznych (Newtona)");
-				title.Font = new Font("Arial", 15, FontStyle.Bold);
+				Title tytul = chart1.Titles.Add("Wyznaczanie miejsca zerowego metodą stycznych (Newtona)");
+				tytul.Font = new Font("Arial", 15, FontStyle.Bold);
 
 				chart1.ChartAreas[0].AxisX.Title = "Oś X";
 				chart1.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 15, FontStyle.Bold);
@@ -63,9 +63,9 @@ namespace Metoda_Newtona
 		// Zaznaczanie na wykresie potencjalnych miejsc zerowych
 
 								// (wsp.X, wsp.Y potencjalnego miejsca zerowego)
-		public void DrawPoint(decimal pointX, decimal pointY)
+		public void RysujPunkt(decimal pointX, decimal pointY)
 		{
-			potentialZeroPlaces.Points.AddXY(pointX, pointY);
+			potencjalneMZ.Points.AddXY(pointX, pointY);
 			//			potentialZeroPlaces.LegendText = "Punkt X0";
 			//potentialZeroPlaces.ChartType = SeriesChartType.Point;
 		}
@@ -85,7 +85,7 @@ namespace Metoda_Newtona
 		// Zaznaczenie miejsca zerowego na wykresie
 
 								// (wsp.X, wsp.Y miejsca zerowego)
-		public void DrawZeroPlace(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
+		public void RysujMiejsceZerowe(decimal pointX, decimal pointY) // Oznaczenie miejsca zerowego
 		{
 			try{
 				Series series = new Series("Miejsce zerowe");
@@ -159,11 +159,11 @@ namespace Metoda_Newtona
 				//while (chart1.Series.Count > 0) { chart1.Series.RemoveAt(0); }
 
 				chart1.Series.Clear();
-				potentialZeroPlaces = new Series("Potencjalne miejsca zerowe");
-				potentialZeroPlaces.ChartType = SeriesChartType.Point;
-				potentialZeroPlaces.Color = Color.Green;
-				potentialZeroPlaces.MarkerSize = 10;
-				chart1.Series.Add(potentialZeroPlaces);
+				potencjalneMZ = new Series("Potencjalne miejsca zerowe");
+				potencjalneMZ.ChartType = SeriesChartType.Point;
+				potencjalneMZ.Color = Color.Green;
+				potencjalneMZ.MarkerSize = 10;
+				chart1.Series.Add(potencjalneMZ);
 
 			}
 			catch {

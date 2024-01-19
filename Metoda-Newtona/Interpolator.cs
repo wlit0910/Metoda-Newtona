@@ -25,17 +25,17 @@ namespace Metoda_Newtona
 
 		// Funckja do wyliczania wartości funkcji w punkcie punkcie x1, x2, x3, x4 ......
 
-									// (tablica ze współczynnikami wielomianu, współrzedna X punktu dla którego będziemy wyznaczać wartość funkcji)
-		public decimal ObliczWartoscFunkcji_WPunkcieX(decimal[] functionParameters, decimal pointX) // Wyliczamy po kolei wartości funkcji f(x) w punkcie x1, x2, x3, x4 ......  i dodajemy je do siebie
+									//		(tablica ze współczynnikami wielomianu, współrzedna X punktu dla którego będziemy wyznaczać wartość funkcji)
+		public decimal ObliczWartoscFunkcji_WPunkcieX(decimal[] wspolczynnikiWielom, decimal wspX) // Wyliczamy po kolei wartości funkcji f(x) w punkcie x1, x2, x3, x4 ......  i dodajemy je do siebie
 		{
-			decimal result = 0.0m;
-			for (int i = 0; i < functionParameters.Length; i++)
+			decimal wartoscFunkcji = 0.0m;
+			for (int i = 0; i < wspolczynnikiWielom.Length; i++)
 			{
 				//		x1,x2,x3,x4....		*						x0 do potęgi takiej, ile jest wpółczynników wielomianu, iteracyjnie o 1 mniej
-				result += functionParameters[i] * (decimal)Math.Pow((double)pointX, functionParameters.Length - 1 - i);
+				wartoscFunkcji += wspolczynnikiWielom[i] * (decimal)Math.Pow((double)wspX, wspolczynnikiWielom.Length - 1 - i);
 				
 			}
-			return result; // wartość funkcji w zadanym punkcie - współrzedna Y
+			return wartoscFunkcji; // wartość funkcji w zadanym punkcie - współrzedna Y
 		}
 
 
@@ -45,15 +45,15 @@ namespace Metoda_Newtona
 		//Funkcja do wyznaczania wartości pochodnej funkcji w punktach x1, x2, x3, x4, ......
 
 												// tablica ze współczynnikami wielomianu
-		public decimal[] ObliczPochodna(decimal[] functionParameters) // Wyznaczenie tablicy z wartościami pochodnych funkcji w punktach x1, x2, x3, x4, ......
+		public decimal[] ObliczPochodna(decimal[] wspolczynnikiWielom) // Wyznaczenie tablicy z wartościami pochodnych funkcji w punktach x1, x2, x3, x4, ......
 		{
-			decimal[] result = new decimal[functionParameters.Length - 1];
+			decimal[] ParamPochodnej = new decimal[wspolczynnikiWielom.Length - 1];
 
-			for (int i = 0; i < functionParameters.Length - 1; i++)
+			for (int i = 0; i < wspolczynnikiWielom.Length - 1; i++)
 			{
-				result[i] = functionParameters[i] * (functionParameters.Length - 1 - i);
+				ParamPochodnej[i] = wspolczynnikiWielom[i] * (wspolczynnikiWielom.Length - 1 - i);
 			}
-			return result; // wyliczona wartość pochodnej funkcji
+			return ParamPochodnej; // wyliczona wartość pochodnej funkcji
 		}
 
 
@@ -64,16 +64,16 @@ namespace Metoda_Newtona
 		//Funkcja do wyznaczania wartości punktów opisujących styczną
 
 									//(tablica z wartościami pochodnych,    współrzędna X pochodnej, wsp. Y pochodnej)
-		public decimal[] ObliczStyczna(decimal[] derivativeFunctionParameters, decimal pointX, decimal pointY)
+		public decimal[] ObliczStyczna(decimal[] parametryPochodnej, decimal wspX, decimal wspY)
 		{
-			decimal[] result = new decimal[2];
+			decimal[] wspolrzedneStycznej = new decimal[2];
 
-			decimal derivativeValue = ObliczWartoscFunkcji_WPunkcieX(derivativeFunctionParameters, pointX);
-			result[0] = derivativeValue;
+			decimal wartoscPochodnej = ObliczWartoscFunkcji_WPunkcieX(parametryPochodnej, wspX);
+			wspolrzedneStycznej[0] = wartoscPochodnej;
 
-			result[1] = pointY - derivativeValue * pointX; // przekształcone równanie stycznej
+			wspolrzedneStycznej[1] = wspY - wartoscPochodnej * wspX; // przekształcone równanie stycznej
 
-			return result; // tablica z wartościami opisującymi styczną
+			return wspolrzedneStycznej; // tablica z wartościami opisującymi styczną
 		}
 
 
@@ -86,25 +86,25 @@ namespace Metoda_Newtona
 			try //obsługa błędów wprowadzanych danych parserami
 			{
 				wykres.ResetChart();
+				decimal punktStartowy = Decimal.Parse(punktStartowy_TextBox.Text);			// punkt startowy X0
 				decimal epsilon = Decimal.Parse(epsilon_TextBox.Text);       // parametr epsilon
 				decimal delta = Decimal.Parse(delta_TextBox.Text);			// parametr delta
-				int iterations = Int32.Parse(iteracje_TextBox.Text);		// liczba iteracji
-				decimal pointX = Decimal.Parse(punktStartowy_TextBox.Text);			// punkt startowy X0
+				int liczbaIteracji = Int32.Parse(iteracje_TextBox.Text);		// liczba iteracji
 
 
 
 				//wykres.PunktPocz(pointX); // zaznaczenie punktu startowego nie dziala
 
 
-				decimal[] functionParameters = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(' '), Decimal.Parse); // wpisanie współczynników wielomianów do tablicy współczynników wielomianu
+				decimal[] wspolczynnikiWielom = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(' '), Decimal.Parse); // wpisanie współczynników wielomianów do tablicy współczynników wielomianu
 
-				decimal zeroPlace = ObliczMiejsceZerowe(functionParameters, pointX, epsilon, delta, iterations); // funkcja obliczająca miejsce zerowe
+				decimal miejsceZerowe = ObliczMiejsceZerowe(wspolczynnikiWielom, punktStartowy, epsilon, delta, liczbaIteracji); // funkcja obliczająca miejsce zerowe
 
-				miejsceZerowe_TextBox.Text = zeroPlace.ToString();
+				miejsceZerowe_TextBox.Text = miejsceZerowe.ToString();
 
-				Series functionChartSeries = PrepareChartSeries(functionParameters, pointX, "Funkcja f(x)");
+				Series WykresFunkcjiWielomianu = StworzSerieDanych(wspolczynnikiWielom, punktStartowy, "Funkcja f(x)");
 
-				wykres.DrawFunctionChart(functionChartSeries);
+				wykres.DrawFunctionChart(WykresFunkcjiWielomianu);
 				wykres.Show();
 			}
 			catch
@@ -123,20 +123,20 @@ namespace Metoda_Newtona
 									
 										// tablica z współczynnikami wielomianu, punkt startowy, epislon, delta, max. liczba iteracji
 
-		public decimal ObliczMiejsceZerowe(decimal[] functionParameters, decimal x0, decimal epsilon, decimal delta, int iterations) 
+		public decimal ObliczMiejsceZerowe(decimal[] wspolczynnikiWielom, decimal x0, decimal epsilon, decimal delta, int liczbaIteracji) 
 		{
 			
 			// porobic AppendText zamiast +=
 
 			
-			richTextBox1.Text += "Wzór funkcji w postaci wielomianu: " + wspolczynniki_textbox1.Text + "\n"; //String.Join(";", functionParameters
-			richTextBox1.Text += "Punkt startowy X0: " + punktStartowy_TextBox.Text + "\n"; //x0
+			richTextBox1.Text += "Wzór funkcji w postaci wielomianu: " + wspolczynniki_textbox1.Text + "\n"; 
+			richTextBox1.Text += "Punkt startowy X0: " + punktStartowy_TextBox.Text + "\n"; 
 
 
 			decimal x1 = x0 - 1; 
 
 			// wyliczona wartość funkcji w punkcie x0
-			decimal fX0 = ObliczWartoscFunkcji_WPunkcieX(functionParameters, x0);
+			decimal fX0 = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, x0);
 
 
 		
@@ -144,30 +144,30 @@ namespace Metoda_Newtona
 			richTextBox1.Text += "Wartość funkcji w punkcie startowym wynosi: " + fX0 + "\n";
 			richTextBox1.Text += "Dokładność porównania z zerem - epsilon: " + epsilon + "\n";
 			richTextBox1.Text += "Dokładność wyznaczania pierwiastka - delta: " + delta + "\n";
-			richTextBox1.Text += "Maksymalna liczba iteracji: " + iterations + "\n";
+			richTextBox1.Text += "Maksymalna liczba iteracji: " + liczbaIteracji + "\n";
 
-			int numberOfIteration = 0;
+			int numerIteracji = 0;
 
-			while (iterations > 0 && Math.Abs(x1 - x0) > epsilon && Math.Abs(fX0) > delta) //wykonuj dopóki liczba iteracji jest większa od 0 i wartość bezwzględna z x1 - x0 jest większa od epsilon i wartość bezwzględna z funkcji w punkcie x0 jest większa od delta
+			while (liczbaIteracji > 0 && Math.Abs(x1 - x0) > epsilon && Math.Abs(fX0) > delta) //wykonuj dopóki liczba iteracji jest większa od 0 i wartość bezwzględna z x1 - x0 jest większa od epsilon i wartość bezwzględna z funkcji w punkcie x0 jest większa od delta
 			{
 				
 
 				richTextBox1.Text += "\n";
-				numberOfIteration += 1;
+				numerIteracji += 1;
 				richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Bold);
 
-				richTextBox1.AppendText("Numer iteracji: " + numberOfIteration + "\n");
+				richTextBox1.AppendText("Numer iteracji: " + numerIteracji + "\n");
 				//logRichTextBox.Rtf = @"{\rtf1\ansi This is in \b bold\b0.}";
 
 
 
 				// Tutaj są wartości pochodnej
-				decimal[] derivativeParamters = ObliczPochodna(functionParameters);
+				decimal[] wartosciPochodnej = ObliczPochodna(wspolczynnikiWielom);
 
 
 
 				// Obliczona pochodna funkcji w potencjalnym miejscu zerowym
-				decimal fX1 = ObliczWartoscFunkcji_WPunkcieX(derivativeParamters, x0);
+				decimal fX1 = ObliczWartoscFunkcji_WPunkcieX(wartosciPochodnej, x0);
 
 				
 				richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Regular);
@@ -175,12 +175,12 @@ namespace Metoda_Newtona
 
 
 				// Obliczone wartości opisujące styczną
-				decimal[] tangentParameters = ObliczStyczna(derivativeParamters, x0, fX0);
+				decimal[] wartosciStycznej = ObliczStyczna(wartosciPochodnej, x0, fX0);
 
 
-				if (functionParameters.Length > 1) // nie wyliczymy stycznej dla stałej tak żeby przecięła oś X
+				if (wspolczynnikiWielom.Length > 1) // nie wyliczymy stycznej dla stałej tak żeby przecięła oś X
 				{
-					Series series = PrepareTangentSeries(tangentParameters, x0, "Styczna nr " + numberOfIteration);
+					Series series = PrepareTangentSeries(wartosciStycznej, x0, "Styczna nr " + numerIteracji);
 					wykres.DrawFunctionChart(series);
 				}
 
@@ -207,18 +207,18 @@ namespace Metoda_Newtona
 				richTextBox1.Text += "Potencjalne miejsce zerowe wynosi: " + x0 + "\n";
 
 				// Wyliczamy wartość funkcji w potencjalnym miejscu zerowym
-				fX0 = ObliczWartoscFunkcji_WPunkcieX(functionParameters, x0);
+				fX0 = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, x0);
 
 
 				richTextBox1.Text += "Wartość funkcji w potencjalnym miejscu zerowym wynosi: " + fX0 + "\n";
-				wykres.DrawPoint(x0, fX0);
+				wykres.RysujPunkt(x0, fX0);
 
-				iterations = iterations - 1;
+				liczbaIteracji = liczbaIteracji - 1;
 
 
 			}
 
-			if (iterations == 0) // Czy osiągnięto maksymalną liczbę iteracji?
+			if (liczbaIteracji == 0) // Czy osiągnięto maksymalną liczbę iteracji?
 			{
 				MessageBox.Show("Przekroczono maksymalną liczbę iteracji","Osiągnięto maksymalną liczbę iteracji", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 				richTextBox1.Text += "Przekroczono maksymalną liczbę iteracji\n";
@@ -236,9 +236,9 @@ namespace Metoda_Newtona
 			richTextBox1.AppendText("Wartość funkcji w tym miejscu zerowym wynosi: " + fX0.ToString() + "\n");
 			richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Regular);
 
-			richTextBox1.AppendText("Numer iteracji, w której znaleziono miejsce zerowe: " + numberOfIteration.ToString() + "\n");
+			richTextBox1.AppendText("Numer iteracji, w której znaleziono miejsce zerowe: " + numerIteracji.ToString() + "\n");
 
-			wykres.DrawZeroPlace(x0, fX0); // Zaznaczane jest miejsce zerowe na wykresie
+			wykres.RysujMiejsceZerowe(x0, fX0); // Zaznaczane jest miejsce zerowe na wykresie
 			
 
 			return x0; // wartość miejsca zerowego, współrzędna X
@@ -252,11 +252,11 @@ namespace Metoda_Newtona
 		// Funkcja sprawdzająca, czy miejsce zerowe jest zgodne z wartością epsilon (dokładność porównania z zerem)
 
 		//					(tablica z współczynnikami wielom, wyliczone miejsce zerowe, epsilon)
-		public bool SprawdzWynik(decimal[] functionParameters, decimal zeroPlace, decimal epsilon) // Sprawdź wynik - funkcja
+		public bool SprawdzWynik(decimal[] wspolczynnikiWielom, decimal miejsceZerowe, decimal epsilon) // Sprawdź wynik - funkcja
 		{
-			decimal result = ObliczWartoscFunkcji_WPunkcieX(functionParameters, zeroPlace);  // czy bezwzględna wartość funkcji w miejscu zerowym jest mniejsza od wartości epsilon??
+			decimal wartosc_w_MZ = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, miejsceZerowe);  // czy bezwzględna wartość funkcji w miejscu zerowym jest mniejsza od wartości epsilon??
 
-			if (Math.Abs(result) < epsilon)												// wtedy - jeśli tutaj jest wartość bliska 0, to znaczy że program działa ok
+			if (Math.Abs(wartosc_w_MZ) < epsilon)												// wtedy - jeśli tutaj jest wartość bliska 0, to znaczy że program działa ok
 			{
 				return true;
 			}
@@ -276,12 +276,12 @@ namespace Metoda_Newtona
 		{
 			// try catch
 
-			decimal[] functionParameters = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(' '), Decimal.Parse);
-			decimal zeroPlace = Decimal.Parse(miejsceZerowe_TextBox.Text);
+			decimal[] wspolczynnikiWielom = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(' '), Decimal.Parse);
+			decimal miejsceZerowe = Decimal.Parse(miejsceZerowe_TextBox.Text);
 			decimal epsilon = Decimal.Parse(epsilon_TextBox.Text);
-			bool correctResult = SprawdzWynik(functionParameters, zeroPlace, epsilon);
+			bool czyPoprawny = SprawdzWynik(wspolczynnikiWielom, miejsceZerowe, epsilon);
 
-			if (correctResult)
+			if (czyPoprawny)
 			{
 				MessageBox.Show("Miejsce zerowe jest poprawne");
 			}
@@ -300,14 +300,14 @@ namespace Metoda_Newtona
 		// Tworzenie serii danych do wykresu
 
 									// (tablica z współczynnikami wielom., punkt startowy, nazwa serii do wykresu)
-		public Series PrepareChartSeries(decimal[] functionParameters, decimal startingPointX, string seriesName)
+		public Series StworzSerieDanych(decimal[] wspolczynnikiWielom, decimal punktStartowy, string nazwaSerii)
 		{
 			// try catch
 
-			Series series = new Series(seriesName);
-			for (decimal i = startingPointX - 5.0m; i < startingPointX + 5.0m; i = i + 0.5m)
+			Series series = new Series(nazwaSerii);
+			for (decimal i = punktStartowy - 5.0m; i < punktStartowy + 5.0m; i = i + 0.5m)
 			{
-				series.Points.Add(new DataPoint((double)i, (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, i))); // punkty X Y funkcji - albo styczna, miejsce zerowe itd
+				series.Points.Add(new DataPoint((double)i, (double)ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, i))); // punkty X Y funkcji - albo styczna, miejsce zerowe itd
 			}
 			return series; // seria danych do wykresu
 		}
@@ -451,18 +451,9 @@ namespace Metoda_Newtona
 		// Wyświetl okno pomocy
 		private void PomocToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			Pomoc schematObslugiBledow = new Pomoc();
-			schematObslugiBledow.Show();
+			Pomoc pomoc = new Pomoc();
+			pomoc.Show();
 		}
 
-		//private void resetuj_button_Click(object sender, EventArgs e)
-		//{
-
-		//}
-
-		//private void sprawdzWynik_button_Click(object sender, EventArgs e)
-		//{
-
-		//}
 	}
 }
