@@ -54,8 +54,6 @@
 			this.oProgramieToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.pictureBox3 = new System.Windows.Forms.PictureBox();
-			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.pictureBox6 = new System.Windows.Forms.PictureBox();
 			this.button1 = new System.Windows.Forms.Button();
@@ -63,8 +61,6 @@
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
 			this.SuspendLayout();
@@ -239,7 +235,7 @@
 			// saveButton
 			// 
 			this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.saveButton.Location = new System.Drawing.Point(523, 736);
+			this.saveButton.Location = new System.Drawing.Point(532, 605);
 			this.saveButton.Margin = new System.Windows.Forms.Padding(2);
 			this.saveButton.Name = "saveButton";
 			this.saveButton.Size = new System.Drawing.Size(92, 44);
@@ -254,7 +250,7 @@
 			this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.richTextBox1.Name = "richTextBox1";
 			this.richTextBox1.ReadOnly = true;
-			this.richTextBox1.Size = new System.Drawing.Size(484, 394);
+			this.richTextBox1.Size = new System.Drawing.Size(484, 255);
 			this.richTextBox1.TabIndex = 39;
 			this.richTextBox1.Text = "";
 			// 
@@ -283,7 +279,7 @@
 			// PomocToolStripMenuItem
 			// 
 			this.PomocToolStripMenuItem.Name = "PomocToolStripMenuItem";
-			this.PomocToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.PomocToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
 			this.PomocToolStripMenuItem.Text = "Pomoc";
 			this.PomocToolStripMenuItem.Click += new System.EventHandler(this.PomocToolStripMenuItem_Click);
 			// 
@@ -298,7 +294,7 @@
 			// oProgramieToolStripMenuItem1
 			// 
 			this.oProgramieToolStripMenuItem1.Name = "oProgramieToolStripMenuItem1";
-			this.oProgramieToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.oProgramieToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
 			this.oProgramieToolStripMenuItem1.Text = "O programie";
 			this.oProgramieToolStripMenuItem1.Click += new System.EventHandler(this.oProgramieToolStripMenuItem1_Click);
 			// 
@@ -317,37 +313,17 @@
 			this.pictureBox2.Image = global::Metoda_Newtona.Properties.Resources.mathBackground;
 			this.pictureBox2.Location = new System.Drawing.Point(728, 310);
 			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(184, 282);
+			this.pictureBox2.Size = new System.Drawing.Size(184, 339);
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox2.TabIndex = 43;
 			this.pictureBox2.TabStop = false;
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.Image = global::Metoda_Newtona.Properties.Resources.mathBackground;
-			this.pictureBox3.Location = new System.Drawing.Point(728, 590);
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new System.Drawing.Size(184, 189);
-			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox3.TabIndex = 44;
-			this.pictureBox3.TabStop = false;
-			// 
-			// pictureBox4
-			// 
-			this.pictureBox4.Image = global::Metoda_Newtona.Properties.Resources.mathBackground;
-			this.pictureBox4.Location = new System.Drawing.Point(12, 590);
-			this.pictureBox4.Name = "pictureBox4";
-			this.pictureBox4.Size = new System.Drawing.Size(184, 189);
-			this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox4.TabIndex = 47;
-			this.pictureBox4.TabStop = false;
 			// 
 			// pictureBox5
 			// 
 			this.pictureBox5.Image = global::Metoda_Newtona.Properties.Resources.mathBackground;
 			this.pictureBox5.Location = new System.Drawing.Point(12, 310);
 			this.pictureBox5.Name = "pictureBox5";
-			this.pictureBox5.Size = new System.Drawing.Size(184, 282);
+			this.pictureBox5.Size = new System.Drawing.Size(184, 339);
 			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox5.TabIndex = 46;
 			this.pictureBox5.TabStop = false;
@@ -365,7 +341,7 @@
 			// button1
 			// 
 			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.button1.Location = new System.Drawing.Point(629, 736);
+			this.button1.Location = new System.Drawing.Point(629, 605);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 44);
 			this.button1.TabIndex = 48;
@@ -388,13 +364,11 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(924, 787);
+			this.ClientSize = new System.Drawing.Size(924, 660);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.pictureBox4);
 			this.Controls.Add(this.pictureBox5);
 			this.Controls.Add(this.pictureBox6);
-			this.Controls.Add(this.pictureBox3);
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.saveButton);
@@ -428,8 +402,6 @@
 			this.menuStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
 			this.ResumeLayout(false);
@@ -462,8 +434,6 @@
 		private System.Windows.Forms.ToolStripMenuItem PomocToolStripMenuItem;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.PictureBox pictureBox2;
-		private System.Windows.Forms.PictureBox pictureBox3;
-		private System.Windows.Forms.PictureBox pictureBox4;
 		private System.Windows.Forms.PictureBox pictureBox5;
 		private System.Windows.Forms.PictureBox pictureBox6;
 		private System.Windows.Forms.ToolStripMenuItem autorzyToolStripMenuItem;
