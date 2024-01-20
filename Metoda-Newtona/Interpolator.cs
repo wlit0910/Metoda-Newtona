@@ -33,6 +33,9 @@ namespace Metoda_Newtona
 			{
 				//		x1,x2,x3,x4....		*						x0 do potęgi takiej, ile jest wpółczynników wielomianu, iteracyjnie o 1 mniej
 				wartoscFunkcji += wspolczynnikiWielom[i] * (decimal)Math.Pow((double)wspX, wspolczynnikiWielom.Length - 1 - i);
+
+				// wzór funkcji o współczynnikach np. 5 6 7  i punktu startowego = 3
+				// wynosiłby f(x) = 5*3^3 + 6*3^2 + 7*3^1
 				
 			}
 			return wartoscFunkcji; // wartość funkcji w zadanym punkcie - współrzedna Y
@@ -105,7 +108,7 @@ namespace Metoda_Newtona
 
 
 				decimal wspY = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom,punktStartowy);
-				//Series start = PunktStartowy(punktStartowy, wspY, "Punkt startowy X0");
+				
 				
 				wykres.RysujStart(punktStartowy,wspY); // zaznaczenie punktu startowego na wykresie
 
@@ -195,7 +198,7 @@ namespace Metoda_Newtona
 
 				if (wspolczynnikiWielom.Length > 1) // nie wyliczymy stycznej dla stałej tak żeby przecięła oś X
 				{
-					Series series = PrepareTangentSeries(wartosciStycznej, x0, "Styczna nr " + numerIteracji);
+					Series series = StworzSerie_dlaStycznej(wartosciStycznej, x0, "Styczna nr " + numerIteracji);
 					wykres.RysujWielomian(series);
 				}
 
@@ -341,62 +344,64 @@ namespace Metoda_Newtona
 		// Tworzenie serii danych do wykresu - dla stycznej w punkcie
 
 		//									(tablica współczynników wielom., punkt startowy, nazwa serii)
-		public Series PrepareTangentSeries(decimal[] functionParameters, decimal startingPointX, string seriesName) // rysowanie stycznych
+		public Series StworzSerie_dlaStycznej(decimal[] wspolczynnikiWielom, decimal punktStartowy, string nazwaSerii) // rysowanie stycznych
 		{
 
 			// Tworzenie nowej serii danych o podanej nazwie
-			Series series = new Series(seriesName);
+			Series seria = new Series(nazwaSerii);
 
 			// Ustawienie koloru serii na czerwony
-			series.Color = Color.Red;
+			seria.Color = Color.Red;
 
 			// Obliczenie wartości funkcji wielomianowej w punkcie startowym
-			decimal fStartingPointX = ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX);
+			decimal wartoscFunkcjiwX0 = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy);
 
-			// Inicjalizacja wartości pomocniczej valueAtX   ZMIENCI
-			decimal valueAtX = fStartingPointX;
+			// Inicjalizacja wartości pomocniczej pomoc_wartoscwX   
+			decimal pomoc_wartoscwX = wartoscFunkcjiwX0;
+
+
 
 			// Sprawdzenie warunków dla różnych przypadków - jeśli współczynników wielomianu jest więcej niż 0 i gdy wartość funkcji w punkcie jest mniejsza od 0 (lub  przeciwny warunek)
-			if ((functionParameters[0] > 0 && fStartingPointX < 0) || (functionParameters[0] < 0 && fStartingPointX > 0))
+			if ((wspolczynnikiWielom[0] > 0 && wartoscFunkcjiwX0 < 0) || (wspolczynnikiWielom[0] < 0 && wartoscFunkcjiwX0 > 0))
 			{
 				// Dodanie punktu do serii dla punktu leżącego 0.5 jednostki przed punktem startowym
-				series.Points.Add(new DataPoint((double)(startingPointX - 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX - 0.5m)));
+				seria.Points.Add(new DataPoint((double)(punktStartowy - 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy - 0.5m)));
 
 				// Pętla dodająca punkty do serii do momentu, gdy wartość funkcji zmienia znak
-				while (fStartingPointX * valueAtX > 0)
+				while (wartoscFunkcjiwX0 * pomoc_wartoscwX > 0)
 				{
 					// Obliczenie wartości funkcji dla aktualnego punktu
-					valueAtX = ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX);
+					pomoc_wartoscwX = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy);
 					// Dodanie punktu do serii
-					series.Points.Add(new DataPoint((double)startingPointX, (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX)));
+					seria.Points.Add(new DataPoint((double)punktStartowy, (double)ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy)));
 					// Zwiększenie wartości x o 0.5 jednostki
-					startingPointX += 0.5m;
+					punktStartowy += 0.5m;
 				}
 			}
-			else if ((functionParameters[0] > 0 && fStartingPointX > 0) || (functionParameters[0] < 0 && fStartingPointX < 0))
+			else if ((wspolczynnikiWielom[0] > 0 && wartoscFunkcjiwX0 > 0) || (wspolczynnikiWielom[0] < 0 && wartoscFunkcjiwX0 < 0))
 			{
 				// Dodanie punktu do serii dla punktu leżącego 0.5 jednostki po punkcie startowym
-				series.Points.Add(new DataPoint((double)(startingPointX + 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX + 0.5m)));
+				seria.Points.Add(new DataPoint((double)(punktStartowy + 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy + 0.5m)));
 				// Pętla dodająca punkty do serii do momentu, gdy wartość funkcji zmienia znak
-				while (fStartingPointX * valueAtX > 0)
+				while (wartoscFunkcjiwX0 * pomoc_wartoscwX > 0)
 				{
 					// Obliczenie wartości funkcji dla aktualnego punktu
-					valueAtX = ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX);
+					pomoc_wartoscwX = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy);
 					// Dodanie punktu do serii
-					series.Points.Add(new DataPoint((double)startingPointX, (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX)));
+					seria.Points.Add(new DataPoint((double)punktStartowy, (double)ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy)));
 					// Zmniejszenie wartości x o 0.5 jednostki
-					startingPointX -= 0.5m;
+					punktStartowy -= 0.5m;
 				}
 			}
 			else
 			{
 				// Dodanie punktów do serii dla punktów leżących 0.5 jednostki przed, w, i po punkcie startowym
-				series.Points.Add(new DataPoint((double)(startingPointX + 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX + 0.5m)));
-				series.Points.Add(new DataPoint((double)(startingPointX), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX)));
-				series.Points.Add(new DataPoint((double)(startingPointX - 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX - 0.5m)));
+				seria.Points.Add(new DataPoint((double)(punktStartowy + 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy + 0.5m)));
+				seria.Points.Add(new DataPoint((double)(punktStartowy), (double)ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy)));
+				seria.Points.Add(new DataPoint((double)(punktStartowy - 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, punktStartowy - 0.5m)));
 				
 			}
-			return series; // seria danych do wykresu, dotycząca stycznej
+			return seria; // seria danych do wykresu, dotycząca stycznej
 		}
 
 

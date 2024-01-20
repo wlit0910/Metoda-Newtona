@@ -95,7 +95,7 @@
 			this.miejsceZerowe_TextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.miejsceZerowe_TextBox.Name = "miejsceZerowe_TextBox";
 			this.miejsceZerowe_TextBox.ReadOnly = true;
-			this.miejsceZerowe_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.miejsceZerowe_TextBox.Size = new System.Drawing.Size(179, 20);
 			this.miejsceZerowe_TextBox.TabIndex = 35;
 			// 
 			// label_6
