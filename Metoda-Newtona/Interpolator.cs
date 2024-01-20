@@ -138,10 +138,11 @@ namespace Metoda_Newtona
 
 		public decimal ObliczMiejsceZerowe(decimal[] wspolczynnikiWielom, decimal x0, decimal epsilon, decimal delta, int liczbaIteracji) 
 		{
-			
+
 			// porobic AppendText zamiast +=
 
-			
+			richTextBox1.AppendText("\n");
+			richTextBox1.AppendText("\n");
 			richTextBox1.AppendText("Wzór funkcji w postaci wielomianu: " + wspolczynniki_textbox1.Text + "\n"); 
 			richTextBox1.AppendText("Punkt startowy X0: " + punktStartowy_TextBox.Text + "\n"); 
 
@@ -288,22 +289,27 @@ namespace Metoda_Newtona
 
 		private void sprawdzWynik_button_Click(object sender, EventArgs e) // Sprawdź wynik - przycisk
 		{
-			// try catch
-
-			decimal[] wspolczynnikiWielom = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(' '), Decimal.Parse);
-			decimal miejsceZerowe = Decimal.Parse(miejsceZerowe_TextBox.Text);
-			decimal epsilon = Decimal.Parse(epsilon_TextBox.Text);
-			bool czyPoprawny = SprawdzWynik(wspolczynnikiWielom, miejsceZerowe, epsilon);
-
-			if (czyPoprawny)
+			try
 			{
-				MessageBox.Show("Miejsce zerowe jest poprawne");
+				decimal[] wspolczynnikiWielom = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(' '), Decimal.Parse);
+				decimal miejsceZerowe = Decimal.Parse(miejsceZerowe_TextBox.Text);
+				decimal epsilon = Decimal.Parse(epsilon_TextBox.Text);
+				bool czyPoprawny = SprawdzWynik(wspolczynnikiWielom, miejsceZerowe, epsilon);
+
+				if (czyPoprawny)
+				{
+					MessageBox.Show("Miejsce zerowe jest poprawne", "| f(x) | < ε  ==  ?", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+				}
+				else
+				{
+					MessageBox.Show("Miejsce zerowe nie spełnia kryterium poprawności");
+				}
 			}
-			else
+			catch 
 			{
-				MessageBox.Show("Miejsce zerowe nie spełnia kryterium poprawności");
-			}
-			
+				Blad blad = new Blad();
+				blad.Show();
+			}		
 		}
 
 
