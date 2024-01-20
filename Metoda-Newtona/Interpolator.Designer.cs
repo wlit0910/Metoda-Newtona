@@ -69,7 +69,7 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label6.Location = new System.Drawing.Point(291, 159);
+			this.label6.Location = new System.Drawing.Point(217, 222);
 			this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(17, 18);
@@ -79,7 +79,7 @@
 			// sprawdzWynik_button
 			// 
 			this.sprawdzWynik_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.sprawdzWynik_button.Location = new System.Drawing.Point(432, 273);
+			this.sprawdzWynik_button.Location = new System.Drawing.Point(552, 137);
 			this.sprawdzWynik_button.Margin = new System.Windows.Forms.Padding(2);
 			this.sprawdzWynik_button.Name = "sprawdzWynik_button";
 			this.sprawdzWynik_button.Size = new System.Drawing.Size(72, 51);
@@ -91,7 +91,7 @@
 			// miejsceZerowe_TextBox
 			// 
 			this.miejsceZerowe_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.miejsceZerowe_TextBox.Location = new System.Drawing.Point(523, 236);
+			this.miejsceZerowe_TextBox.Location = new System.Drawing.Point(521, 106);
 			this.miejsceZerowe_TextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.miejsceZerowe_TextBox.Name = "miejsceZerowe_TextBox";
 			this.miejsceZerowe_TextBox.ReadOnly = true;
@@ -101,17 +101,18 @@
 			// label_6
 			// 
 			this.label_6.AutoSize = true;
-			this.label_6.Location = new System.Drawing.Point(324, 236);
+			this.label_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.label_6.Location = new System.Drawing.Point(520, 78);
 			this.label_6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label_6.Name = "label_6";
-			this.label_6.Size = new System.Drawing.Size(132, 13);
+			this.label_6.Size = new System.Drawing.Size(157, 13);
 			this.label_6.TabIndex = 34;
 			this.label_6.Text = "Obliczone miejsce zerowe:";
 			// 
 			// resetuj_button
 			// 
 			this.resetuj_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.resetuj_button.Location = new System.Drawing.Point(538, 273);
+			this.resetuj_button.Location = new System.Drawing.Point(628, 137);
 			this.resetuj_button.Margin = new System.Windows.Forms.Padding(2);
 			this.resetuj_button.Name = "resetuj_button";
 			this.resetuj_button.Size = new System.Drawing.Size(72, 51);
@@ -123,47 +124,47 @@
 			// iteracje_TextBox
 			// 
 			this.iteracje_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.iteracje_TextBox.Location = new System.Drawing.Point(523, 202);
+			this.iteracje_TextBox.Location = new System.Drawing.Point(357, 289);
 			this.iteracje_TextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.iteracje_TextBox.Name = "iteracje_TextBox";
-			this.iteracje_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.iteracje_TextBox.Size = new System.Drawing.Size(108, 20);
 			this.iteracje_TextBox.TabIndex = 32;
 			this.iteracje_TextBox.Text = "100";
 			// 
 			// delta_TextBox
 			// 
 			this.delta_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.delta_TextBox.Location = new System.Drawing.Point(523, 161);
+			this.delta_TextBox.Location = new System.Drawing.Point(357, 223);
 			this.delta_TextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.delta_TextBox.Name = "delta_TextBox";
-			this.delta_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.delta_TextBox.Size = new System.Drawing.Size(108, 20);
 			this.delta_TextBox.TabIndex = 31;
 			this.delta_TextBox.Text = "0,0001";
 			// 
 			// label_5
 			// 
 			this.label_5.AutoSize = true;
-			this.label_5.Location = new System.Drawing.Point(324, 202);
+			this.label_5.Location = new System.Drawing.Point(217, 292);
 			this.label_5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label_5.Name = "label_5";
-			this.label_5.Size = new System.Drawing.Size(132, 13);
+			this.label_5.Size = new System.Drawing.Size(96, 26);
 			this.label_5.TabIndex = 30;
-			this.label_5.Text = "Maksymalna liczba iteracji:";
+			this.label_5.Text = "Maksymalna liczba\r\niteracji:";
 			// 
 			// label_4
 			// 
 			this.label_4.AutoSize = true;
-			this.label_4.Location = new System.Drawing.Point(324, 164);
+			this.label_4.Location = new System.Drawing.Point(239, 217);
 			this.label_4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label_4.Name = "label_4";
-			this.label_4.Size = new System.Drawing.Size(189, 13);
+			this.label_4.Size = new System.Drawing.Size(68, 39);
 			this.label_4.TabIndex = 29;
-			this.label_4.Text = "Dokładność wyznaczania pierwiastka:";
+			this.label_4.Text = "Dokładność\r\nwyznaczania\r\npierwiastka:";
 			// 
 			// Oblicz_button
 			// 
 			this.Oblicz_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.Oblicz_button.Location = new System.Drawing.Point(327, 273);
+			this.Oblicz_button.Location = new System.Drawing.Point(476, 262);
 			this.Oblicz_button.Margin = new System.Windows.Forms.Padding(2);
 			this.Oblicz_button.Name = "Oblicz_button";
 			this.Oblicz_button.Size = new System.Drawing.Size(72, 51);
@@ -175,37 +176,37 @@
 			// label_3
 			// 
 			this.label_3.AutoSize = true;
-			this.label_3.Location = new System.Drawing.Point(324, 130);
+			this.label_3.Location = new System.Drawing.Point(239, 162);
 			this.label_3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label_3.Name = "label_3";
-			this.label_3.Size = new System.Drawing.Size(166, 13);
+			this.label_3.Size = new System.Drawing.Size(104, 26);
 			this.label_3.TabIndex = 27;
-			this.label_3.Text = "Dokładność porównania z zerem:";
+			this.label_3.Text = "Dokładność\r\nporównania z zerem:";
 			// 
 			// epsilon_TextBox
 			// 
 			this.epsilon_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.epsilon_TextBox.Location = new System.Drawing.Point(523, 123);
+			this.epsilon_TextBox.Location = new System.Drawing.Point(357, 168);
 			this.epsilon_TextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.epsilon_TextBox.Name = "epsilon_TextBox";
-			this.epsilon_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.epsilon_TextBox.Size = new System.Drawing.Size(108, 20);
 			this.epsilon_TextBox.TabIndex = 26;
 			this.epsilon_TextBox.Text = "0,0001";
 			// 
 			// punktStartowy_TextBox
 			// 
 			this.punktStartowy_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.punktStartowy_TextBox.Location = new System.Drawing.Point(523, 87);
+			this.punktStartowy_TextBox.Location = new System.Drawing.Point(357, 91);
 			this.punktStartowy_TextBox.Margin = new System.Windows.Forms.Padding(2);
 			this.punktStartowy_TextBox.Name = "punktStartowy_TextBox";
-			this.punktStartowy_TextBox.Size = new System.Drawing.Size(156, 20);
+			this.punktStartowy_TextBox.Size = new System.Drawing.Size(108, 20);
 			this.punktStartowy_TextBox.TabIndex = 25;
 			this.punktStartowy_TextBox.Text = "3";
 			// 
 			// label_2
 			// 
 			this.label_2.AutoSize = true;
-			this.label_2.Location = new System.Drawing.Point(324, 94);
+			this.label_2.Location = new System.Drawing.Point(217, 94);
 			this.label_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label_2.Name = "label_2";
 			this.label_2.Size = new System.Drawing.Size(96, 13);
@@ -215,7 +216,7 @@
 			// label_1
 			// 
 			this.label_1.AutoSize = true;
-			this.label_1.Location = new System.Drawing.Point(324, 43);
+			this.label_1.Location = new System.Drawing.Point(217, 43);
 			this.label_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label_1.Name = "label_1";
 			this.label_1.Size = new System.Drawing.Size(116, 26);
@@ -225,10 +226,10 @@
 			// wspolczynniki_textbox1
 			// 
 			this.wspolczynniki_textbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.wspolczynniki_textbox1.Location = new System.Drawing.Point(523, 49);
+			this.wspolczynniki_textbox1.Location = new System.Drawing.Point(357, 43);
 			this.wspolczynniki_textbox1.Margin = new System.Windows.Forms.Padding(2);
 			this.wspolczynniki_textbox1.Name = "wspolczynniki_textbox1";
-			this.wspolczynniki_textbox1.Size = new System.Drawing.Size(156, 20);
+			this.wspolczynniki_textbox1.Size = new System.Drawing.Size(108, 20);
 			this.wspolczynniki_textbox1.TabIndex = 22;
 			this.wspolczynniki_textbox1.Text = "7 8 1 2";
 			// 
@@ -353,7 +354,7 @@
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label7.Location = new System.Drawing.Point(290, 125);
+			this.label7.Location = new System.Drawing.Point(216, 157);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(18, 20);
 			this.label7.TabIndex = 49;
