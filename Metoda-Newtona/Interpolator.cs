@@ -142,8 +142,8 @@ namespace Metoda_Newtona
 			// porobic AppendText zamiast +=
 
 			
-			richTextBox1.Text += "Wzór funkcji w postaci wielomianu: " + wspolczynniki_textbox1.Text + "\n"; 
-			richTextBox1.Text += "Punkt startowy X0: " + punktStartowy_TextBox.Text + "\n"; 
+			richTextBox1.AppendText("Wzór funkcji w postaci wielomianu: " + wspolczynniki_textbox1.Text + "\n"); 
+			richTextBox1.AppendText("Punkt startowy X0: " + punktStartowy_TextBox.Text + "\n"); 
 
 
 			decimal x1 = x0 - 1; 
@@ -154,10 +154,10 @@ namespace Metoda_Newtona
 
 		
 
-			richTextBox1.Text += "Wartość funkcji w punkcie startowym wynosi: " + fX0 + "\n";
-			richTextBox1.Text += "Dokładność porównania z zerem - epsilon: " + epsilon + "\n";
-			richTextBox1.Text += "Dokładność wyznaczania pierwiastka - delta: " + delta + "\n";
-			richTextBox1.Text += "Maksymalna liczba iteracji: " + liczbaIteracji + "\n";
+			richTextBox1.AppendText("Wartość funkcji w punkcie startowym wynosi: " + fX0 + "\n");
+			richTextBox1.AppendText("Dokładność porównania z zerem - epsilon: " + epsilon + "\n");
+			richTextBox1.AppendText("Dokładność wyznaczania pierwiastka - delta: " + delta + "\n");
+			richTextBox1.AppendText("Maksymalna liczba iteracji: " + liczbaIteracji + "\n");
 
 			int numerIteracji = 0;
 
@@ -165,11 +165,12 @@ namespace Metoda_Newtona
 			{
 				
 
-				richTextBox1.Text += "\n";
+				//richTextBox1.AppendText( "\n");
 				numerIteracji += 1;
 				richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Bold);
 
-				richTextBox1.AppendText("Numer iteracji: " + numerIteracji + "\n");
+				//richTextBox1.AppendText("Numer iteracji: " + numerIteracji + "\n");
+
 				//logRichTextBox.Rtf = @"{\rtf1\ansi This is in \b bold\b0.}";
 
 
@@ -184,7 +185,7 @@ namespace Metoda_Newtona
 
 				
 				richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Regular);
-				richTextBox1.Text += "Pochodna funkcji w potencjalnym miejscu zerowym wynosi: " + fX1 + "\n";
+				//richTextBox1.AppendText("Pochodna funkcji w potencjalnym miejscu zerowym wynosi: " + fX1 + "\n");
 
 
 				// Obliczone wartości opisujące styczną
@@ -203,9 +204,9 @@ namespace Metoda_Newtona
 				if (Math.Abs(fX1) < delta) //sprawdzenie czy wartość funkcji od bieżącego przybliżenia miejsca zerowego jest mniejsza od przyjętej wartości delty - KRYTERIUM STOPU
 				{
 					MessageBox.Show("Zły punkt startowy");
-					richTextBox1.Text += "Wartość funkcji f(x), która uruchomiła kryterium stopu: "+fX1.ToString()+"\n";
-					richTextBox1.Text += "Zły punkt startowy\n";
-					richTextBox1.Text += "Koniec obliczeń" + "\n";
+					richTextBox1.AppendText("Wartość funkcji f(x), która uruchomiła kryterium stopu: " + fX1.ToString() + "\n");
+					richTextBox1.AppendText("Zły punkt startowy\n");
+					richTextBox1.AppendText("Koniec obliczeń" + "\n");
 
 					return x0;
 				}
@@ -217,13 +218,13 @@ namespace Metoda_Newtona
 
 
 
-				richTextBox1.Text += "Potencjalne miejsce zerowe wynosi: " + x0 + "\n";
+				//richTextBox1.AppendText("Potencjalne miejsce zerowe wynosi: " + x0 + "\n");
 
 				// Wyliczamy wartość funkcji w potencjalnym miejscu zerowym
 				fX0 = ObliczWartoscFunkcji_WPunkcieX(wspolczynnikiWielom, x0);
 
 
-				richTextBox1.Text += "Wartość funkcji w potencjalnym miejscu zerowym wynosi: " + fX0 + "\n";
+				//richTextBox1.AppendText("Wartość funkcji w potencjalnym miejscu zerowym wynosi: " + fX0 + "\n");
 				wykres.RysujPunkt(x0, fX0);
 
 				liczbaIteracji = liczbaIteracji - 1;
@@ -234,14 +235,14 @@ namespace Metoda_Newtona
 			if (liczbaIteracji == 0) // Czy osiągnięto maksymalną liczbę iteracji?
 			{
 				MessageBox.Show("Przekroczono maksymalną liczbę iteracji","Osiągnięto maksymalną liczbę iteracji", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-				richTextBox1.Text += "Przekroczono maksymalną liczbę iteracji\n";
+				richTextBox1.AppendText("Przekroczono maksymalną liczbę iteracji\n");
 			}
 
-			richTextBox1.Text += "\n";
-			richTextBox1.Text += "\n";
+			richTextBox1.AppendText("\n");
+			richTextBox1.AppendText("\n");
 
-			richTextBox1.Text += "UZYSKANE WYNIKI" + "\n";
-			richTextBox1.Text += "-------------------------------------------------------------------------------------------------------\n";
+			richTextBox1.AppendText("UZYSKANE WYNIKI" + "\n");
+			richTextBox1.AppendText("-------------------------------------------------------------------------------------------------------\n");
 
 			richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Bold);
 
@@ -336,37 +337,54 @@ namespace Metoda_Newtona
 		//									(tablica współczynników wielom., punkt startowy, nazwa serii)
 		public Series PrepareTangentSeries(decimal[] functionParameters, decimal startingPointX, string seriesName) // rysowanie stycznych
 		{
-			
 
+			// Tworzenie nowej serii danych o podanej nazwie
 			Series series = new Series(seriesName);
+
+			// Ustawienie koloru serii na czerwony
 			series.Color = Color.Red;
 
+			// Obliczenie wartości funkcji wielomianowej w punkcie startowym
 			decimal fStartingPointX = ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX);
+
+			// Inicjalizacja wartości pomocniczej valueAtX   ZMIENCI
 			decimal valueAtX = fStartingPointX;
 
+			// Sprawdzenie warunków dla różnych przypadków - jeśli współczynników wielomianu jest więcej niż 0 i gdy wartość funkcji w punkcie jest mniejsza od 0 (lub  przeciwny warunek)
 			if ((functionParameters[0] > 0 && fStartingPointX < 0) || (functionParameters[0] < 0 && fStartingPointX > 0))
 			{
+				// Dodanie punktu do serii dla punktu leżącego 0.5 jednostki przed punktem startowym
 				series.Points.Add(new DataPoint((double)(startingPointX - 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX - 0.5m)));
 
+				// Pętla dodająca punkty do serii do momentu, gdy wartość funkcji zmienia znak
 				while (fStartingPointX * valueAtX > 0)
 				{
+					// Obliczenie wartości funkcji dla aktualnego punktu
 					valueAtX = ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX);
+					// Dodanie punktu do serii
 					series.Points.Add(new DataPoint((double)startingPointX, (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX)));
+					// Zwiększenie wartości x o 0.5 jednostki
 					startingPointX += 0.5m;
 				}
 			}
 			else if ((functionParameters[0] > 0 && fStartingPointX > 0) || (functionParameters[0] < 0 && fStartingPointX < 0))
 			{
+				// Dodanie punktu do serii dla punktu leżącego 0.5 jednostki po punkcie startowym
 				series.Points.Add(new DataPoint((double)(startingPointX + 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX + 0.5m)));
+				// Pętla dodająca punkty do serii do momentu, gdy wartość funkcji zmienia znak
 				while (fStartingPointX * valueAtX > 0)
 				{
+					// Obliczenie wartości funkcji dla aktualnego punktu
 					valueAtX = ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX);
+					// Dodanie punktu do serii
 					series.Points.Add(new DataPoint((double)startingPointX, (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX)));
+					// Zmniejszenie wartości x o 0.5 jednostki
 					startingPointX -= 0.5m;
 				}
 			}
 			else
 			{
+				// Dodanie punktów do serii dla punktów leżących 0.5 jednostki przed, w, i po punkcie startowym
 				series.Points.Add(new DataPoint((double)(startingPointX + 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX + 0.5m)));
 				series.Points.Add(new DataPoint((double)(startingPointX), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX)));
 				series.Points.Add(new DataPoint((double)(startingPointX - 0.5m), (double)ObliczWartoscFunkcji_WPunkcieX(functionParameters, startingPointX - 0.5m)));

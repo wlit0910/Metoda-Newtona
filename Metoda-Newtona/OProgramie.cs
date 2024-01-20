@@ -21,5 +21,10 @@ namespace Metoda_Newtona
 		{
 			this.Hide();
 		}
+
+		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) // link do literatury, z której braliśmy wzory
+		{
+			System.Diagnostics.Process.Start("https://eduinf.waw.pl/inf/alg/005_root/0013.php");
+		}
 	}
 }
