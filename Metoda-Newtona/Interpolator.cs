@@ -34,7 +34,7 @@ namespace Metoda_Newtona
 				//		x1,x2,x3,x4....		*						x0 do potęgi takiej, ile jest wpółczynników wielomianu, iteracyjnie o 1 mniej
 				wartoscFunkcji += wspolczynnikiWielom[i] * (decimal)Math.Pow((double)wspX, wspolczynnikiWielom.Length - 1 - i);
 
-				// wzór funkcji o współczynnikach np. 5 6 7  i punktu startowego = 3
+				// wzór funkcji dla wielomianu o współczynnikach np. 5 6 7  i dla punktu startowego = 3
 				// wynosiłby f(x) = 5*3^3 + 6*3^2 + 7*3^1
 				
 			}
