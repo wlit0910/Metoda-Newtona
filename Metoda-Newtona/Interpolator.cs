@@ -498,5 +498,9 @@ namespace Metoda_Newtona
 			pomoc.Show();
 		}
 
+		private void button2_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

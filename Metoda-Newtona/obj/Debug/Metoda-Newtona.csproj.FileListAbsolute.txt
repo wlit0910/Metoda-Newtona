@@ -26,3 +26,17 @@ C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Me
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.pdb
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Blad.resources
 C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Pomoc.resources
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\Metoda-Newtona.exe.config
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\Metoda-Newtona.exe
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\Metoda-Newtona.pdb
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.csproj.AssemblyReference.cache
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Interpolator.resources
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Blad.resources
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.OProgramie.resources
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Properties.Resources.resources
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Pomoc.resources
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda_Newtona.Wykres.resources
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.csproj.GenerateResource.cache
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.csproj.CoreCompileInputs.cache
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.exe
+C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.pdb

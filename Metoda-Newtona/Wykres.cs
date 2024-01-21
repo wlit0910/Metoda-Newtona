@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Windows.Controls;
 
 
 namespace Metoda_Newtona
@@ -208,6 +210,41 @@ namespace Metoda_Newtona
 		private void chart1_Click(object sender, EventArgs e)
 		{
 
+		}
+
+
+
+		private void zapiszWykresPNGToolStripMenuItem_Click(object sender, EventArgs e) // zapisywanie wykresu
+		{
+			MemoryStream ms = new MemoryStream();
+			ms.Position = 0;
+
+			this.chart1.SaveImage(ms, ChartImageFormat.Png);
+			//ms.WriteByte(13);
+
+			SaveFileDialog svd = new SaveFileDialog();
+
+			svd.CreatePrompt = true;
+			svd.OverwritePrompt = true;
+
+			svd.FileName = "Wykres-z-wyznaczonym-MZ";
+			svd.DefaultExt = "png";
+			svd.Filter =
+				"PNG files (*.png)|*.png|All files (*.*)|*.*";
+			svd.InitialDirectory =
+				Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+			DialogResult result = svd.ShowDialog();
+
+			Stream fileStream;
+
+			if (result == DialogResult.OK)
+			{
+				fileStream = svd.OpenFile();
+				ms.Position = 0;
+				ms.WriteTo(fileStream);
+				fileStream.Close();
+			}
 		}
 	}
 }

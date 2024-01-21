@@ -32,7 +32,11 @@
 			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wykres));
 			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.opcjeWykresuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.zapiszWykresPNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// chart1
@@ -42,33 +46,67 @@
 			this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
 			legend1.Name = "Legend1";
 			this.chart1.Legends.Add(legend1);
-			this.chart1.Location = new System.Drawing.Point(0, 0);
-			this.chart1.Margin = new System.Windows.Forms.Padding(2);
+			this.chart1.Location = new System.Drawing.Point(0, 28);
+			this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.chart1.Name = "chart1";
-			this.chart1.Size = new System.Drawing.Size(959, 606);
+			this.chart1.Size = new System.Drawing.Size(1279, 718);
 			this.chart1.TabIndex = 1;
 			this.chart1.Text = "chart1";
 			this.chart1.Click += new System.EventHandler(this.chart1_Click);
 			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opcjeWykresuToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(1279, 28);
+			this.menuStrip1.TabIndex = 3;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// opcjeWykresuToolStripMenuItem
+			// 
+			this.opcjeWykresuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zapiszWykresPNGToolStripMenuItem});
+			this.opcjeWykresuToolStripMenuItem.Name = "opcjeWykresuToolStripMenuItem";
+			this.opcjeWykresuToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+			this.opcjeWykresuToolStripMenuItem.Text = "Opcje wykresu";
+			// 
+			// zapiszWykresPNGToolStripMenuItem
+			// 
+			this.zapiszWykresPNGToolStripMenuItem.Name = "zapiszWykresPNGToolStripMenuItem";
+			this.zapiszWykresPNGToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.zapiszWykresPNGToolStripMenuItem.Text = "Zapisz wykres PNG";
+			this.zapiszWykresPNGToolStripMenuItem.Click += new System.EventHandler(this.zapiszWykresPNGToolStripMenuItem_Click);
+			// 
 			// Wykres
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(959, 606);
+			this.ClientSize = new System.Drawing.Size(1279, 746);
 			this.Controls.Add(this.chart1);
+			this.Controls.Add(this.menuStrip1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(2);
+			this.MainMenuStrip = this.menuStrip1;
+			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "Wykres";
 			this.Text = "Wykres";
 			this.Load += new System.EventHandler(this.Wykres_Load);
 			((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
 
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem opcjeWykresuToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem zapiszWykresPNGToolStripMenuItem;
 	}
 }
