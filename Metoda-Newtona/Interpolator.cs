@@ -12,6 +12,7 @@ using System.Windows.Forms.DataVisualization.Charting; // dodana przestrzeń naz
 
 namespace Metoda_Newtona
 {
+	// 3x^3 - 2x^2 dla x0 = -4 lub 2 == 0,67
 	public partial class Interpolator : Form
 	{
 		private Wykres wykres;
@@ -174,8 +175,6 @@ namespace Metoda_Newtona
 				richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Bold);
 
 				//richTextBox1.AppendText("Numer iteracji: " + numerIteracji + "\n");
-
-				//logRichTextBox.Rtf = @"{\rtf1\ansi This is in \b bold\b0.}";
 
 
 
