@@ -40,3 +40,25 @@ C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\D
 C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.csproj.CoreCompileInputs.cache
 C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.exe
 C:\Users\wlito\OneDrive\Pulpit\metodaNewtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.pdb
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\AngouriMath.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\Antlr4.Runtime.Standard.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\GenericTensor.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\HonkSharp.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\IndexRange.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\Numbers.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.Buffers.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.Memory.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.ValueTuple.dll
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\AngouriMath.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\Antlr4.Runtime.Standard.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\GenericTensor.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\HonkSharp.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\Numbers.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.Buffers.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.Memory.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\bin\Debug\System.ValueTuple.xml
+C:\Users\wlito\Desktop\Metoda Newtona\Metoda-Newtona\Metoda-Newtona\obj\Debug\Metoda-Newtona.csproj.CopyComplete

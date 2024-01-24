@@ -6,9 +6,12 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Web;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting; // dodana przestrzeń nazw niezbędna do tworzenia wykresów
+using System.Diagnostics.CodeAnalysis;
+
 
 namespace Metoda_Newtona
 {
@@ -103,7 +106,8 @@ namespace Metoda_Newtona
 				int liczbaIteracji = Int32.Parse(iteracje_TextBox.Text);        // liczba iteracji
 
 
-				
+
+				//Entity func = wspolczynniki_textbox1.Text;
 
 				decimal[] wspolczynnikiWielom = Array.ConvertAll(wspolczynniki_textbox1.Text.Split(' '), Decimal.Parse); // wpisanie współczynników wielomianów do tablicy współczynników wielomianu
 
