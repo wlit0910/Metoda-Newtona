@@ -23,7 +23,7 @@ namespace Metoda_Newtona
 		public Interpolator()
 		{
 			InitializeComponent();
-			wykres = new Wykres();
+			wykres = new Wykres(); 
 		}
 
 
