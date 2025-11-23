@@ -11,13 +11,6 @@
 
 ### Temat projektu: Wyznaczanie miejsca zerowego funkcji metodą stycznych (metodą Newtona)
 
-Wykonawcy projektu:
-
-<ul>
-  <li>Weronika Litowczenko</li>
-  <li>Jan Rusinek</li>
-  <li>Adam Wandelt</li>
-</ul>
 
 | Task                                                              | Completion |
 | ----------------------------------------------------------------- | ---------- |
