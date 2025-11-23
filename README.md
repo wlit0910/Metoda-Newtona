@@ -14,7 +14,7 @@
 ### Demo:
 <br>
 <div align="center">
-<img src="https://github.com/wlit0910/Metoda-Newtona/blob/main/demo.gif" width="1000">
+<img src="https://github.com/wlit0910/Metoda-Newtona/blob/main/demo.gif" width="700">
 <br>
 </div>
 <br><br>
