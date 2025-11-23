@@ -11,6 +11,14 @@
 
 ### Temat projektu: Wyznaczanie miejsca zerowego funkcji metodą stycznych (metodą Newtona)
 
+### Demo:
+<br>
+<div align="center">
+<img src="https://github.com/wlit0910/Metoda-Newtona/blob/main/demo.gif" width="1000">
+<br>
+</div>
+<br><br>
+
 
 | Task                                                              | Completion |
 | ----------------------------------------------------------------- | ---------- |
